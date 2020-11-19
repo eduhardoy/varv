@@ -1,13 +1,15 @@
 <template>
   <header>
     <div class="logo">
-      <img alt="Vue logo" src="../assets/logo.png" />
+      <router-link to="/">
+        <img alt="Vue logo" src="../assets/logo.png" >
+      </router-link>
     </div>
     <div class="menu">
       <ul class="nav">
-        <li><a href="360tour">360 TOUR</a></li>
-        <li><a href="about">ABOUT US</a></li>
-        <li><a href="contact">CONTACT</a></li>
+        <li><router-link to="tours">360 TOUR</router-link></li>
+        <li><router-link to="about">ABOUT US</router-link></li>
+        <li><router-link to="contact">CONTACT</router-link></li>
       </ul>
     </div>
   </header>
