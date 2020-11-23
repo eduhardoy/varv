@@ -6,9 +6,11 @@
     <div class="rights">
       <h4>© 2020 ALL RIGHTS RESERVED</h4>
     </div>
-    <figure class="inibot">
+    <a href="">
+      <figure class="inibot">
       <img src="../assets/inibot.png" alt="" class="inibotimg">
     </figure>
+    </a>
   </footer>
 </template>
 
@@ -20,13 +22,13 @@ export default {
 
 <style>
 footer {
-  background-color: #ffffff;
+  background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
-  margin-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 15px;
 }
 
 footer figure {

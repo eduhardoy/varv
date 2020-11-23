@@ -36,7 +36,7 @@ export default {
   max-width: 1200px;
   flex: 1%;
   margin: 0 auto;
-  margin-top: 50px;
+  padding-top: 50px;
   width: 100%;
   display: flex;
   justify-content: center;

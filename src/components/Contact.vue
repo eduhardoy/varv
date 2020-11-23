@@ -11,18 +11,18 @@
           <i class="icon-envelop"></i>
           <h4>varvlab@gmail.com</h4>
         </div>
-        <div class="dato">
+        <a class="dato" href="https://www.facebook.com/varvlab">
           <i class="icon-facebook"></i>
           <h4>/varvlab </h4>
-        </div>
-        <div class="dato">
+        </a>
+        <a class="dato" href="https://www.instagram.com/varvlab/">
           <i class="icon-instagram"></i>
           <h4>@varvlab</h4>
-        </div>
-        <div class="dato">
+        </a>
+        <a class="dato" href="https://www.youtube.com/user/indeterminacion">
           <i class="icon-youtube"></i>
           <h4>VARV</h4>
-        </div>
+        </a>
       </div>
     </div>
     <div class="formnow">
@@ -97,7 +97,8 @@ export default {
 
 .contact {
   width: 100%;
-  margin-top: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   font-size: 28px;
   display: flex;
   justify-content: center;
@@ -108,6 +109,7 @@ export default {
   font-family: "Brandon Text", sans-serif;
   font-size: 25px;
   font-weight: 400;
+  color: black;
 }
 
 .redes {
@@ -129,6 +131,7 @@ export default {
   margin: 0;
   font-size: 30px;
   vertical-align: baseline;
+  color: black;
 }
 
 .dato h4{
@@ -138,6 +141,7 @@ export default {
   font-size: 25px;
   font-weight: 400;
   vertical-align: baseline;
+  color: black;
 }
 
 .formnow {
@@ -268,6 +272,5 @@ export default {
   width: 80%;
 }
 }
-
 
 </style>

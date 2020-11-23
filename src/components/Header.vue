@@ -30,8 +30,8 @@ export default {
   height: 100px;
   display: flex;
   justify-content: space-around;
-  background-color: rgba(0, 0, 0, 0.0);
   background-color: white;
+  box-shadow: 0px 8px 9px -1px rgba(125, 120, 120, 0.6);
   color: white;
   position: fixed;
   top: 0;
