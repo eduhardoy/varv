@@ -2,13 +2,28 @@
   <div class="contact">
     <div class="redes">
       <h3>CONTACTO</h3>
-      <ul>
-        <li>+593 991425988</li>
-        <li>varvlab@gmail.com </li>
-        <li>VARV</li>
-        <li>/varvlab </li>
-        <li>@varvlab </li>
-      </ul>
+      <div>
+        <div class="dato">
+          <i class="icon-phone"></i>
+          <h4>+593 991425988</h4>
+        </div>
+        <div class="dato">
+          <i class="icon-envelop"></i>
+          <h4>varvlab@gmail.com</h4>
+        </div>
+        <div class="dato">
+          <i class="icon-facebook"></i>
+          <h4>/varvlab </h4>
+        </div>
+        <div class="dato">
+          <i class="icon-instagram"></i>
+          <h4>@varvlab</h4>
+        </div>
+        <div class="dato">
+          <i class="icon-youtube"></i>
+          <h4>VARV</h4>
+        </div>
+      </div>
     </div>
     <div class="formnow">
       <h3>COTIZA TU PROYECTO</h3>
@@ -29,6 +44,57 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../public/fonts/icomoon.eot?uus47');
+  src:  url('../../public/fonts/icomoon.eot?uus47#iefix') format('embedded-opentype'),
+    url('../../public/fonts/icomoon.ttf?uus47') format('truetype'),
+    url('../../public/fonts/icomoon.woff?uus47') format('woff'),
+    url('../../public/fonts/icomoon.svg?uus47#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-envelop:before {
+  content: "\e945";
+}
+.icon-google:before {
+  content: "\ea8a";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+
 .contact {
   width: 100%;
   margin-top: 50px;
@@ -40,7 +106,7 @@ export default {
 
 .contact h3 {
   font-family: "Brandon Text", sans-serif;
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 400;
 }
 
@@ -52,18 +118,26 @@ export default {
   width: 30%;
 }
 
-.redes ul{
-  margin: 0;
-  padding: 0;
-  text-align: justify;
+.dato {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  margin-top: 25px;
 }
 
-.redes ul li{
+.dato i{
   margin: 0;
-  margin-top: 20px;
-  padding: 0;
+  font-size: 30px;
+  vertical-align: baseline;
+}
+
+.dato h4{
+  margin: 0;
+  margin-left: 20px;
+  font-family: "Lato", sans-serif;
   font-size: 25px;
-  font-weight: 300;
+  font-weight: 400;
+  vertical-align: baseline;
 }
 
 .formnow {
@@ -177,10 +251,6 @@ export default {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-}
-
-.redes ul li{
-  font-size: 20px;
 }
 
 .formnow {
