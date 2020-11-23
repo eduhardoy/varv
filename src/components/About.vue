@@ -102,4 +102,9 @@ export default {
   font-weight: 300;
 }
 
+@media (max-width: 950px) {
+.about {
+  margin-top: 30px;
+}
+}
 </style>

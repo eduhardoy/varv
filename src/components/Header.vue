@@ -77,6 +77,7 @@ a {
   text-decoration: none;
   color: black;
   font-family: "Brandon Text", sans-serif;
-  font-size: 25px;
+  font-size: 22px;
+  font-weight: 400;
 }
 </style>

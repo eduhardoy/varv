@@ -39,7 +39,8 @@ export default {
 }
 
 .contact h3 {
-  font-size: 25px;
+  font-family: "Brandon Text", sans-serif;
+  font-size: 22px;
   font-weight: 400;
 }
 
@@ -80,13 +81,6 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.formnow form h1 {
-  color: black;
-  font-size: 25px;
-  text-align: center;
-  text-shadow: 2px 2px 4px #000000;
 }
 
 .formname {
@@ -169,7 +163,39 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
+  width: 45%;
+}
+
+.formbutton {
+  font-size: 12px;
+}
+}
+
+@media (max-width: 950px) {
+.contact {
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.redes ul li{
+  font-size: 20px;
+}
+
+.formnow {
+  width: 70%;
+  margin-bottom: 30px;
+}
+
+.formbutton{
+  width: 30%;
+}
+}
+
+@media (max-width: 530px) {
+  .formnow {
+  width: 80%;
 }
 }
 

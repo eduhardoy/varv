@@ -46,4 +46,10 @@ footer figure {
   width: 180px;
 }
 
+@media (max-width: 950px) {
+footer {
+  margin-top: 50px;
+}
+}
+
 </style>
