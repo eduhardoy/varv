@@ -2,14 +2,15 @@
   <header>
     <div class="logo">
       <router-link to="/">
-        <img alt="Vue logo" src="../assets/logo.png" >
+        <img alt="Vue logo" src="../assets/VARVLOGO.png" >
       </router-link>
     </div>
     <div class="menu">
       <ul class="nav">
-        <li><router-link to="tours">360 TOUR</router-link></li>
-        <li><router-link to="about">ABOUT US</router-link></li>
-        <li><router-link to="contact">CONTACT</router-link></li>
+        <li><router-link to="about">NOSOTROS</router-link></li>
+        <li><router-link to="tours">PROYECTOS</router-link></li>
+        <li><router-link to="contact">CONTACTO</router-link></li>
+        <li><router-link to="clients">CLIENTES</router-link></li>
       </ul>
     </div>
   </header>
@@ -27,23 +28,27 @@ export default {
 <style>
 header {
   width: 100%;
-  max-height: 140px;
+  height: 150px;
   display: flex;
   justify-content: space-around;
-  background-color: #ffffff;
-  box-shadow: 0px 8px 9px -1px rgba(125, 120, 120, 0.6);
-  font-family: "Syne Mono", monospace;
-  font-size: 25px;
-  position: sticky;
+  background-color: rgba(0, 0, 0, 0.0);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
 }
+
 .logo {
   display: flex;
   align-items: center;
   justify-content: center;
+    width: 20%;
 }
 .logo img {
   width: auto;
-  height: 60px;
+  height: 80px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -51,12 +56,14 @@ header {
 .menu {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  width: 80%;
 }
 
 .nav {
   display: flex;
   flex-direction: row;
+  padding-right: 70px;
 }
 
 ul {
@@ -67,6 +74,8 @@ li {
 }
 a {
   text-decoration: none;
-  color: #30383f;
+  color: black;
+  font-family: "Brandon Text", sans-serif;
+  font-size: 30px;
 }
 </style>
