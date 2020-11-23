@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="header">
     <div class="logo">
       <router-link to="/">
         <img alt="Vue logo" src="../assets/VARVLOGO.png" >
@@ -10,7 +10,6 @@
         <li><router-link to="about">NOSOTROS</router-link></li>
         <li><router-link to="tours">PROYECTOS</router-link></li>
         <li><router-link to="contact">CONTACTO</router-link></li>
-        <li><router-link to="clients">CLIENTES</router-link></li>
       </ul>
     </div>
   </header>
@@ -26,12 +25,13 @@ export default {
 </script>
 
 <style>
-header {
+.header {
   width: 100%;
-  height: 150px;
+  height: 100px;
   display: flex;
   justify-content: space-around;
   background-color: rgba(0, 0, 0, 0.0);
+  background-color: white;
   color: white;
   position: fixed;
   top: 0;
@@ -64,6 +64,7 @@ header {
   display: flex;
   flex-direction: row;
   padding-right: 70px;
+  margin: 0;
 }
 
 ul {
@@ -76,6 +77,6 @@ a {
   text-decoration: none;
   color: black;
   font-family: "Brandon Text", sans-serif;
-  font-size: 30px;
+  font-size: 25px;
 }
 </style>
