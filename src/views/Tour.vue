@@ -1,13 +1,7 @@
 <template>
-    TOUR ID {{$route.params.id}}
-
+  <div>TOUR ID {{ $route.params.id }}</div>
 </template>
 
 <script>
-
-
-
-export default {
-    
-}
+export default {};
 </script>

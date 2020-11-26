@@ -4,6 +4,10 @@ import Contact from "../views/Contact.vue";
 import NotFound from "../views/404.vue";
 import Tours from "../views/Tours.vue";
 import Tour from "../views/Tour.vue";
+import Admin from "../views/Admin/Admin.vue";
+import AdminLogin from "../views/Admin/AdminLogin.vue";
+import AuthGuard from "../guards/auth.guard";
+import IsLoggedGuard from "../guards/isLogged.guard";
 
 const routes = [
   {
@@ -39,6 +43,17 @@ const routes = [
     path: "/404",
     name: "NotFound",
     component: NotFound,
+  },
+  {
+    path: "/admin",
+    name: "Admin",
+    component: Admin,
+    beforeEnter: AuthGuard,
+  },
+  {
+    path: "/admin/login",
+    component: AdminLogin,
+    beforeEnter: IsLoggedGuard,
   },
 ];
 
