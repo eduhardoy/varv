@@ -4,9 +4,9 @@
       <img src="../assets/VARVLOGO.png" alt="" class="footerlogoimg">
     </figure>
     <div class="rights">
-      <h4>© 2020 ALL RIGHTS RESERVED</h4>
+      <h4>© 2020 All Rights Reserved</h4>
     </div>
-    <a href="">
+    <a href="http://inibotnea.com/">
       <figure class="inibot">
       <img src="../assets/inibot.png" alt="" class="inibotimg">
     </figure>
@@ -22,7 +22,7 @@ export default {
 
 <style>
 footer {
-  background-color: #f0f0f0;
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -96,18 +96,19 @@ export default {
 }
 
 .contact {
+  flex: 1%;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 150px;
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  font-size: 28px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 
 .contact h3 {
-  font-family: "Brandon Text", sans-serif;
-  font-size: 25px;
+  font-family: "Lato", sans-serif;
+  font-size: 35px;
   font-weight: 400;
   color: black;
 }
@@ -117,19 +118,20 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 30%;
+  height: 100%;
+  width: 50%;
 }
 
 .dato {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: flex-start;
   margin-top: 25px;
 }
 
 .dato i{
   margin: 0;
-  font-size: 30px;
+  font-size: 35px;
   vertical-align: baseline;
   color: black;
 }
@@ -138,8 +140,8 @@ export default {
   margin: 0;
   margin-left: 20px;
   font-family: "Lato", sans-serif;
-  font-size: 25px;
-  font-weight: 400;
+  font-size: 35px;
+  font-weight: 300;
   vertical-align: baseline;
   color: black;
 }
@@ -149,7 +151,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 30%;
+  width: 40%;
 }
 
 .formnow form {
@@ -162,8 +164,8 @@ export default {
 }
 
 .formname {
-  width: 100%;
-  height: 50px;
+  width: 80%;
+  height: 80px;
   margin-top: 20px;
   background: transparent;
   border: solid black 2px;
@@ -180,8 +182,8 @@ export default {
 }
 
 .formemail {
-  width: 100%;
-  height: 50px;
+  width: 80%;
+  height: 80px;
   margin-top: 15px;
   background: transparent;
   border: solid black 2px;
@@ -199,8 +201,8 @@ export default {
 }
 
 .formtext {
-  width: 100%;
-  height: 150px;
+  width: 80%;
+  height: 200px;
   margin-top: 15px;
   background: transparent;
   border: solid black 2px;

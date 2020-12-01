@@ -9,6 +9,7 @@
       <ul class="nav">
         <li><router-link to="about">NOSOTROS</router-link></li>
         <li><router-link to="tours">PROYECTOS</router-link></li>
+        <li><router-link to="contact">PRECIOS</router-link></li>
         <li><router-link to="contact">CONTACTO</router-link></li>
       </ul>
     </div>
@@ -73,7 +74,7 @@ li {
 a {
   text-decoration: none;
   color: black;
-  font-family: "Brandon Text", sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 22px;
   font-weight: 400;
 }
