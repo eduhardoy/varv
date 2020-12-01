@@ -4,24 +4,19 @@
       <h3>CONTACTO</h3>
       <div>
         <div class="dato">
-          <i class="icon-phone"></i>
-          <h4>+593 991425988</h4>
+          <i class="icon-phone"><strong>+593 991425988</strong></i>
         </div>
         <div class="dato">
-          <i class="icon-envelop"></i>
-          <h4>varvlab@gmail.com</h4>
+          <i class="icon-envelop"><strong>varvlab@gmail.com</strong></i>
         </div>
         <a class="dato" href="https://www.facebook.com/varvlab">
-          <i class="icon-facebook"></i>
-          <h4>/varvlab </h4>
+          <i class="icon-facebook"><strong>/varvlab</strong></i>
         </a>
         <a class="dato" href="https://www.instagram.com/varvlab/">
-          <i class="icon-instagram"></i>
-          <h4>@varvlab</h4>
+          <i class="icon-instagram"><strong>@varvlab</strong></i>
         </a>
         <a class="dato" href="https://www.youtube.com/user/indeterminacion">
-          <i class="icon-youtube"></i>
-          <h4>VARV</h4>
+          <i class="icon-youtube"><strong>VARV</strong></i>
         </a>
       </div>
     </div>
@@ -111,6 +106,8 @@ export default {
   font-size: 35px;
   font-weight: 400;
   color: black;
+  padding-bottom: 30px;
+  padding-top: 30px;
 }
 
 .redes {
@@ -126,7 +123,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
 .dato i{
@@ -136,7 +133,7 @@ export default {
   color: black;
 }
 
-.dato h4{
+.dato i strong{
   margin: 0;
   margin-left: 20px;
   font-family: "Lato", sans-serif;
