@@ -44,7 +44,7 @@
         <h2 class="title">ESPECIAL</h2>
       </div>
       <div class="row2end">
-        <h4 class="title2">COTIZAR</h4>
+        <h4 class="title2">+$200</h4>
       </div>
       <div class="description1">
         <h3>Videos 360°</h3>
@@ -53,6 +53,7 @@
         <h3>Tours interactivos personalizados</h3>
       </div>
       <div class="description3">
+        <h3>*Cuentanos sobre tu proyecto y cotiza con nosotros</h3>
       </div>
       <div class="description4">
       </div>
@@ -71,8 +72,9 @@ export default {
 </script>
 
 <style>
-h3, h2{
-    font-weight: 300;
+h3{
+  font-weight: 300;
+  margin: 0;
 }
 
 .prices {
@@ -96,7 +98,7 @@ h3, h2{
   border-radius: 20%;
   border: solid 3px black;
   display: grid;
-  grid-template-rows: 1.2fr 1.2fr 0.8fr 0.8fr 0.8fr 0.8fr;
+  grid-template-rows: 100px 120px 50px 50px 50px 50px;
   grid-template-columns: 1fr;
   overflow: hidden;
 }
@@ -147,39 +149,46 @@ h3, h2{
 .title2 {
   width: 50%;
   height: 40%;
-  font-size: 30px;
+  font-size: 60px;
+  padding-bottom: 20px;
   margin: 0;
-  color: #000000;
+  color: #ffffff;
 }
 
 .description1 {
   grid-row: 3;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
+  margin-top: 30px;
 }
 
 .description2 {
   grid-row: 4;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
+  margin-top: 30px;
 }
 
 .description3 {
   grid-row: 5;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
+  margin-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .description4 {
   grid-row: 6;
   text-align: center;
-  font-size: 18px;
+  font-size: 22px;
+  margin-top: 30px;
 }
 
 .iva h2{
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   padding-top: 20px;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 300;
 }
 
