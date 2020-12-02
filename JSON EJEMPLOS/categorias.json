@@ -1,0 +1,17 @@
+[
+    {
+        "id":"1",
+        "name":"Hoteles",
+        "description":"Todos los hoteles."
+    },
+    {
+        "id":"2",
+        "name":"Cultural",
+        "description":"Todos los centros culturales."
+    },
+    {
+        "id":"3",
+        "name":"Pueblo",
+        "description":"Todos los pueblos."
+    }
+]
