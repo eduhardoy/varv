@@ -24,6 +24,9 @@
     "cross-env": "^7.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0-0",
+    "fibers": "^5.0.0",
+    "sass": "^1.29.0",
+    "sass-loader": "^10.1.0",
     "vue-cli-plugin-config": "~0.3.7"
   },
   "eslintConfig": {
