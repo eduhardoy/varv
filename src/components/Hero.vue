@@ -10,10 +10,13 @@ export default {
 
 <style>
 .hero {
-  background-image: url("../assets/franwallpaper.png");
+  background-image: url("../assets/centro.png");
   background-color: #ffffff;
   background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   width: 100%;
-  height: 1000px;
+  height: 875px;
+  margin-top: 95px;
 }
 </style>

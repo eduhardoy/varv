@@ -6,6 +6,7 @@
     <!-- Hero Component -->
     <Hero />
     <About />
+    <Prices />
     <Contact />
     <Footer />
   </div>
@@ -16,6 +17,7 @@ import Header from "../components/Header";
 import Wapp from "../components/Whatsapp";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Prices from "../components/Prices";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 
@@ -26,6 +28,7 @@ export default {
     Wapp,
     Hero,
     About,
+    Prices,
     Contact,
     Footer,
   },
