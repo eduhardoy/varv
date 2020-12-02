@@ -49,6 +49,24 @@ const routes = [
     name: "Admin",
     component: Admin,
     beforeEnter: AuthGuard,
+    children: [
+      {
+        path:"",
+        component: import("../views/Admin/AdminCategorias.vue")
+      },
+      {
+        path:"/colecciones",
+        component: import("../views/Admin/AdminColecciones.vue")
+      },
+      {
+        path:"/tours",
+        component: import("../views/Admin/AdminTours.vue")
+      },
+      {
+        path:"/clientes",
+        component: import("../views/Admin/AdminClientes.vue")
+      }
+    ]
   },
   {
     path: "/admin/login",
