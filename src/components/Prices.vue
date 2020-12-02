@@ -123,7 +123,7 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(15,160,194, 0.3);
+  background-color: rgba(15,160,194, 0.6);
   margin: 0;
   margin-bottom: 5px;
 }
@@ -141,7 +141,7 @@ h3{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(15,160,194, 0.9);
+  background-color: rgba(15,160,194, 0.6);
   margin: 0;
   margin-bottom: 5px;
 }
