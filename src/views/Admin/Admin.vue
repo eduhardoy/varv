@@ -22,15 +22,17 @@ export default {};
 
 <style lang="scss">
 .admin-container {
+  margin: 0;
   display: flex;
   flex-direction: row;
   height: 100vh;
   width: 100vw;
   position: relative;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
 
   .admin-menu {
     position: relative;
-    background-color: beige;
+    color: white;
     height: 100%;
     width: 20%;
     display: flex;
@@ -39,6 +41,7 @@ export default {};
     .admin-menu-title {
       box-sizing: border-box;
       border: 1px solid black;
+      background-color: #1c1c1c;
       display: flex;
       justify-content: center;
       height: 10%;
@@ -50,14 +53,18 @@ export default {};
     .admin-menu-list {
       box-sizing: border-box;
       border: 1px solid black;
+      background-color: #383838;
       display: flex;
       justify-content: start;
       flex-direction: column;
+      align-items: center;
       height: 90%;
+      padding-top: 10px;
 
       button {
-        font-family: Poppins-Medium;
-        font-size: 16px;
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        width: 90%;
+        font-size: 20px;
         color: #555555;
         line-height: 1.2;
         display: flex;
@@ -75,7 +82,7 @@ export default {};
 
   .admin-subcontainer {
     /* position: relative; */
-    background-color: beige;
+    background-color: white;
     height: 100%;
     width: 80%;
   }

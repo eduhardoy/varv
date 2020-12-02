@@ -22,7 +22,7 @@ export default {
 <style lang="scss">
 .admin-categorias {
   position: relative;
-  background-color: beige;
+  background-color: white;
   height: 100%;
   width: 100%;
   display: flex;
@@ -31,12 +31,15 @@ export default {
   .admin-title {
     box-sizing: border-box;
     border: 1px solid black;
+    background-color: #d1d1d1;
     display: flex;
     justify-content: center;
     height: 10%;
     align-items: center;
     h1 {
       margin: 0px;
+      color: #000;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
     }
   }
 

@@ -2,8 +2,10 @@
   <div class="container-login">
     <div class="wrap-login">
       <form class="login-form" action="">
-        <span class="login-form-logo"></span>
-        <span class="login-form-title"> Log in</span>
+        <span class="login-form-logo">
+          <img class="logovarv" src="../../assets/VARVLOGO.png" alt="">
+        </span>
+        <span class="login-form-title"> Login here</span>
         <div class="form-wrap-input">
           <input
             type="text"
@@ -22,7 +24,7 @@
         </div>
         <div class="form-container-btn">
           <button class="form-btn" v-on:click.prevent="goToAdminHome">
-            Login
+            LOGIN
           </button>
         </div>
       </form>
@@ -51,9 +53,9 @@ export default {
 
 <style>
 .container-login {
-  min-height: 95vh;
-  min-width: 95vw;
-  background-image: url(../../assets/devices.png);
+  min-height: 97vh;
+  min-width: 97vw;
+  background-image: url(../../assets/centro.png);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -75,7 +77,7 @@ export default {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.7);
 }
 
 .wrap-login {
@@ -83,7 +85,8 @@ export default {
   border-radius: 10px;
   overflow: hidden;
   padding: 55px 55px 37px 55px;
-  background: -webkit-linear-gradient(top, #7579ff, #b224ef);
+  background: #fff;
+  box-shadow: 0px 8px 9px -1px rgba(125, 120, 120, 0.6);
 }
 
 .login-form {
@@ -96,17 +99,22 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   background-color: #fff;
   margin: 0 auto;
+  box-shadow: 0px 0px 9px 0px #000000;
+}
+
+.logovarv {
+  width: 90px;
 }
 
 .login-form-title {
-  font-family: Poppins-Medium;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 30px;
-  color: #fff;
+  color: #000;
   line-height: 1.2;
   text-align: center;
   text-transform: uppercase;
@@ -118,14 +126,14 @@ export default {
 .form-wrap-input {
   width: 100%;
   position: relative;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.24);
+  border-bottom: 2px solid black;
   margin-bottom: 30px;
 }
 
 .form-input {
-  font-family: Poppins-Regular;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #ffff;
+  color: #000;
   line-height: 1.2;
   display: block;
   width: 100%;
@@ -138,7 +146,7 @@ export default {
 }
 
 .form-input::placeholder {
-  color: #ffff;
+  color: #000;
 }
 
 .form-container-btn {
@@ -148,9 +156,10 @@ export default {
   width: 100%;
 }
 .form-btn {
-  font-family: Poppins-Medium;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-size: 16px;
-  color: #555555;
+  color: #fff;
+  box-shadow: 0px 8px 9px -1px rgba(125, 120, 120, 0.6);
   line-height: 1.2;
   display: flex;
   justify-content: center;
@@ -161,12 +170,13 @@ export default {
   border-radius: 25px;
   position: relative;
   transition: 0.4s;
+  background-color: #1e1e1e;
 }
 
 .form-btn:hover {
   transition: 0.4s;
   color: #fff;
-  background: -webkit-linear-gradient(bottom, #7579ff, #b224ef);
+  background: #06D755;
   /* background: linear-gradient(bottom, #7579ff, #b224ef); */
 }
 

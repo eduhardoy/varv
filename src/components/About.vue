@@ -33,7 +33,7 @@ export default {
 <style>
 
 .about {
-  max-width: 1200px;
+  max-width: 1700px;
   flex: 1%;
   margin: 0 auto;
   padding-top: 50px;
