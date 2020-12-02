@@ -1,0 +1,104 @@
+[
+    {
+        "id":"1",
+        "name":"Coleccion 1",
+        "description":"Coleccion 1",
+        "image":{
+            "id":"1",
+            "name":"Image 1",
+            "url":"https://xxxxxx/xxx"
+        },
+        "categories": [
+            {
+                "id":"1",
+                "name":"Hoteles",
+                "description":"Todos los hoteles."
+            },
+            {
+                "id":"2",
+                "name":"Cultural",
+                "description":"Todos los centros culturales."
+            }
+        ],
+        "tours": [
+            {
+                "id":"1",
+                "name":"Tour 1",
+                "description": "Tour 1",
+                "image":{
+                    "id":"4",
+                    "name":"Image 1",
+                    "url":"https://xxxxxx/xxx"
+                }
+            }
+        ]
+    },
+    {
+        "id":"2",
+        "name":"Coleccion 2",
+        "description":"Coleccion 2",
+        "image":{
+            "id":"2",
+            "name":"Image 2",
+            "url":"https://xxxxxx/xxx"
+        },
+        "categories": [
+            {
+                "id":"1",
+                "name":"Hoteles",
+                "description":"Todos los hoteles."
+            },
+            {
+                "id":"2",
+                "name":"Cultural",
+                "description":"Todos los centros culturales."
+            }
+        ],
+        "tours": [
+            {
+                "id":"2",
+                "name":"Tour 2",
+                "description": "Tour 2",
+                "image":{
+                    "id":"5",
+                    "name":"Image 5",
+                    "url":"https://xxxxxx/xxx"
+                }
+            }
+        ]
+    },
+    {
+        "id":"3",
+        "name":"Coleccion 3",
+        "description":"Coleccion 3",
+        "image":{
+            "id":"3",
+            "name":"Image 3",
+            "url":"https://xxxxxx/xxx"
+        },
+        "categories": [
+            {
+                "id":"1",
+                "name":"Hoteles",
+                "description":"Todos los hoteles."
+            },
+            {
+                "id":"2",
+                "name":"Cultural",
+                "description":"Todos los centros culturales."
+            }
+        ],
+        "tours": [
+            {
+                "id":"3",
+                "name":"Tour 3",
+                "description": "Tour 3",
+                "image":{
+                    "id":"6",
+                    "name":"Image 6",
+                    "url":"https://xxxxxx/xxx"
+                }
+            }
+        ]
+    }
+]
