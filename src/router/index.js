@@ -59,7 +59,7 @@ const routes = [
         component: import("../views/Admin/AdminColecciones.vue")
       },
       {
-        path:"/tours",
+        path:"/admin/tours",
         component: import("../views/Admin/AdminTours.vue")
       },
       {

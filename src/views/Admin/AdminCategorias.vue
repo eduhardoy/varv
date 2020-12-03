@@ -10,28 +10,39 @@
     </div>
     <div class="admin-body">
       <ul class="admin-list">
-        <li class="list-item">
-          <div></div>
-          <button></button>
-          <button></button>
+        <li v-for="item in items" v-bind:key="item.id" class="list-item">
+          <div class="datos-list">
+            <h4>Nombre: {{ item.name }}</h4>
+            <h4>Descripción: {{ item.description }}</h4>
+          </div>
+          <button class="change-button">
+            <img src="../../assets/config.png" alt="">
+          </button>
+          <button class="delete-button">
+            <img src="../../assets/delete.png" alt="">
+          </button>
         </li>
-        <li class="list-item"></li>
-        <li class="list-item"></li>
-        <li class="list-item"></li>
-        <li class="list-item"></li>
-        <li class="list-item"></li>
       </ul>
     </div>
   </div>
 </template>
 
 <script>
+import datos from "../../../JSON EJEMPLOS/categorias.json";
+
 export default {
   data: () => {
     return {
       title: "CATEGORÍAS",
     };
   },
+  computed: {
+    items() {
+      return datos.map((item) => {
+        return item;
+      })
+    }
+  }
 };
 </script>
 
@@ -79,7 +90,7 @@ export default {
       justify-content: center;
       align-items: center;
       line-height: 1;
-      background-color: rgb(0, 0, 0);
+      background-color: rgb(14, 14, 14);
       box-shadow: 0px 0px 9px -2px #000000;
       color: rgb(255, 255, 255);
       h2{
@@ -87,6 +98,7 @@ export default {
         margin: 0;
         padding-bottom: 5px;
         font-size: 70px;
+        font-weight: 500;
       }
     }
     }
@@ -116,6 +128,47 @@ export default {
       background: #ededed;
       border-radius: 25px;
       box-shadow: 0px 0px 9px -2px #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .datos-list{
+        width: 60%;
+        height: 70%;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background: #ededed;
+        h4{
+          font-family: "Lato", Helvetica, Arial, sans-serif;
+          font-size: 28px;
+          font-weight: 300;
+          margin: 0;
+          margin-top: 5px;
+          margin-bottom: 10px;
+        }
+      }
+      .change-button{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 50px;
+          background: #ededed;
+        }
+      }
+      .delete-button{
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+          width: 50px;
+          background: #ededed;
+        }
+      }
       }
     }
   }

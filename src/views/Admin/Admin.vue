@@ -8,9 +8,9 @@
         <h1>MENU</h1>
       </div>
       <div class="admin-menu-list">
-        <button v-on:click="title = 'Categorias'">Categorias</button>
-        <button v-on:click="title = 'Colecciones'">Colecciones</button>
-        <button v-on:click="title = 'Clientes'">Clientes</button>
+        <button v-on:click="title = 'Categorias'">CATEGORÍAS</button>
+        <button v-on:click="title = 'Colecciones'">COLECCIONES</button>
+        <button v-on:click="title = 'Clientes'">CLIENTES</button>
       </div>
     </div>
     <div class="admin-subcontainer">
@@ -43,7 +43,6 @@ export default {};
 
     .admin-menu-title {
       box-sizing: border-box;
-      border-right: 1px solid black;
       background-color: #ededed;
       display: flex;
       justify-content: space-around;
@@ -61,8 +60,8 @@ export default {};
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 140px;
-      height: 140px;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
       background-color: #fff;
       margin: 0 auto;
@@ -74,7 +73,6 @@ export default {};
 
     .admin-menu-list {
       box-sizing: border-box;
-      border-right: 1px solid black;
       background-color: #ededed;
       display: flex;
       justify-content: start;
@@ -86,12 +84,12 @@ export default {};
       button {
         font-family: "Lato", Helvetica, Arial, sans-serif;
         width: 80%;
-        font-size: 27px;
-        font-weight: 300;
+        font-size: 28px;
+        font-weight: 400;
         color: black;
         line-height: 1.2;
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
         align-items: center;
         padding: 0 20px;
         min-width: 120px;
