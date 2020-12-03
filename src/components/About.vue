@@ -87,7 +87,7 @@ export default {
 }
 
 .lista {
-  width: 40%;
+  width: 30%;
   text-align: justify;
   font-weight: 300;
   font-size: 20px;

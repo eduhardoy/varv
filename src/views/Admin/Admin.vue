@@ -2,6 +2,9 @@
   <div class="admin-container">
     <div class="admin-menu">
       <div class="admin-menu-title">
+        <span class="login-form-logo">
+          <img class="logovarv" src="../../assets/VARVLOGO.png" alt="">
+        </span>
         <h1>MENU</h1>
       </div>
       <div class="admin-menu-list">
@@ -32,7 +35,7 @@ export default {};
 
   .admin-menu {
     position: relative;
-    color: white;
+    color: black;
     height: 100%;
     width: 20%;
     display: flex;
@@ -40,20 +43,39 @@ export default {};
 
     .admin-menu-title {
       box-sizing: border-box;
-      border: 1px solid black;
-      background-color: #1c1c1c;
+      border-right: 1px solid black;
+      background-color: #ededed;
       display: flex;
-      justify-content: center;
-      height: 10%;
+      justify-content: space-around;
+      height: 30%;
       align-items: center;
+      flex-direction: column;
       h1 {
         margin: 0px;
       }
     }
+
+    .login-form-logo {
+      font-size: 60px;
+      color: #333333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background-color: #fff;
+      margin: 0 auto;
+      box-shadow: 0px 0px 9px 0px #000000;
+      .logovarv {
+        width: 90px;
+      }
+    }
+
     .admin-menu-list {
       box-sizing: border-box;
-      border: 1px solid black;
-      background-color: #383838;
+      border-right: 1px solid black;
+      background-color: #ededed;
       display: flex;
       justify-content: start;
       flex-direction: column;
@@ -63,19 +85,22 @@ export default {};
 
       button {
         font-family: "Lato", Helvetica, Arial, sans-serif;
-        width: 90%;
-        font-size: 20px;
-        color: #555555;
+        width: 80%;
+        font-size: 27px;
+        font-weight: 300;
+        color: black;
         line-height: 1.2;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         padding: 0 20px;
         min-width: 120px;
         height: 50px;
-        margin-bottom: 10px;
+        margin-top: 30px;
         position: relative;
         transition: 0.4s;
+        background-color: #ededed;
+        border-bottom: black 1px solid;
       }
     }
   }
