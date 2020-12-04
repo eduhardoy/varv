@@ -99,6 +99,11 @@ export default {};
         transition: 0.4s;
         background-color: #ededed;
         border-bottom: black 1px solid;
+        &:hover{
+          background-color:rgb(0, 0, 0, 0.8);
+          color: white;
+          border-radius: 25px;
+        }
       }
     }
   }

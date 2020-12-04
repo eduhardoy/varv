@@ -93,6 +93,10 @@ export default {
       background-color: rgb(14, 14, 14);
       box-shadow: 0px 0px 9px -2px #000000;
       color: rgb(255, 255, 255);
+      &:hover{
+          background-color:rgba(18, 221, 52, 0.8);
+          color: white;
+        }
       h2{
         font-family: 'Rubik', sans-serif;
         margin: 0;
@@ -158,6 +162,11 @@ export default {
           width: 50px;
           background: #ededed;
         }
+        &:hover{
+          img {
+            width: 80px;
+          }
+        }
       }
       .delete-button{
         width: 10%;
@@ -168,6 +177,11 @@ export default {
           width: 50px;
           background: #ededed;
         }
+        &:hover{
+          img{
+            width: 80px;
+          }
+          };
       }
       }
     }

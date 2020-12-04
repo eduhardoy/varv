@@ -91,9 +91,13 @@ export default {
       justify-content: center;
       align-items: center;
       line-height: 1;
-      background-color: rgb(13, 224, 59);
+      background-color: rgb(0, 0, 0);
       box-shadow: 0px 0px 9px -2px #000000;
       color: rgb(255, 255, 255);
+      &:hover{
+          background-color:rgba(18, 221, 52, 0.8);
+          color: white;
+        }
       h2{
         font-family: 'Rubik', sans-serif;
         margin: 0;
@@ -151,14 +155,18 @@ export default {
         }
       }
       .tour-button{
-        background-color: rgb(143,209,79);
+        background-color: rgba(18, 221, 52, 0.8);
         width: 8%;
         height: 50%;
         border-radius: 15px;
         margin-right: 20px;
-        border: 2px black solid;
+        color: white;
         font-family: "Lato", Helvetica, Arial, sans-serif;
         font-size: 15px;
+        &:hover{
+          border: 2px black solid;
+          color: black;
+        }
       }
       .change-button{
         width: 10%;
@@ -169,6 +177,11 @@ export default {
           width: 50px;
           background: #ededed;
         }
+        &:hover{
+          img{
+            width: 80px;
+          }
+          };
       }
       .delete-button{
         width: 10%;
@@ -179,6 +192,11 @@ export default {
           width: 50px;
           background: #ededed;
         }
+        &:hover{
+          img{
+            width: 80px;
+          }
+          };
       }
       }
     }
