@@ -4,7 +4,7 @@
       <div class="title-box">
         <h1>{{title}}</h1>
       </div>
-      <button class="add-button">
+      <button class="add-button" @click="$refs.add.openModal()">
       <h2>+</h2>
       </button>
     </div>
@@ -15,19 +15,39 @@
             <h4>Nombre: {{ item.name }}</h4>
             <h4>Descripción: {{ item.description }}</h4>
           </div>
-          <button class="change-button">
+          <button class="change-button" @click="$refs.change.openModal()">
             <img src="../../assets/config.png" alt="">
           </button>
-          <button class="delete-button">
+          <button class="delete-button"  @click="$refs.delete.openModal()">
             <img src="../../assets/delete.png" alt="">
           </button>
         </li>
       </ul>
     </div>
+    <ModalAdd ref="add">
+      <template v-slot:body>
+        <input class="modal-selector">
+        <input class="modal-selector">
+      </template>
+    </ModalAdd>
+    <ModalChange ref="change">
+      <template v-slot:body>
+        <input class="modal-selector">
+        <input class="modal-selector">
+      </template>
+    </ModalChange>
+    <ModalDelete ref="delete">
+      <template v-slot:body>
+        <p class="modal-delete-selector">Esta seguro que desea eliminar?</p>
+      </template>
+    </ModalDelete>
   </div>
 </template>
 
 <script>
+import ModalDelete from "../../components/ModalDelete";
+import ModalAdd from "../../components/ModalAdd";
+import ModalChange from "../../components/ModalChange";
 import datos from "../../../JSON EJEMPLOS/categorias.json";
 
 export default {
@@ -35,6 +55,11 @@ export default {
     return {
       title: "CATEGORÍAS",
     };
+  },
+  components: {
+    ModalDelete,
+    ModalAdd,
+    ModalChange,
   },
   computed: {
     items() {
@@ -47,6 +72,9 @@ export default {
 </script>
 
 <style lang="scss">
+.overflow-hidden {
+  overflow: hidden;
+}
 .admin-categorias {
   position: relative;
   background-color: white;
@@ -55,8 +83,17 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-
+  .modal-selector{
+    width: 60%;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 30px;
+    background-color: #ededed;
+    outline: none;
+  }
   .admin-title {
     width: 100%;
     display: flex;
@@ -78,7 +115,7 @@ export default {
     }
     }
     .add-button{
-      z-index: 999;
+      z-index: 997;
       border-radius: 100%;
       top: 25px;
       right: 100px;

@@ -79,7 +79,7 @@ export default {
     }
     }
     .add-button{
-      z-index: 999;
+      z-index: 997;
       border-radius: 100%;
       top: 25px;
       right: 100px;
