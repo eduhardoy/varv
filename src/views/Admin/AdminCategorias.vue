@@ -26,19 +26,19 @@
     </div>
     <ModalAdd ref="add">
       <template v-slot:body>
-        <input class="modal-selector">
-        <input class="modal-selector">
+        <input class="modal-selector" placeholder="Nombre">
+        <input class="modal-selector" placeholder="Descripción">
       </template>
     </ModalAdd>
     <ModalChange ref="change">
       <template v-slot:body>
-        <input class="modal-selector">
-        <input class="modal-selector">
+        <input class="modal-selector" placeholder="Nombre">
+        <input class="modal-selector" placeholder="Descripción">
       </template>
     </ModalChange>
     <ModalDelete ref="delete">
       <template v-slot:body>
-        <p class="modal-delete-selector">Esta seguro que desea eliminar?</p>
+        <p>Esta seguro que desea eliminar?</p>
       </template>
     </ModalDelete>
   </div>
@@ -84,10 +84,12 @@ export default {
   flex-direction: column;
   align-items: center;
   .modal-selector{
+    text-align: center;
     width: 60%;
     font-family: "Lato", Helvetica, Arial, sans-serif;
     margin-top: 20px;
-    padding: 10px;
+    padding: 20px;
+    padding-left: 30px;
     border: 2px solid black;
     border-radius: 25px;
     font-size: 30px;

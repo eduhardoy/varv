@@ -4,7 +4,7 @@
       <div class="title-box">
         <h1>{{title}}</h1>
       </div>
-      <button class="add-button">
+      <button class="add-button" @click="$refs.add.openModal()">
       <h2>+</h2>
       </button>
     </div>
@@ -15,19 +15,47 @@
             <h4>Nombre: {{ item.name }}</h4>
             <h4>URL: {{ item.URL }}</h4>
           </div>
-          <button class="change-button">
+          <button class="change-button" @click="$refs.change.openModal()">
             <img src="../../assets/config.png" alt="">
           </button>
-          <button class="delete-button">
+          <button class="delete-button" @click="$refs.delete.openModal()">
             <img src="../../assets/delete.png" alt="">
           </button>
         </li>
       </ul>
     </div>
+    <ModalAdd ref="add">
+      <template v-slot:body>
+        <div class="modal-container">
+          <input class="modal-selector" placeholder="Nombre">
+          <input class="modal-selector" placeholder="Descripción">
+          <input class="modal-selector" placeholder="Nombre imagen">
+          <input class="modal-selector" placeholder="URL">
+        </div>
+      </template>
+    </ModalAdd>
+    <ModalChange ref="change">
+      <template v-slot:body>
+        <div class="modal-container">
+          <input class="modal-selector" placeholder="Nombre">
+          <input class="modal-selector" placeholder="Descripción">
+          <input class="modal-selector" placeholder="Nombre imagen">
+          <input class="modal-selector" placeholder="URL">
+        </div>
+      </template>
+    </ModalChange>
+    <ModalDelete ref="delete">
+      <template v-slot:body>
+        <p>Esta seguro que desea eliminar?</p>
+      </template>
+    </ModalDelete>
   </div>
 </template>
 
 <script>
+import ModalDelete from "../../components/ModalDelete";
+import ModalAdd from "../../components/ModalAdd";
+import ModalChange from "../../components/ModalChange";
 import datos from "../../../JSON EJEMPLOS/tours.json";
 
 export default {
@@ -35,6 +63,11 @@ export default {
     return {
       title: "TOURS",
     };
+  },
+  components: {
+    ModalDelete,
+    ModalAdd,
+    ModalChange,
   },
   computed: {
     items() {
@@ -56,7 +89,27 @@ export default {
   flex-direction: column;
   align-items: center;
   font-family: "Lato", Helvetica, Arial, sans-serif;
-
+  .modal-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .modal-selector{
+    text-align: center;
+    width: 30%;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    padding: 20px;
+    padding-left: 30px;
+    margin-left: 20px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 25px;
+    background-color: #ededed;
+    outline: none;
+  }
+  }
   .admin-title {
     width: 100%;
     display: flex;
