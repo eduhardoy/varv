@@ -31,6 +31,12 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'Brandon';
+  src:  url('../assets/Fonts/Brandon_med.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 .about {
   max-width: 1700px;
@@ -61,7 +67,7 @@ export default {
 }
 
 .frase h2 strong{
-  font-family: "Brandon Text", sans-serif;
+  font-family: "Brandon", sans-serif;
   font-weight: 400;
   margin: 0;
 }
@@ -69,7 +75,7 @@ export default {
 .description {
   width: 100%;
   height: 70%;
-  margin-top: 8%;
+  margin-top: 5%;
   margin-bottom: 3%;
   display: flex;
   justify-content: center;
@@ -90,7 +96,7 @@ export default {
   width: 30%;
   text-align: justify;
   font-weight: 300;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .lista h4 {

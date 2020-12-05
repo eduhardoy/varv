@@ -40,6 +40,13 @@ export default {
 
 <style>
 @font-face {
+  font-family: 'Brandon';
+  src:  url('../assets/Fonts/Brandon_med.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'icomoon';
   src:  url('../../public/fonts/icomoon.eot?uus47');
   src:  url('../../public/fonts/icomoon.eot?uus47#iefix') format('embedded-opentype'),
@@ -77,9 +84,6 @@ export default {
 .icon-facebook:before {
   content: "\ea90";
 }
-.icon-facebook2:before {
-  content: "\ea91";
-}
 .icon-instagram:before {
   content: "\ea92";
 }
@@ -103,7 +107,7 @@ export default {
 }
 
 .contact h3 {
-  font-family: "Lato", sans-serif;
+  font-family: "Brandon", sans-serif;
   font-size: 35px;
   font-weight: 400;
   color: black;
@@ -251,7 +255,7 @@ export default {
 
 @media (max-width: 950px) {
 .contact {
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
@@ -259,7 +263,7 @@ export default {
 
 .formnow {
   width: 70%;
-  margin-bottom: 30px;
+  margin-top: 100px;
 }
 
 .formbutton{

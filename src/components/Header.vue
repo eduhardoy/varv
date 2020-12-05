@@ -7,10 +7,10 @@
     </div>
     <div class="menu">
       <ul class="nav">
-        <li><router-link to="about">NOSOTROS</router-link></li>
-        <li><router-link to="tours">PROYECTOS</router-link></li>
-        <li><router-link to="contact">PRECIOS</router-link></li>
-        <li><router-link to="contact">CONTACTO</router-link></li>
+        <li><router-link to="about">Nosotros</router-link></li>
+        <li><router-link to="tours">Proyectos</router-link></li>
+        <li><router-link to="contact">Precios</router-link></li>
+        <li><router-link to="contact">Contacto</router-link></li>
       </ul>
     </div>
   </header>
@@ -23,11 +23,17 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'Brandon';
+  src:  url('../assets/Fonts/Brandon_bld.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 .header {
   width: 100%;
   height: 100px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: white;
   box-shadow: 0px 8px 9px -1px rgba(125, 120, 120, 0.6);
   color: white;
@@ -55,7 +61,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 80%;
+  width: 50%;
 }
 
 .nav {
@@ -69,13 +75,13 @@ ul {
   list-style-type: none;
 }
 li {
-  padding-left: 30px;
+  padding-left: 50px;
 }
 a {
   text-decoration: none;
   color: black;
-  font-family: "Lato", sans-serif;
-  font-size: 22px;
-  font-weight: 400;
+  font-family: "Brandon", sans-serif;
+  font-size: 20px;
+  text-transform: uppercase;
 }
 </style>
