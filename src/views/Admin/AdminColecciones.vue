@@ -2,10 +2,10 @@
   <div class="admin-colecciones">
     <div class="admin-title">
       <div class="title-box">
-        <h1>{{title}}</h1>
+        <h1>{{ title }}</h1>
       </div>
       <button class="add-button" @click="$refs.add.openModal()">
-      <h2>+</h2>
+        <h2>+</h2>
       </button>
     </div>
     <div class="admin-body">
@@ -15,12 +15,17 @@
             <h4>Nombre: {{ item.name }}</h4>
             <h4>Descripción: {{ item.description }}</h4>
           </div>
-          <button class="tour-button">TOURS</button>
-          <button class="change-button" @click="$refs.change.openModal()">
-            <img src="../../assets/config.png" alt="">
+          <button class="tour-button" v-on:click.prevent="goToTour(item.tours)">
+            TOURS
+          </button>
+          <button
+            class="change-button"
+            v-on:click.prevent="openChangeModal(item)"
+          >
+            <img src="../../assets/config.png" alt="" />
           </button>
           <button class="delete-button" @click="$refs.delete.openModal()">
-            <img src="../../assets/delete.png" alt="">
+            <img src="../../assets/delete.png" alt="" />
           </button>
         </li>
       </ul>
@@ -28,22 +33,22 @@
     <ModalAdd ref="add">
       <template v-slot:body>
         <div class="modal-container">
-          <input class="modal-selector" placeholder="Nombre">
-          <input class="modal-selector" placeholder="Descripción">
-          <input class="modal-selector" placeholder="Nombre imagen">
-          <input class="modal-selector" placeholder="URL">
-          <input class="modal-selector" placeholder="Categoria">
+          <input class="modal-selector" placeholder="Nombre" />
+          <input class="modal-selector" placeholder="Descripción" />
+          <input class="modal-selector" placeholder="Nombre imagen" />
+          <input class="modal-selector" placeholder="URL" />
+          <input class="modal-selector" placeholder="Categoria" />
         </div>
       </template>
     </ModalAdd>
     <ModalChange ref="change">
       <template v-slot:body>
         <div class="modal-container">
-          <input class="modal-selector" placeholder="Nombre">
-          <input class="modal-selector" placeholder="Descripción">
-          <input class="modal-selector" placeholder="Nombre imagen">
-          <input class="modal-selector" placeholder="URL">
-          <input class="modal-selector" placeholder="Categoria">
+          <input class="modal-selector" placeholder="Nombre" v-model="nombre" />
+          <input class="modal-selector" placeholder="Descripción" />
+          <input class="modal-selector" placeholder="Nombre imagen" />
+          <input class="modal-selector" placeholder="URL" />
+          <input class="modal-selector" placeholder="Categoria" />
         </div>
       </template>
     </ModalChange>
@@ -63,8 +68,20 @@ import ModalChange from "../../components/ModalChange";
 import datos from "../../../JSON EJEMPLOS/colecciones.json";
 
 export default {
+  methods: {
+    goToTour(tours) {
+      console.log(tours);
+      this.$router.push({ name: "tours", params: { tours } });
+    },
+    openChangeModal(props) {
+      //prorps = {id,name,descrption,imageId,imageName,imageUrl}
+      this.changeState = props;
+      this.$refs.change.openModal();
+    },
+  },
   data: () => {
     return {
+      changeState: {},
       title: "COLECCIONES",
     };
   },
@@ -77,9 +94,9 @@ export default {
     items() {
       return datos.map((item) => {
         return item;
-      })
-    }
-  }
+      });
+    },
+  },
 };
 </script>
 
@@ -93,26 +110,26 @@ export default {
   flex-direction: column;
   align-items: center;
   font-family: "Lato", Helvetica, Arial, sans-serif;
-  .modal-container{
+  .modal-container {
     width: 100%;
     display: flex;
     justify-content: center;
     flex-direction: row;
     flex-wrap: wrap;
-    .modal-selector{
-    text-align: center;
-    width: 30%;
-    font-family: "Lato", Helvetica, Arial, sans-serif;
-    margin-top: 20px;
-    padding: 20px;
-    padding-left: 30px;
-    margin-left: 20px;
-    border: 2px solid black;
-    border-radius: 25px;
-    font-size: 25px;
-    background-color: #ededed;
-    outline: none;
-  }
+    .modal-selector {
+      text-align: center;
+      width: 30%;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      margin-top: 20px;
+      padding: 20px;
+      padding-left: 30px;
+      margin-left: 20px;
+      border: 2px solid black;
+      border-radius: 25px;
+      font-size: 25px;
+      background-color: #ededed;
+      outline: none;
+    }
   }
   .admin-title {
     width: 100%;
@@ -120,21 +137,21 @@ export default {
     justify-content: center;
     align-items: center;
     .title-box {
-    height: 100px;
-    width: 22%;
-    color: black;
-    background-color: transparent;
-    border-bottom: solid 2px black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    h1 {
-      font-family: "Lato", Helvetica, Arial, sans-serif;
-      font-size: 45px;
-      font-weight: 300;
+      height: 100px;
+      width: 22%;
+      color: black;
+      background-color: transparent;
+      border-bottom: solid 2px black;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h1 {
+        font-family: "Lato", Helvetica, Arial, sans-serif;
+        font-size: 45px;
+        font-weight: 300;
+      }
     }
-    }
-    .add-button{
+    .add-button {
       z-index: 997;
       border-radius: 100%;
       top: 25px;
@@ -150,19 +167,19 @@ export default {
       background-color: rgb(0, 0, 0);
       box-shadow: 0px 0px 9px -2px #000000;
       color: rgb(255, 255, 255);
-      &:hover{
-          background-color:rgba(18, 221, 52, 0.8);
-          color: white;
-        }
-      h2{
-        font-family: 'Rubik', sans-serif;
+      &:hover {
+        background-color: rgba(18, 221, 52, 0.8);
+        color: white;
+      }
+      h2 {
+        font-family: "Rubik", sans-serif;
         margin: 0;
         padding-bottom: 5px;
         font-size: 70px;
         font-weight: 500;
       }
     }
-    }
+  }
 
   .admin-body {
     background-color: white;
@@ -171,7 +188,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    .admin-list{
+    .admin-list {
       width: 90%;
       display: flex;
       justify-content: center;
@@ -181,79 +198,79 @@ export default {
       margin: 0;
       margin-top: 30px;
       .list-item {
-      padding: 0;
-      margin: 0;
-      margin-top: 30px;
-      width: 80%;
-      height: 100px;
-      background: #ededed;
-      border-radius: 25px;
-      box-shadow: 0px 0px 9px -2px #000000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      .datos-list{
-        width: 60%;
-        height: 70%;
-        margin-left: 50px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+        width: 80%;
+        height: 100px;
         background: #ededed;
-        h4{
+        border-radius: 25px;
+        box-shadow: 0px 0px 9px -2px #000000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .datos-list {
+          width: 60%;
+          height: 70%;
+          margin-left: 50px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          background: #ededed;
+          h4 {
+            font-family: "Lato", Helvetica, Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 300;
+            margin: 0;
+            margin-top: 5px;
+            margin-bottom: 10px;
+          }
+        }
+        .tour-button {
+          background-color: rgba(18, 221, 52, 0.8);
+          width: 8%;
+          height: 50%;
+          border-radius: 15px;
+          margin-right: 20px;
+          color: white;
           font-family: "Lato", Helvetica, Arial, sans-serif;
-          font-size: 28px;
-          font-weight: 300;
-          margin: 0;
-          margin-top: 5px;
-          margin-bottom: 10px;
-        }
-      }
-      .tour-button{
-        background-color: rgba(18, 221, 52, 0.8);
-        width: 8%;
-        height: 50%;
-        border-radius: 15px;
-        margin-right: 20px;
-        color: white;
-        font-family: "Lato", Helvetica, Arial, sans-serif;
-        font-size: 15px;
-        &:hover{
-          border: 2px black solid;
-          color: black;
-        }
-      }
-      .change-button{
-        width: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-          width: 50px;
-          background: #ededed;
-        }
-        &:hover{
-          img{
-            width: 80px;
+          font-size: 15px;
+          &:hover {
+            border: 2px black solid;
+            color: black;
           }
-          };
-      }
-      .delete-button{
-        width: 10%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        img{
-          width: 50px;
-          background: #ededed;
         }
-        &:hover{
-          img{
-            width: 80px;
+        .change-button {
+          width: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 50px;
+            background: #ededed;
           }
-          };
-      }
+          &:hover {
+            img {
+              width: 80px;
+            }
+          }
+        }
+        .delete-button {
+          width: 10%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            width: 50px;
+            background: #ededed;
+          }
+          &:hover {
+            img {
+              width: 80px;
+            }
+          }
+        }
       }
     }
   }

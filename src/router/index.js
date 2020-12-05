@@ -51,22 +51,24 @@ const routes = [
     beforeEnter: AuthGuard,
     children: [
       {
-        path:"",
-        component: import("../views/Admin/AdminCategorias.vue")
+        path: "",
+        component: import("../views/Admin/AdminCategorias.vue"),
       },
       {
-        path:"/colecciones",
-        component: import("../views/Admin/AdminColecciones.vue")
+        path: "/admin/colecciones",
+        component: import("../views/Admin/AdminColecciones.vue"),
       },
       {
-        path:"/admin/tours",
-        component: import("../views/Admin/AdminTours.vue")
+        path: "/admin/tours",
+        name: "tours",
+        component: import("../views/Admin/AdminTours.vue"),
+        props: true,
       },
       {
-        path:"/clientes",
-        component: import("../views/Admin/AdminClientes.vue")
-      }
-    ]
+        path: "/admin/clientes",
+        component: import("../views/Admin/AdminClientes.vue"),
+      },
+    ],
   },
   {
     path: "/admin/login",
