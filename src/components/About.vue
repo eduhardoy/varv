@@ -1,20 +1,20 @@
 <template>
   <div class="about">
     <div class="frase">
-      <h2>Hola, esto es <strong>VARV</strong></h2>
-      <h2>Nosotros creamos Tours 360 para que logres</h2>
+      <h2>Hola, esto es <strong>VARV</strong>.</h2>
+      <h2>Nosotros creamos Tours Virtuales 360° para que logres</h2>
       <h2>darle dinámica y vida a tus proyectos</h2>
     </div>
     <div class="description">
       <figure class="devices">
-        <img src="../assets/devices.png" alt="">
+        <img src="../assets/vr.png" alt="">
       </figure>
       <div class="lista">
-        <h4>Nos destaca el sector en la realizacion de Tours Virtuales 360 de Alta Calidad para el sector Inmobiliario y Cultural</h4>
+        <h4>Trabajamos con todas las plataformas y dispositivos</h4>
         <ul>
           <h5>Tours insertables en paginas WEB</h5>
           <h5>Compatibles con nuevas tecnologias y dispositivos</h5>
-          <h5>Fotos 360 para el Facebook</h5>
+          <h5>Fotos 360° para el Facebook</h5>
           <h5>Tour VR insertable en Google Maps y Street View</h5>
           <h5>Tour Gafas VR</h5>
           <h5>Contenido de Realidad Virtual para Ferias</h5>

@@ -8,6 +8,7 @@
     <About />
     <Prices />
     <Contact />
+    <Clients />
     <Footer />
   </div>
 </template>
@@ -19,6 +20,7 @@ import Hero from "../components/Hero";
 import About from "../components/About";
 import Prices from "../components/Prices";
 import Contact from "../components/Contact";
+import Clients from "../components/Clients";
 import Footer from "../components/Footer";
 
 export default {
@@ -30,6 +32,7 @@ export default {
     About,
     Prices,
     Contact,
+    Clients,
     Footer,
   },
 };

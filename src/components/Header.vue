@@ -7,10 +7,10 @@
     </div>
     <div class="menu">
       <ul class="nav">
-        <li><router-link to="about">Nosotros</router-link></li>
-        <li><router-link to="tours">Proyectos</router-link></li>
-        <li><router-link to="contact">Precios</router-link></li>
-        <li><router-link to="contact">Contacto</router-link></li>
+        <li class="menu-elements"><router-link to="about">Nosotros</router-link></li>
+        <li class="menu-elements"><router-link to="tours">Proyectos</router-link></li>
+        <li class="menu-elements"><router-link to="contact">Precios</router-link></li>
+        <li class="menu-elements"><router-link to="contact">Contacto</router-link></li>
       </ul>
     </div>
   </header>
@@ -71,17 +71,16 @@ export default {
   align-items: center;
   padding-right: 70px;
   margin: 0;
-}
-
-ul {
   list-style-type: none;
 }
-li {
+
+.menu-elements {
   margin-left: 40px;
   height: 30px;
-  width: 120px;
+  padding-right: 10px;
+  padding-left: 10px;
 } 
-li:hover {
+.menu-elements:hover {
   border-bottom: 0.1em solid black;
 }
 a {

@@ -47,15 +47,16 @@
         <h4 class="title2">+$200</h4>
       </div>
       <div class="description1">
-        <h3>Videos 360°</h3>
+        <h3>Vídeos 360°</h3>
       </div>
       <div class="description2">
         <h3>Tours interactivos personalizados</h3>
       </div>
       <div class="description3">
-        <h3>*Cuentanos sobre tu proyecto y cotiza con nosotros</h3>
+        <h3>Fotos y vídeos con dron</h3>
       </div>
       <div class="description4">
+        <h3>*Cuentanos sobre tu proyecto y cotiza</h3>
       </div>
     </div>
     </div>
@@ -85,15 +86,18 @@ h3{
 
 .list {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   padding-bottom: 50px;
 }
 
 .pricecase {
-  height: 450px;
-  width: 400px;
+  height: 480px;
+  width: 25%;
+  margin-left: 50px;
+  min-width: 450px;
+  max-width: 500px;
   margin-top: 50px;
   border-radius: 20%;
   border: solid 3px black;
