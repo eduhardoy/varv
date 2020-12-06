@@ -92,8 +92,8 @@ h3{
 }
 
 .pricecase {
-  height: 500px;
-  width: 500px;
+  height: 450px;
+  width: 400px;
   margin-top: 50px;
   border-radius: 20%;
   border: solid 3px black;
@@ -113,7 +113,7 @@ h3{
 
 .title {
   width: 50%;
-  height: 40%;
+  height: 30%;
   font-size: 30px;
   margin: 0;
   color: #ffffff;
@@ -158,22 +158,22 @@ h3{
 .description1 {
   grid-row: 3;
   text-align: center;
-  font-size: 22px;
-  margin-top: 30px;
+  font-size: 18px;
+  margin-top: 20px;
 }
 
 .description2 {
   grid-row: 4;
   text-align: center;
-  font-size: 22px;
-  margin-top: 30px;
+  font-size: 18px;
+  margin-top: 20px;
 }
 
 .description3 {
   grid-row: 5;
   text-align: center;
-  font-size: 22px;
-  margin-top: 30px;
+  font-size: 18px;
+  margin-top: 20px;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -181,8 +181,8 @@ h3{
 .description4 {
   grid-row: 6;
   text-align: center;
-  font-size: 22px;
-  margin-top: 30px;
+  font-size: 18px;
+  margin-top: 20px;
 }
 
 .iva h2{

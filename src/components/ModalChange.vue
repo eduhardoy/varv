@@ -66,8 +66,8 @@ export default {
   &__dialog {
     background-color: #fff;
     position: relative;
-    width: 50%;
-    height: 50%;
+    width: 60%;
+    height: 60%;
     display: flex;
     align-items: center;
     flex-direction: column;
