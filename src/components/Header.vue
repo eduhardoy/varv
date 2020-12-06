@@ -67,6 +67,8 @@ export default {
 .nav {
   display: flex;
   flex-direction: row;
+  justify-content: flex;
+  align-items: center;
   padding-right: 70px;
   margin: 0;
 }
@@ -75,13 +77,19 @@ ul {
   list-style-type: none;
 }
 li {
-  padding-left: 50px;
+  margin-left: 40px;
+  height: 30px;
+  width: 120px;
+} 
+li:hover {
+  border-bottom: 0.1em solid black;
 }
 a {
   text-decoration: none;
   color: black;
   font-family: "Brandon", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
+  text-align: center;
   text-transform: uppercase;
 }
 </style>
