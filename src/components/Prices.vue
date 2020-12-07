@@ -100,7 +100,7 @@ export default {
   max-width: 500px;
   margin-top: 50px;
   border-radius: 20%;
-  border: solid 3px black;
+  border: solid 1px black;
   display: grid;
   grid-template-rows: 100px 120px 50px 50px 50px 50px;
   grid-template-columns: 1fr;

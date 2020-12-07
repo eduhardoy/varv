@@ -7,10 +7,10 @@
     </div>
     <div class="description">
       <figure class="devices">
-        <img src="../assets/devices.png" alt="">
+        <img src="../assets/catedral2.png" alt="">
       </figure>
       <div class="lista">
-        <ul>
+        <ul class="item-about-list">
           <h5> Fotografía y vídeo en 360°</h5>
           <h5> Tours virtuales interactivos</h5>
           <h5> Tomas aéreas con dron</h5>
@@ -39,7 +39,7 @@ export default {
 }
 
 .about {
-  max-width: 1700px;
+  max-width: 1500px;
   flex: 1%;
   margin: 0 auto;
   padding-top: 50px;
@@ -76,17 +76,18 @@ export default {
 
 .description {
   width: 100%;
-  height: 60%;
-  margin-top: 5%;
+  height: 100%;
+  margin-top: 3%;
   margin-bottom: 3%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .devices {
   width: 40%;
-  height: 100%;
+  height: 80%;
   margin: 0;
 }
 
@@ -96,25 +97,32 @@ export default {
 }
 
 .lista {
-  width: 30%;
+  width: 100%;
   text-align: justify;
   font-weight: 300;
   font-size: 25px;
   display: flex;
   align-items: flex-start;
-  margin-left: 40px;
 }
 
 .lista h5 {
-  font-family: "Brandon", sans-serif;
-  font-weight: 400;
-  font-size: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
   margin: 0;
-  margin-top: 10px;
-  letter-spacing: 2px;
+  margin: 15px;
+  padding: 20px;
+  border: black solid 1px;
+  border-radius: 35px;
 }
 
-.lista h5::before {content: "•"; color: rgb(25,147,193)}
+.item-about-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
 
 @media (max-width: 950px) {
 .about {
