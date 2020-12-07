@@ -37,18 +37,18 @@
           <input class="modal-selector" placeholder="Descripción" />
           <input class="modal-selector" placeholder="Nombre imagen" />
           <input class="modal-selector" placeholder="URL" />
-          <input class="modal-selector" placeholder="Categoria" />
+          <input class="modal-selector" placeholder="Categoria"/>
         </div>
       </template>
     </ModalAdd>
     <ModalChange ref="change">
       <template v-slot:body>
         <div class="modal-container">
-          <input class="modal-selector" placeholder="Nombre" v-model="nombre" />
-          <input class="modal-selector" placeholder="Descripción" />
-          <input class="modal-selector" placeholder="Nombre imagen" />
-          <input class="modal-selector" placeholder="URL" />
-          <input class="modal-selector" placeholder="Categoria" />
+          <input class="modal-selector" placeholder="Nombre" v-model="this.changeState.name" />
+          <input class="modal-selector" placeholder="Descripción" v-model="this.changeState.description" />
+          <input class="modal-selector" placeholder="Nombre imagen" v-model="this.changeState.image.name" />
+          <input class="modal-selector" placeholder="URL" v-model="this.changeState.image.url" />
+          <select class="modal-selector" placeholder="Categoria"></select>
         </div>
       </template>
     </ModalChange>
@@ -74,7 +74,7 @@ export default {
       this.$router.push({ name: "tours", params: { tours } });
     },
     openChangeModal(props) {
-      //prorps = {id,name,descrption,imageId,imageName,imageUrl}
+      //{id,name,descrption,imageId,imageName,imageUrl}
       this.changeState = props;
       this.$refs.change.openModal();
     },
