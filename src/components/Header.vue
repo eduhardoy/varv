@@ -29,6 +29,37 @@ export default {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../../public/fonts/icomoon.eot?uus47');
+  src:  url('../../public/fonts/icomoon.eot?uus47#iefix') format('embedded-opentype'),
+    url('../../public/fonts/icomoon.ttf?uus47') format('truetype'),
+    url('../../public/fonts/icomoon.woff?uus47') format('woff'),
+    url('../../public/fonts/icomoon.svg?uus47#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+}
+
 .header {
   width: 100%;
   height: 100px;

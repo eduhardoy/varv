@@ -3,7 +3,7 @@
     <div class="frase">
       <h2>Hola, esto es <strong>VARV</strong>.</h2>
       <h2 class="frase-space">Con nosotros podrás darle</h2>
-      <h2 class="frase-space">dinámica y vida a tus proyectos</h2>
+      <h2 class="frase-space">dinámica y vida a tus proyectos.</h2>
     </div>
     <div class="description">
       <figure class="devices">
@@ -75,29 +75,29 @@ export default {
 }
 
 .description {
-  width: 100%;
+  width: 90%;
   height: 100%;
-  margin-top: 3%;
+  margin-top: 1%;
   margin-bottom: 3%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 .devices {
-  width: 40%;
-  height: 80%;
+  width: 50%;
+  height: auto;
   margin: 0;
 }
 
 .devices img{
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .lista {
-  width: 100%;
+  width: 50%;
   text-align: justify;
   font-weight: 300;
   font-size: 25px;
@@ -122,6 +122,7 @@ export default {
   justify-content: center;
   align-items: center;
   margin: 0;
+  padding: 0;
 }
 
 @media (max-width: 950px) {
