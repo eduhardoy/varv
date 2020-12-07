@@ -67,7 +67,7 @@ export default {
 .nav {
   display: flex;
   flex-direction: row;
-  justify-content: flex;
+  justify-content: center;
   align-items: center;
   padding-right: 70px;
   margin: 0;
@@ -81,7 +81,7 @@ export default {
   padding-left: 10px;
 } 
 .menu-elements:hover {
-  border-bottom: 0.1em solid black;
+  border-bottom: 2px solid black;
 }
 .menu-elements a{
   text-decoration: none;

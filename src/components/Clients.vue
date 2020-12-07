@@ -1,20 +1,12 @@
 <template>
   <div class="clients">
     <div class="container">
-      <h2>CLIENTES</h2>
+      <h2>NUESTROS CLIENTES</h2>
       <ul>
         <li><img src="../assets/cliente4.png" alt="" /></li>
         <li><img src="../assets/cliente3.png" alt="" /></li>
-        <li><img src="../assets/cliente4.png" alt="" /></li>
-        <li><img src="../assets/cliente2.jpeg" alt="" /></li>
         <li><img src="../assets/cliente1.png" alt="" /></li>
         <li><img src="../assets/cliente2.jpeg" alt="" /></li>
-        <li><img src="../assets/cliente3.png" alt="" /></li>
-        <li><img src="../assets/cliente4.png" alt="" /></li>
-        <li><img src="../assets/cliente3.png" alt="" /></li>
-        <li><img src="../assets/cliente1.png" alt="" /></li>
-        <li><img src="../assets/cliente2.jpeg" alt="" /></li>
-        <li><img src="../assets/cliente1.png" alt="" /></li>
       </ul>
     </div>
   </div>
