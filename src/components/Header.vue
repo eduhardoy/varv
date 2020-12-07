@@ -91,4 +91,8 @@ export default {
   text-align: center;
   text-transform: uppercase;
 }
+
+a{
+  text-decoration: none;
+}
 </style>

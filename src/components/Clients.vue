@@ -3,9 +3,18 @@
     <div class="container">
       <h2>CLIENTES</h2>
       <ul>
-        <li><img src="" alt="" /></li>
-        <li><img src="" alt="" /></li>
-        <li><img src="" alt="" /></li>
+        <li><img src="../assets/cliente4.png" alt="" /></li>
+        <li><img src="../assets/cliente3.png" alt="" /></li>
+        <li><img src="../assets/cliente4.png" alt="" /></li>
+        <li><img src="../assets/cliente2.jpeg" alt="" /></li>
+        <li><img src="../assets/cliente1.png" alt="" /></li>
+        <li><img src="../assets/cliente2.jpeg" alt="" /></li>
+        <li><img src="../assets/cliente3.png" alt="" /></li>
+        <li><img src="../assets/cliente4.png" alt="" /></li>
+        <li><img src="../assets/cliente3.png" alt="" /></li>
+        <li><img src="../assets/cliente1.png" alt="" /></li>
+        <li><img src="../assets/cliente2.jpeg" alt="" /></li>
+        <li><img src="../assets/cliente1.png" alt="" /></li>
       </ul>
     </div>
   </div>
@@ -27,10 +36,8 @@ export default {
 
 .container {
   flex: 1%;
-  max-width: 1920px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -39,14 +46,15 @@ export default {
 }
 
 .clients {
-  background-color: #F0F2F5;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  background-color:#fafafa;
+  margin-bottom: 40px;
 }
 
 .clients h2 {
   text-align: center;
-  margin-bottom: 40px;
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 10px;
   color: black;
   font-family: "Brandon", monospace;
   font-size: 35px;
@@ -57,8 +65,7 @@ export default {
   height: auto;
   max-height: 100%;
   width: auto;
-  border-radius: 50%;
-  max-width: 150px;
+  max-width: 200px;
 }
 
 .clients ul {
@@ -68,15 +75,17 @@ export default {
   align-items: center;
   width: 100%;
   padding: 0;
+  margin-bottom: 40px;
 }
 
 .clients ul li {
+  background-color: white;
+  box-shadow: 1px 1px 12px 5px rgba(0,0,0,0.33);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 3%;
   height: 200px;
-  width: 250px;
-  margin-bottom: 3%;
+  width: 200px;
+  margin: 20px;
 }
 </style>

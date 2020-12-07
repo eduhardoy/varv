@@ -11,12 +11,13 @@
       </figure>
       <div class="lista">
         <ul>
-          <h5>- Fotografía y vídeo en 360°</h5>
-          <h5>- Tours virtuales interactivos</h5>
-          <h5>- Tomas aéreas con dron</h5>
-          <h5>- Levantamiento en 3D</h5>
-          <h5>- Diseño arquitectónico</h5>
-          <h5>- Consultoría y construcción</h5>
+          <h5> Fotografía y vídeo en 360°</h5>
+          <h5> Tours virtuales interactivos</h5>
+          <h5> Tomas aéreas con dron</h5>
+          <h5> Levantamiento en 3D</h5>
+          <h5> Diseño arquitectónico</h5>
+          <h5> Consultoría y construcción</h5>
+          <h5> Capacitación digital</h5>
         </ul>
       </div>
     </div>
@@ -80,6 +81,7 @@ export default {
   margin-bottom: 3%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .devices {
@@ -100,15 +102,19 @@ export default {
   font-size: 25px;
   display: flex;
   align-items: flex-start;
+  margin-left: 40px;
 }
 
 .lista h5 {
-  font-weight: 300;
+  font-family: "Brandon", sans-serif;
+  font-weight: 400;
   font-size: 30px;
   margin: 0;
   margin-top: 10px;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
+
+.lista h5::before {content: "•"; color: rgb(25,147,193)}
 
 @media (max-width: 950px) {
 .about {
