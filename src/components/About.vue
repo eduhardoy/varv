@@ -2,22 +2,21 @@
   <div class="about">
     <div class="frase">
       <h2>Hola, esto es <strong>VARV</strong>.</h2>
-      <h2>Nosotros creamos Tours Virtuales 360° para que logres</h2>
-      <h2>darle dinámica y vida a tus proyectos</h2>
+      <h2 class="frase-space">Con nosotros podrás darle</h2>
+      <h2 class="frase-space">dinámica y vida a tus proyectos</h2>
     </div>
     <div class="description">
       <figure class="devices">
-        <img src="../assets/vr.png" alt="">
+        <img src="../assets/devices.png" alt="">
       </figure>
       <div class="lista">
-        <h4>Trabajamos con todas las plataformas y dispositivos</h4>
         <ul>
-          <h5>Tours insertables en paginas WEB</h5>
-          <h5>Compatibles con nuevas tecnologias y dispositivos</h5>
-          <h5>Fotos 360° para el Facebook</h5>
-          <h5>Tour VR insertable en Google Maps y Street View</h5>
-          <h5>Tour Gafas VR</h5>
-          <h5>Contenido de Realidad Virtual para Ferias</h5>
+          <h5>- Fotografía y vídeo en 360°</h5>
+          <h5>- Tours virtuales interactivos</h5>
+          <h5>- Tomas aéreas con dron</h5>
+          <h5>- Levantamiento en 3D</h5>
+          <h5>- Diseño arquitectónico</h5>
+          <h5>- Consultoría y construcción</h5>
         </ul>
       </div>
     </div>
@@ -64,7 +63,9 @@ export default {
 .frase h2 {
   font-weight: 300;
   margin: 0;
+  letter-spacing: 0.1em
 }
+
 
 .frase h2 strong{
   font-family: "Brandon", sans-serif;
@@ -74,7 +75,7 @@ export default {
 
 .description {
   width: 100%;
-  height: 70%;
+  height: 60%;
   margin-top: 5%;
   margin-bottom: 3%;
   display: flex;
@@ -82,7 +83,7 @@ export default {
 }
 
 .devices {
-  width: 50%;
+  width: 40%;
   height: 100%;
   margin: 0;
 }
@@ -96,16 +97,17 @@ export default {
   width: 30%;
   text-align: justify;
   font-weight: 300;
-  font-size: 22px;
-}
-
-.lista h4 {
-  font-weight: 300;
-  margin-top: 0;
+  font-size: 25px;
+  display: flex;
+  align-items: flex-start;
 }
 
 .lista h5 {
   font-weight: 300;
+  font-size: 30px;
+  margin: 0;
+  margin-top: 10px;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 950px) {

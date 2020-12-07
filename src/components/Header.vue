@@ -83,7 +83,7 @@ export default {
 .menu-elements:hover {
   border-bottom: 0.1em solid black;
 }
-a {
+.menu-elements a{
   text-decoration: none;
   color: black;
   font-family: "Brandon", sans-serif;

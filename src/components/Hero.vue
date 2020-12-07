@@ -1,8 +1,10 @@
 <template>
   <div class="hero">
     <div class="hero-container">
-      <h1 class="hero-title">TOURS INTERACTIVOS 360°</h1>
-      <h2 class="hero-details">PARA EL SECTOR EDUCATIVO, INMOBILIARIO Y CULTURAL</h2>
+      <h1 class="hero-title">VARV</h1>
+      <h2 class="hero-details">Visualización</h2>
+      <h2 class="hero-details">Arquitectura</h2>
+      <h2 class="hero-details">Realidad Virtual</h2>
     </div>
   </div>
 </template>
@@ -20,6 +22,14 @@ export default {
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Brandon Thin';
+  src:  url('../assets/Fonts/Brandon_thin.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .hero {
   background-image: url("../assets/mural.png");
   background-color: #ffffff;
@@ -31,24 +41,45 @@ export default {
   margin-top: 95px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-end;
 }
 .hero-container{
-  width: 45%;
+  width: 40%;
+  height: 80%;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
+  margin-top: 145px;
 }
 .hero-title {
+  margin: 0;
   color: #ffffff;
   font-family: "Brandon";
-  font-size: 45px;
+  font-size: 120px;
 }
 .hero-details {
+  margin: 0;
   color: #ffffff;
-  font-family: "Brandon";
-  font-size: 30px;
+  font-family: "Brandon Thin";
+  font-size: 60px;
+}
+
+@media (max-width: 1750px) {
+  .hero-container{
+    margin-top: 165px;
+}
+}
+@media (max-width: 1050px) {
+  .hero-container{
+  width: 100%;
+  align-items: center;
+  margin: 0;
+}
+.hero-title {
+  margin-bottom: 400px;
+  margin-top: 20px;
+}
 }
 </style>

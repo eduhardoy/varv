@@ -18,6 +18,13 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: 'Brandon';
+  src:  url('../assets/Fonts/Brandon_med.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .container {
   flex: 1%;
   max-width: 1920px;
@@ -39,11 +46,11 @@ export default {
 
 .clients h2 {
   text-align: center;
-  margin-top: 20px;
   margin-bottom: 40px;
-  color: #30383f;
-  font-family: "Lato", monospace;
-  font-size: 30px;
+  color: black;
+  font-family: "Brandon", monospace;
+  font-size: 35px;
+  font-weight: 400;
 }
 
 .clients img {

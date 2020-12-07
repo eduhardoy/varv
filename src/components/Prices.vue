@@ -73,8 +73,8 @@ export default {
 </script>
 
 <style>
-h3{
-  font-weight: 300;
+.prices h3{
+  font-weight: 400;
   margin: 0;
 }
 
