@@ -1,31 +1,24 @@
 <template>
+<div></div>
 </template>
 
 <script>
+import datos2 from "../../JSON EJEMPLOS/categorias.json";
+
 export default {
-  name: "SelectButton",
+    name: "SelectButton",
+    computed: {
+        items2() {
+            return datos2.map((item2) => {
+                return item2;
+            });
+        },
+    },
 };
+
 
 </script>
 
 <style>
-.menu-btn {
-    border-radius: 48px;
-    border: 0.5px solid lightgrey;
-    font-size: 0.9em;
-    padding: 2px 10px;
-    background-color: white;
-}
 
-.menu {
-    padding-top: 10px;
-    z-index: 200;
-    margin-top: 4px;
-    background-color: white;
-    position: absolute;
-}
-
-.menu-option {
-    padding: 6px 20px 6px;
-}
 </style>
