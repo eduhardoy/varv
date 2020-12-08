@@ -43,7 +43,7 @@ export default {
 }
 
 .whatsapp {
-  z-index: 999;
+  z-index: 2;
   bottom: 70px;
   right: 20px;
   width: 60px;

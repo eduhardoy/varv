@@ -1,4 +1,5 @@
 <template>
+  <i class="icon-menu burger-button"></i>
   <header class="header">
     <div class="logo">
       <router-link to="/">
@@ -23,13 +24,6 @@ export default {
 </script>
 
 <style>
-@font-face {
-  font-family: 'Brandon';
-  src:  url('../assets/Fonts/Brandon_bld.otf') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @font-face {
   font-family: 'icomoon';
   src:  url('../../public/fonts/icomoon.eot?uus47');
@@ -60,6 +54,21 @@ export default {
   content: "\e9bd";
 }
 
+.burger-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: black;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 6;
+  right: 0px;
+  top: 0px;
+  font-size: 30px;
+}
+
 .header {
   width: 100%;
   height: 100px;
@@ -79,7 +88,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-    width: 20%;
+  width: 20%;
 }
 .logo img {
   width: auto;
@@ -92,7 +101,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 50%;
+  width: 40%;
 }
 
 .nav {
@@ -121,9 +130,58 @@ export default {
   font-size: 18px;
   text-align: center;
   text-transform: uppercase;
+  line-height: 30px;
 }
 
 a{
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header{
+    height: 60px;
+  }
+  .burger-button{
+    display: flex;
+  }
+
+  .logo {
+  width: 100%;
+}
+.logo img {
+  width: auto;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+  .menu{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+    top: 0;
+    left: -100vw;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+  }
+
+  .menu.is-active {
+        left: 0;
+    }
+
+  .nav{
+    flex-direction: column;
+  }
+  .menu-elements {
+  height: 50%;
+  margin: 30px;
+  }
+  .menu-elements a{
+  font-size: 50px;
+  color: white;
+} 
 }
 </style>
