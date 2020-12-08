@@ -82,4 +82,10 @@ export default {
   margin-top: 20px;
 }
 }
+@media (max-width: 768px) {
+.hero {
+  margin-top: 50px;
+}
+}
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="contact">
+  <div class="contact" id="contact">
     <div class="redes">
       <h3>CONTACTO</h3>
       <div>
@@ -98,8 +98,8 @@ export default {
   flex: 1%;
   max-width: 1920px;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 100px;
+  padding-top: 100px;
+    padding-bottom: 100px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
@@ -111,8 +111,7 @@ export default {
   font-size: 35px;
   font-weight: 400;
   color: black;
-  padding-bottom: 30px;
-  padding-top: 30px;
+  padding: 0;
 }
 
 .redes {

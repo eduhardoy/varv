@@ -1,5 +1,5 @@
 <template>
-  <div class="prices">
+  <div class="prices" id="prices">
     <div class="list">
       <div class="pricecase">
       <div class="row1">
@@ -81,7 +81,7 @@ export default {
 .prices {
   background-color: #ffffff;
   width: 100%;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 .list {
@@ -89,7 +89,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 
 .pricecase {
@@ -189,8 +189,6 @@ export default {
 }
 
 .iva h2{
-  padding-bottom: 15px;
-  padding-top: 20px;
   font-size: 30px;
   font-weight: 300;
 }

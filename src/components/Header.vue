@@ -1,25 +1,38 @@
 <template>
-  <i class="icon-menu burger-button"></i>
   <header class="header">
     <div class="logo">
       <router-link to="/">
         <img alt="Vue logo" src="../assets/VARVLOGO.png" >
       </router-link>
     </div>
-    <div class="menu">
+    <div class="menu" v-bind:class="{isActive: isActive}">
+      <button class="notshow" :class="{closebutton: isActive}"  @click="closeMenu()">X</button>
       <ul class="nav">
-        <li class="menu-elements"><router-link to="about">Nosotros</router-link></li>
-        <li class="menu-elements"><router-link to="tours">Proyectos</router-link></li>
-        <li class="menu-elements"><router-link to="contact">Precios</router-link></li>
-        <li class="menu-elements"><router-link to="contact">Contacto</router-link></li>
+        <li class="menu-elements" @click="closeMenu()"><a href="#about">Nosotros</a></li>
+        <li class="menu-elements" @click="closeMenu()"><a href="">Proyectos</a></li>
+        <li class="menu-elements" @click="closeMenu()"><a href="#prices">Precios</a></li>
+        <li class="menu-elements" @click="closeMenu()"><a href="#contact">Contacto</a></li>
       </ul>
     </div>
+    <i class="icon-menu burger-button" @click="openMenu()"></i>
   </header>
 </template>
-
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      isActive: false
+    };
+  },
+  methods: {
+    closeMenu() {
+      this.isActive = false;
+    },
+    openMenu() {
+      this.isActive = true;
+    }
+  }
 };
 </script>
 
@@ -62,11 +75,30 @@ export default {
   display: none;
   align-items: center;
   justify-content: center;
-  position: fixed;
-  z-index: 6;
   right: 0px;
   top: 0px;
   font-size: 30px;
+}
+
+.notshow{
+  display: none;
+}
+
+.closebutton{
+  display: flex;
+  position: absolute;
+  border-radius: 50%;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
 }
 
 .header {
@@ -146,7 +178,7 @@ a{
   }
 
   .logo {
-  width: 100%;
+  width: 20%;
 }
 .logo img {
   width: auto;
@@ -157,7 +189,7 @@ a{
 
   .menu{
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 4;
     top: 0;
     left: -100vw;
@@ -168,15 +200,16 @@ a{
     transition: .4s;
   }
 
-  .menu.is-active {
+  .menu.isActive {
         left: 0;
+        flex-direction: column;
     }
 
   .nav{
     flex-direction: column;
   }
   .menu-elements {
-  height: 50%;
+  height: 60%;
   margin: 30px;
   }
   .menu-elements a{

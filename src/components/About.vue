@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about" id="about">
     <div class="frase">
       <h2>Hola, esto es <strong>VARV</strong>.</h2>
       <h2 class="frase-space">Con nosotros podrás darle</h2>
@@ -42,7 +42,7 @@ export default {
   max-width: 1500px;
   flex: 1%;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 100px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -121,6 +121,7 @@ export default {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  text-align: center;
   margin: 0;
   padding: 0;
 }
