@@ -44,11 +44,13 @@
     <ModalChange ref="change">
       <template v-slot:body>
         <div class="modal-container">
-          <input class="modal-selector" placeholder="Nombre" v-model="this.changeState.name" />
-          <input class="modal-selector" placeholder="Descripción" v-model="this.changeState.description" />
-          <input class="modal-selector" placeholder="Nombre imagen" v-model="this.changeState.image.name" />
-          <input class="modal-selector" placeholder="URL" v-model="this.changeState.image.url" />
-          <select class="modal-selector" placeholder="Categoria"></select>
+          <input class="modal-selector" placeholder="Nombre" v-model="this.changeState.name"/>
+          <input class="modal-selector" placeholder="Descripción" v-model="this.changeState.description"/>
+          <input class="modal-selector" placeholder="Nombre imagen" v-model="this.changeState.image.name"/>
+          <input class="modal-selector" placeholder="URL" v-model="this.changeState.image.url"/>
+          <select class="modal-selector" placeholder="Categoria" multiple>
+            <option value="" v-for="item2 in items2" v-bind:key="item2.id">{{ item2.name }}</option>
+          </select>
         </div>
       </template>
     </ModalChange>
@@ -66,6 +68,7 @@ import ModalDelete from "../../components/ModalDelete";
 import ModalAdd from "../../components/ModalAdd";
 import ModalChange from "../../components/ModalChange";
 import datos from "../../../JSON EJEMPLOS/colecciones.json";
+import datos2 from "../../../JSON EJEMPLOS/categorias.json";
 
 export default {
   methods: {
@@ -94,6 +97,11 @@ export default {
     items() {
       return datos.map((item) => {
         return item;
+      });
+    },
+    items2() {
+      return datos2.map((item2) => {
+        return item2;
       });
     },
   },
