@@ -10,7 +10,7 @@
     </div>
     <div class="admin-body">
       <ul class="admin-list">
-        <li v-for="item in items" v-bind:key="item.id" class="list-item">
+        <li v-for="item in categories" v-bind:key="item.id" class="list-item">
           <div class="datos-list">
             <h4>Nombre: {{ item.name }}</h4>
             <h4>Descripción: {{ item.description }}</h4>
@@ -48,7 +48,6 @@
 import ModalDelete from "../../components/ModalDelete";
 import ModalAdd from "../../components/ModalAdd";
 import ModalChange from "../../components/ModalChange";
-import datos from "../../../JSON EJEMPLOS/categorias.json";
 
 export default {
   data: () => {
@@ -62,11 +61,13 @@ export default {
     ModalChange,
   },
   computed: {
-    items() {
-      return datos.map((item) => {
-        return item;
-      })
+    categories(){
+      console.log(this.$store.getters.allCategories)
+      return this.$store.getters.allCategories
     }
+  },
+  mounted(){
+    this.$store.dispatch("getCategories")
   }
 };
 </script>
