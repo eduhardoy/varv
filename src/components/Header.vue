@@ -2,7 +2,7 @@
   <header class="header">
     <div class="logo">
       <router-link to="/">
-        <img alt="Vue logo" src="../assets/VARVLOGO.png" >
+        <img alt="Vue logo" src="../assets/logo.png" >
       </router-link>
     </div>
     <div class="menu" v-bind:class="{isActive: isActive}">
@@ -103,7 +103,7 @@ export default {
 
 .header {
   width: 100%;
-  height: 100px;
+  height: 70px;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -120,11 +120,11 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 20%;
+  width: 30%;
 }
 .logo img {
   width: auto;
-  height: 80px;
+  height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
@@ -159,7 +159,7 @@ export default {
   text-decoration: none;
   color: black;
   font-family: "Brandon", sans-serif;
-  font-size: 18px;
+  font-size: 15px;
   text-align: center;
   text-transform: uppercase;
   line-height: 30px;
@@ -169,7 +169,7 @@ a{
   text-decoration: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .header{
     height: 60px;
   }
@@ -178,7 +178,7 @@ a{
   }
 
   .logo {
-  width: 20%;
+  width: 100%;
 }
 .logo img {
   width: auto;

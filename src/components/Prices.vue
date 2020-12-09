@@ -81,7 +81,7 @@ export default {
 .prices {
   background-color: #ffffff;
   width: 100%;
-  padding-top: 100px;
+  padding-top: 70px;
 }
 
 .list {

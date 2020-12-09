@@ -42,7 +42,7 @@ export default {
   max-width: 1500px;
   flex: 1%;
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 70px;
   width: 100%;
   display: flex;
   justify-content: center;

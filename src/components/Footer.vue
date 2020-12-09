@@ -4,7 +4,7 @@
       <img src="../assets/VARVLOGO.png" alt="" class="footerlogoimg">
     </figure>
     <div class="rights">
-      <h4>© 2020 All Rights Reserved</h4>
+      <h4>© 2020 All Rights Reserved. <strong><a class="link" href="https://franciscovaldez.pb.online/cv-3">Francisco Valdez Apolo.</a></strong></h4>
     </div>
     <a href="http://inibotnea.com/">
       <figure class="inibot">
@@ -40,6 +40,16 @@ footer figure {
   font-weight: 300;
 }
 
+.rights h4 strong{
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.link{
+  text-decoration: none;
+  color: black;
+}
+
 .footerlogoimg {
   width: 70px;
 }
@@ -47,6 +57,7 @@ footer figure {
 .inibotimg {
   width: 180px;
 }
+
 
 @media (max-width: 950px) {
 footer {
