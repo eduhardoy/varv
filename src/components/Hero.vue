@@ -2,7 +2,7 @@
   <div class="hero">
     <div class="hero-container">
       <h1 class="hero-title">VARV</h1>
-      <h2 class="hero-details">Visualización</h2>
+      <h2 class="hero-details">Tours Virtuales 360</h2>
       <h2 class="hero-details">Arquitectura</h2>
       <h2 class="hero-details">Realidad Virtual</h2>
     </div>
@@ -37,8 +37,8 @@ export default {
   background-position: center center;
   background-size: cover;
   width: 100%;
-  height: 875px;
-  margin-top: 95px;
+  height: 850px;
+  margin-top: 65px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

@@ -98,8 +98,8 @@ export default {
   flex: 1%;
   max-width: 1920px;
   margin: 0 auto;
-  padding-top: 100px;
-    padding-bottom: 100px;
+  padding-top: 70px;
+  padding-bottom: 100px;
   width: 100%;
   display: flex;
   justify-content: flex-start;
