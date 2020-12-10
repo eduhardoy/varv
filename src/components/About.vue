@@ -108,7 +108,7 @@ export default {
 .lista h5 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 25px;
+  font-size: 20px;
   margin: 0;
   margin: 15px;
   padding: 20px;

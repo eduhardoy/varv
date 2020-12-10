@@ -84,7 +84,6 @@ export default {};
       align-items: center;
       height: 90%;
       padding-top: 10px;
-
       button {
         font-family: "Lato", Helvetica, Arial, sans-serif;
         width: 80%;
@@ -103,10 +102,8 @@ export default {};
         transition: 0.4s;
         background-color: #ededed;
         border-bottom: black 1px solid;
-        &:hover {
-          background-color: rgb(0, 0, 0, 0.8);
-          color: white;
-          border-radius: 25px;
+        a {
+          color: black;
         }
       }
     }

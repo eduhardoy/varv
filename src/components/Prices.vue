@@ -94,10 +94,10 @@ export default {
 
 .pricecase {
   height: 480px;
-  width: 25%;
-  min-width: 450px;
-  max-width: 500px;
+  width: calc(80% / 3);
   margin: 20px;
+  box-sizing: border-box;
+  min-width: 450px;
   border-radius: 20%;
   border: solid 1px black;
   display: grid;
