@@ -40,6 +40,10 @@
           <input class="modal-selector" placeholder="Categoria"/>
         </div>
       </template>
+      <template v-slot:footer>
+        <button class="cancel_button" @click="closeModal()">CANCELAR</button>
+        <button class="add_button" @click="closeModal()">AGREGAR</button>
+      </template>
     </ModalAdd>
     <ModalChange ref="change">
       <template v-slot:body>
@@ -53,11 +57,19 @@
           </select>
         </div>
       </template>
+      <template v-slot:footer>
+        <button class="cancel_button" @click="closeModal()">CANCELAR</button>
+        <button class="change_button" @click="closeModal()">MODIFICAR</button>
+      </template>
     </ModalChange>
     <ModalDelete ref="delete">
       <template v-slot:body>
         <p>Esta seguro que desea eliminar?</p>
         <p>*Se eliminaran todos los tours</p>
+      </template>
+      <template v-slot:footer>
+        <button class="cancel_button" @click="closeModal()">CANCELAR</button>
+        <button class="delete_button" @click="closeModal()">ELIMINAR</button>
       </template>
     </ModalDelete>
   </div>

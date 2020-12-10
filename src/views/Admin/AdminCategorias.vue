@@ -18,7 +18,7 @@
           <button class="change-button" v-on:click="openChangeModal(item)">
             <img src="../../assets/config.png" alt="" />
           </button>
-          <button class="delete-button" @click="$refs.delete.openModal()">
+          <button class="delete-button" @click="openDeleteModal(item)">
             <img src="../../assets/delete.png" alt="" />
           </button>
         </li>
@@ -26,8 +26,12 @@
     </div>
     <ModalAdd ref="add">
       <template v-slot:body>
-        <input class="modal-selector" placeholder="Nombre" />
-        <input class="modal-selector" placeholder="Descripción" />
+        <input class="modal-selector" placeholder="Nombre" v-model="newCategory.name"/>
+        <input class="modal-selector" placeholder="Descripción" v-model="newCategory.description"/>
+      </template>
+      <template v-slot:footer>
+        <button class="cancel_button" @click="closeAddModal()">CANCELAR</button>
+        <button class="add_button" @click="confirmAddModal()">AGREGAR</button>
       </template>
     </ModalAdd>
     <ModalChange ref="change">
@@ -42,12 +46,27 @@
           placeholder="Descripción"
           v-model="updateCategory.description"
         />
-        <!-- TODO AGREGAR V-SLOT BUTTONS/FOOTER -->
+      </template>
+      <template v-slot:footer>
+        <button class="cancel_button" @click="$refs.change.closeModal()">
+          CANCELAR
+        </button>
+        <button class="change_button" @click="confirmChangeModal()">
+          MODIFICAR
+        </button>
       </template>
     </ModalChange>
     <ModalDelete ref="delete">
       <template v-slot:body>
         <p>Esta seguro que desea eliminar?</p>
+      </template>
+      <template v-slot:footer>
+        <button class="cancel_button" @click="$refs.delete.closeModal()">
+          CANCELAR
+        </button>
+        <button class="delete_button" @click="confirmDeleteModal()">
+          ELIMINAR
+        </button>
       </template>
     </ModalDelete>
   </div>
@@ -62,6 +81,7 @@ export default {
   data: () => {
     return {
       title: "CATEGORÍAS",
+      newCategory: {},
     };
   },
   components: {
@@ -73,6 +93,27 @@ export default {
     openChangeModal(categoryData) {
       this.$store.dispatch("setUpdateCategory", categoryData);
       return this.$refs.change.openModal();
+    },
+    confirmChangeModal() {
+      this.$store.dispatch("updateCategory");
+      return this.$refs.change.closeModal();
+    },
+    openDeleteModal(categoryData) {
+      this.$store.dispatch("setUpdateCategory", categoryData);
+      return this.$refs.delete.openModal();
+    },
+    confirmDeleteModal() {
+      this.$store.dispatch("deleteCategory");
+      return this.$refs.delete.closeModal();
+    },
+    closeAddModal() {
+      this.newCategory = {};
+      return this.$refs.add.closeModal();
+    },
+    confirmAddModal() {
+      this.$store.dispatch("addCategory", this.newCategory);
+      this.newCategory = {};
+      return this.$refs.add.closeModal();
     },
   },
   computed: {

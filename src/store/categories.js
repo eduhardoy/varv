@@ -16,16 +16,34 @@ export default {
         commit("SET_CATEGORIES", response.data)
       );
     },
-    updateCateogry({ state }) {
+    updateCategory({ state, dispatch }) {
       Axios.put(
         `http://inibotnea.com:3010/api/category/${state.updateCategory.id}`,
         state.updateCategory
-      ).finally(() => {
-        this.$store.dispatch("getCategories");
-      });
+      )
+        .then((response) => console.log(response))
+        .finally(() => {
+          dispatch("getCategories");
+        });
     },
     setUpdateCategory({ commit }, updateCategory) {
       commit("SET_UPDATE_CATEGORY", updateCategory);
+    },
+    deleteCategory({ state, dispatch }) {
+      Axios.delete(
+        `http://inibotnea.com:3010/api/category/${state.updateCategory.id}`
+      )
+        .then((response) => console.log(response))
+        .finally(() => {
+          dispatch("getCategories");
+        });
+    },
+    addCategory({ dispatch }, newCategory) {
+      Axios.post(`http://inibotnea.com:3010/api/category`, newCategory)
+        .then((response) => console.log(response))
+        .finally(() => {
+          dispatch("getCategories");
+        });
     },
   },
   mutations: {
@@ -33,7 +51,7 @@ export default {
       state.categories = categories;
     },
     SET_UPDATE_CATEGORY(state, updateCategory) {
-      state.updateCategory = updateCategory;
+      state.updateCategory = { ...updateCategory };
     },
   },
 };
