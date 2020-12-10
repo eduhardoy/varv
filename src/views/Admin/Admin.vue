@@ -3,14 +3,18 @@
     <div class="admin-menu">
       <div class="admin-menu-title">
         <span class="login-form-logo">
-          <img class="logovarv" src="../../assets/VARVLOGO.png" alt="">
+          <img class="logovarv" src="../../assets/VARVLOGO.png" alt="" />
         </span>
         <h1>MENU</h1>
       </div>
       <div class="admin-menu-list">
-        <button v-on:click="title = 'Categorias'">CATEGORÍAS</button>
-        <button v-on:click="title = 'Colecciones'">COLECCIONES</button>
-        <button v-on:click="title = 'Clientes'">CLIENTES</button>
+        <button><router-link to="/admin">CATEGORÍAS</router-link></button>
+        <button>
+          <router-link to="/admin/colecciones"> COLECCIONES</router-link>
+        </button>
+        <button>
+          <router-link to="/admin/clientes"> CLIENTES</router-link>
+        </button>
       </div>
     </div>
     <div class="admin-subcontainer">
@@ -99,8 +103,8 @@ export default {};
         transition: 0.4s;
         background-color: #ededed;
         border-bottom: black 1px solid;
-        &:hover{
-          background-color:rgb(0, 0, 0, 0.8);
+        &:hover {
+          background-color: rgb(0, 0, 0, 0.8);
           color: white;
           border-radius: 25px;
         }

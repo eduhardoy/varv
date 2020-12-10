@@ -9,6 +9,7 @@
     "build:test": "cross-env X_ENV=test NODE_ENV=production vue-cli-service build"
   },
   "dependencies": {
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "vue": "^3.0.2",
     "vue-router": "^4.0.0-rc.3",
@@ -28,7 +29,8 @@
     "fibers": "^5.0.0",
     "sass": "^1.29.0",
     "sass-loader": "^10.1.0",
-    "vue-cli-plugin-config": "~0.3.7"
+    "vue-cli-plugin-config": "~0.3.7",
+    "vue-loader-v16": "^16.0.0-beta.5.4"
   },
   "eslintConfig": {
     "root": true,
