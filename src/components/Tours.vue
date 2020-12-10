@@ -5,17 +5,29 @@
       <li class="filter-item">{{ item2.name }}</li>
     </ul>
   </div>
-  <div class="tours-portadas">
+  <div class="tours-container">
     <div class="portada-container">
-      <img class="portada" src="../assets/logo.png" alt="">
+      <img class="portada" src="../assets/catedral.png" alt="">
       <h4 class="portada-title">Title</h4>
     </div>
     <div class="portada-container">
-      <img class="portada" src="../assets/logo.png" alt="">
+      <img class="portada" src="../assets/catedral.png" alt="">
       <h4 class="portada-title">Title</h4>
     </div>
     <div class="portada-container">
-      <img class="portada" src="../assets/logo.png" alt="">
+      <img class="portada" src="../assets/catedral.png" alt="">
+      <h4 class="portada-title">Title</h4>
+    </div>
+    <div class="portada-container">
+      <img class="portada" src="../assets/catedral.png" alt="">
+      <h4 class="portada-title">Title</h4>
+    </div>
+    <div class="portada-container">
+      <img class="portada" src="../assets/catedral.png" alt="">
+      <h4 class="portada-title">Title</h4>
+    </div>
+    <div class="portada-container">
+      <img class="portada" src="../assets/catedral.png" alt="">
       <h4 class="portada-title">Title</h4>
     </div>
   </div>
@@ -38,6 +50,13 @@ export default {
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: 'Brandon Thin';
+  src:  url('../assets/Fonts/Brandon_light.otf') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .tours {
   flex: 1%;
   max-width: 1920px;
@@ -50,15 +69,47 @@ export default {
   justify-content: center;
   align-items: center;
   .filter-container{
-    widows: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .filter-list{
+      list-style: none;
+      .filter-item{
+        padding: 1px 10px 1px 10px;
+        font-size: 30px;
+        font-family: "Brandon Thin", sans-serif;
+        font-weight: 400;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        &:hover {
+        border-bottom: 1px solid black;
+        }
+      }
+    }
   }
-  .tours-portada{
+  .tours-container{
   width: 100%;
+  display: inline-flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  .portada-container{
+  box-sizing: border-box;
+  width: calc(100% / 3);
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  .portada-container{
-  width: 33%;
-  margin: 0;
+  .portada{
+    width: 100%;
+  }
+  .portada-title{
+    font-size: 25px;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 20px;
+  }
 }
 }
 }

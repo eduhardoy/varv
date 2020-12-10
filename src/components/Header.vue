@@ -173,21 +173,12 @@ a{
 }
 
 @media screen and (max-width: 1023px) {
-  .header{
-    height: 60px;
-  }
   .burger-button{
     display: flex;
   }
 
   .logo {
   width: 100%;
-}
-.logo img {
-  width: auto;
-  height: 50px;
-  padding-top: 10px;
-  padding-bottom: 10px;
 }
 
   .menu{
@@ -210,6 +201,7 @@ a{
 
   .nav{
     flex-direction: column;
+    padding: 0;
   }
   .menu-elements {
   height: 80%;
