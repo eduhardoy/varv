@@ -10,14 +10,14 @@
     </div>
     <div class="admin-body">
       <ul class="admin-list">
-        <li v-for="item in items" v-bind:key="item.id" class="list-item">
+        <li v-for="item in colecciones" v-bind:key="item.id" class="list-item">
           <div class="datos-list">
             <h4>Nombre: {{ item.name }}</h4>
             <h4>Descripción: {{ item.description }}</h4>
           </div>
-          <button class="tour-button" v-on:click.prevent="goToTour(item.tours)">
+          <!-- <button class="tour-button" v-on:click.prevent="goToTour(item.tours)">
             TOURS
-          </button>
+          </button> -->
           <button
             class="change-button"
             v-on:click.prevent="openChangeModal(item)"
@@ -41,25 +41,25 @@
         </div>
       </template>
       <template v-slot:footer>
-        <button class="cancel_button" @click="closeModal()">CANCELAR</button>
-        <button class="add_button" @click="closeModal()">AGREGAR</button>
+        <button class="cancel_button" @click="closeAddModal()">CANCELAR</button>
+        <button class="add_button" @click="confirmAddModal()">AGREGAR</button>
       </template>
     </ModalAdd>
     <ModalChange ref="change">
       <template v-slot:body>
         <div class="modal-container">
-          <input class="modal-selector" placeholder="Nombre" v-model="this.changeState.name"/>
-          <input class="modal-selector" placeholder="Descripción" v-model="this.changeState.description"/>
-          <input class="modal-selector" placeholder="Nombre imagen" v-model="this.changeState.image.name"/>
-          <input class="modal-selector" placeholder="URL" v-model="this.changeState.image.url"/>
+          <input class="modal-selector" placeholder="Nombre" v-model="updateCollection.name"/>
+          <input class="modal-selector" placeholder="Descripción" v-model="updateCollection.description"/>
+          <input class="modal-selector" placeholder="Nombre imagen" v-model="updateCollection.image.name"/>
+          <input class="modal-selector" placeholder="URL" v-model="updateCollection.image.url"/>
           <select class="modal-selector" placeholder="Categoria" multiple>
-            <option value="" v-for="item2 in items2" v-bind:key="item2.id">{{ item2.name }}</option>
+            <option value="" v-for="item2 in categories" v-bind:key="item2.id">{{ item2.name }}</option>
           </select>
         </div>
       </template>
       <template v-slot:footer>
-        <button class="cancel_button" @click="closeModal()">CANCELAR</button>
-        <button class="change_button" @click="closeModal()">MODIFICAR</button>
+        <button class="cancel_button" @click="$refs.change.closeModal()">CANCELAR</button>
+        <button class="change_button" @click="confirmChangeModal()">MODIFICAR</button>
       </template>
     </ModalChange>
     <ModalDelete ref="delete">
@@ -68,8 +68,8 @@
         <p>*Se eliminaran todos los tours</p>
       </template>
       <template v-slot:footer>
-        <button class="cancel_button" @click="closeModal()">CANCELAR</button>
-        <button class="delete_button" @click="closeModal()">ELIMINAR</button>
+        <button class="cancel_button" @click="$refs.delete.closeModal()">CANCELAR</button>
+        <button class="delete_button" @click="confirmDeleteModal()">ELIMINAR</button>
       </template>
     </ModalDelete>
   </div>
@@ -79,26 +79,43 @@
 import ModalDelete from "../../components/ModalDelete";
 import ModalAdd from "../../components/ModalAdd";
 import ModalChange from "../../components/ModalChange";
-import datos from "../../../JSON EJEMPLOS/colecciones.json";
-import datos2 from "../../../JSON EJEMPLOS/categorias.json";
 
 export default {
+  data: () => ({
+    title: "COLECCIONES",
+    newCollection: {},
+
+  }),
   methods: {
     goToTour(tours) {
       console.log(tours);
       this.$router.push({ name: "tours", params: { tours } });
     },
-    openChangeModal(props) {
-      //{id,name,descrption,imageId,imageName,imageUrl}
-      this.changeState = props;
-      this.$refs.change.openModal();
+    openChangeModal(collectionData) {
+      this.$store.dispatch("setUpdateCollection", collectionData);
+      return this.$refs.change.openModal();
     },
-  },
-  data: () => {
-    return {
-      changeState: {},
-      title: "COLECCIONES",
-    };
+    confirmChangeModal() {
+      this.$store.dispatch("updateCollection");
+      return this.$refs.change.closeModal();
+    },
+    openDeleteModal(collectionData) {
+      this.$store.dispatch("setUpdateCollection", collectionData);
+      return this.$refs.delete.openModal();
+    },
+    confirmDeleteModal() {
+      this.$store.dispatch("deleteCollection");
+      return this.$refs.delete.closeModal();
+    },
+    closeAddModal() {
+      this.newCollection = {};
+      return this.$refs.add.closeModal();
+    },
+    confirmAddModal() {
+      this.$store.dispatch("addCollection", this.newCollection);
+      this.newCollection = {};
+      return this.$refs.add.closeModal();
+    },
   },
   components: {
     ModalDelete,
@@ -106,16 +123,19 @@ export default {
     ModalChange,
   },
   computed: {
-    items() {
-      return datos.map((item) => {
-        return item;
-      });
+    categories() {
+      return this.$store.getters.allCategories;
     },
-    items2() {
-      return datos2.map((item2) => {
-        return item2;
-      });
+    colecciones() {
+      return this.$store.getters.allCollections;
     },
+    updateCollection(){
+      return this.$store.getters.updateCollection
+    }
+  },
+  mounted() {
+    this.$store.dispatch("getCollections")
+    this.$store.dispatch("getCategories");
   },
 };
 </script>
