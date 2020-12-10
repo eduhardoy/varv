@@ -114,6 +114,7 @@ export default {};
     background-color: white;
     height: 100%;
     width: 80%;
+    overflow: auto;
   }
 }
 </style>

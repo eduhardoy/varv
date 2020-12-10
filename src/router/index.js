@@ -46,21 +46,21 @@ const routes = [
     children: [
       {
         path: "",
-        component: import("../views/Admin/AdminCategorias.vue"),
+        component: () => import("../views/Admin/AdminCategorias.vue"),
       },
       {
         path: "/admin/colecciones",
-        component: import("../views/Admin/AdminColecciones.vue"),
+        component: () => import("../views/Admin/AdminColecciones.vue"),
       },
       {
         path: "/admin/tours",
         name: "tours",
-        component: import("../views/Admin/AdminTours.vue"),
+        component: () => import("../views/Admin/AdminTours.vue"),
         props: true,
       },
       {
         path: "/admin/clientes",
-        component: import("../views/Admin/AdminClientes.vue"),
+        component: () => import("../views/Admin/AdminClientes.vue"),
       },
     ],
   },
