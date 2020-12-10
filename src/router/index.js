@@ -2,7 +2,6 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/Home.vue";
 import Contact from "../views/Contact.vue";
 import NotFound from "../views/404.vue";
-import Tours from "../views/Tours.vue";
 import Tour from "../views/Tour.vue";
 import Admin from "../views/Admin/Admin.vue";
 import AdminLogin from "../views/Admin/AdminLogin.vue";
@@ -14,11 +13,6 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
-  },
-  {
-    path: "/tours",
-    name: "Tours",
-    component: Tours,
   },
   {
     path: "/tour/:id",

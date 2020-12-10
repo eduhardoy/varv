@@ -4,7 +4,7 @@
       <img src="../assets/VARVLOGO.png" alt="" class="footerlogoimg">
     </figure>
     <div class="rights">
-      <h4>© 2020 All Rights Reserved. <strong><a class="link" href="https://franciscovaldez.pb.online/cv-3">Francisco Valdez Apolo.</a></strong></h4>
+      <h4>© 2020 All Rights Reserved -<strong><a class="link" href="https://franciscovaldez.pb.online/cv-3"> Francisco Valdez Apolo.</a></strong></h4>
     </div>
     <a href="http://inibotnea.com/">
       <figure class="inibot">

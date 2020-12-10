@@ -6,6 +6,7 @@
     <!-- Hero Component -->
     <Hero />
     <About />
+    <Tours />
     <Prices />
     <Contact />
     <Clients />
@@ -18,6 +19,7 @@ import Header from "../components/Header";
 import Wapp from "../components/Whatsapp";
 import Hero from "../components/Hero";
 import About from "../components/About";
+import Tours from "../components/Tours";
 import Prices from "../components/Prices";
 import Contact from "../components/Contact";
 import Clients from "../components/Clients";
@@ -30,6 +32,7 @@ export default {
     Wapp,
     Hero,
     About,
+    Tours,
     Prices,
     Contact,
     Clients,

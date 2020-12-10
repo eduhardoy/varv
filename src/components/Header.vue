@@ -110,6 +110,7 @@ export default {
   box-shadow: 0px 8px 9px -1px rgba(125, 120, 120, 0.6);
   color: white;
   position: fixed;
+  z-index: 5;
   top: 0;
   left: 0;
   padding: 0;
@@ -149,8 +150,10 @@ export default {
 .menu-elements {
   margin-left: 40px;
   height: 30px;
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 } 
 .menu-elements:hover {
   border-bottom: 2px solid black;
@@ -190,7 +193,7 @@ a{
   .menu{
     position: fixed;
     background-color: rgba(0, 0, 0, 0.9);
-    z-index: 4;
+    z-index: 8;
     top: 0;
     left: -100vw;
     width: 100vw;
@@ -209,11 +212,12 @@ a{
     flex-direction: column;
   }
   .menu-elements {
-  height: 60%;
-  margin: 30px;
+  height: 80%;
+  margin: 40px;
+  border: none;
   }
   .menu-elements a{
-  font-size: 50px;
+  font-size: 30px;
   color: white;
 } 
 }
