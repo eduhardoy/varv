@@ -29,6 +29,10 @@
         <input class="modal-selector" placeholder="Nombre" />
         <input class="modal-selector" placeholder="Descripción" />
       </template>
+      <template v-slot:footer>
+        <button class="cancel_button" @click="closeModal()">CANCELAR</button>
+        <button class="add_button" @click="closeModal()">AGREGAR</button>
+      </template>
     </ModalAdd>
     <ModalChange ref="change">
       <template v-slot:body>
@@ -42,12 +46,19 @@
           placeholder="Descripción"
           v-model="updateCategory.description"
         />
-        <!-- TODO AGREGAR V-SLOT BUTTONS/FOOTER -->
+      </template>
+      <template v-slot:footer>
+        <button class="cancel_button" @click="closeChangeModal()">CANCELAR</button>
+        <button class="change_button" @click="confirmChangeModal()">MODIFICAR</button>
       </template>
     </ModalChange>
     <ModalDelete ref="delete">
       <template v-slot:body>
         <p>Esta seguro que desea eliminar?</p>
+      </template>
+      <template v-slot:footer>
+        <button class="cancel_button" @click="closeModal()">CANCELAR</button>
+        <button class="delete_button" @click="closeModal()">ELIMINAR</button>
       </template>
     </ModalDelete>
   </div>
@@ -74,6 +85,14 @@ export default {
       this.$store.dispatch("setUpdateCategory", categoryData);
       return this.$refs.change.openModal();
     },
+    closeChangeModal(){
+      this.$store.dispatch("setUpdateCategory", {});
+      return this.$refs.change.closeModal();
+    },
+    confirmChangeModal(){
+      this.$store.dispatch("updateCategory")
+      return this.$refs.change.closeModal()
+    }
   },
   computed: {
     categories() {

@@ -11,9 +11,7 @@
           <slot name="body"/>
         </div>
         <div class="modal__footer">
-          <!-- TODO AGREGAR V-SLOT BUTTONS/FOOTER -->
-          <button class="cancel_button" @click="closeModal()">CANCELAR</button>
-          <button class="add_button" @click="closeModal()">AGREGAR</button>
+          <slot name="footer" />
         </div>
       </div>
     </div>

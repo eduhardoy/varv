@@ -16,7 +16,7 @@ export default {
         commit("SET_CATEGORIES", response.data)
       );
     },
-    updateCateogry({ state }) {
+    updateCategory({ state }) {
       Axios.put(
         `http://inibotnea.com:3010/api/category/${state.updateCategory.id}`,
         state.updateCategory
