@@ -38,6 +38,18 @@ export default {
     Clients,
     Footer,
   },
+  compute: {
+    categories(){
+      return this.$store.getters.allCategories;
+    },
+    collections(){
+      return this.$store.getters.allCollections;
+    },
+  },
+  mounted() {
+    this.$store.dispatch('getCategories')
+    this.$store.dispatch('getCollections')
+  }
 };
 </script>
 
