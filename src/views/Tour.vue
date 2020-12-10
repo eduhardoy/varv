@@ -7,10 +7,7 @@
         <h3>DESCRIPTION</h3>
       </div>
       <div class="tour-view">
-        <iframe src="" frameborder="0"></iframe>
-      </div>
-      <div class="tour-collection">
-        <img src="https://drive.google.com/file/d/1II415IqZN-ISV8j6h75YebJIrdF9j0Vi/view?usp=sharing" alt="">
+        <iframe width="100%" height="640" style="width: 100%; height: 640px; border: none; max-width: 100%;" frameborder="0" allowfullscreen allow="xr-spatial-tracking; gyroscope; accelerometer" scrolling="no" src="https://kuula.co/share/collection/7P8zt?fs=1&vr=0&sd=1&thumbs=1&margin=25&alpha=0.80&info=1&logo=1"></iframe>
       </div>
     </div>
   </div>
@@ -50,6 +47,9 @@ export default {
   align-items: center;
   .tour-page-title{
     width: 100%;
+  }
+  .tour-view{
+    width: 80%;
   }
 }
 </style>

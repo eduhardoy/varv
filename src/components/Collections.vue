@@ -1,49 +1,29 @@
 <template>
-<div class="tours">
+<div class="Collections">
   <div class="filter-container">
-    <ul class="filter-list" v-for="item2 in items2" v-bind:key="item2.id">
-      <li class="filter-item">{{ item2.name }}</li>
+    <ul class="filter-list" v-for="item in categories" v-bind:key="item.id">
+      <li class="filter-item">{{ item.name }}</li>
     </ul>
   </div>
-  <div class="tours-container">
-    <div class="portada-container">
-      <img class="portada" src="../assets/catedral.png" alt="">
-      <h4 class="portada-title">Title</h4>
-    </div>
-    <div class="portada-container">
-      <img class="portada" src="../assets/catedral.png" alt="">
-      <h4 class="portada-title">Title</h4>
-    </div>
-    <div class="portada-container">
-      <img class="portada" src="../assets/catedral.png" alt="">
-      <h4 class="portada-title">Title</h4>
-    </div>
-    <div class="portada-container">
-      <img class="portada" src="../assets/catedral.png" alt="">
-      <h4 class="portada-title">Title</h4>
-    </div>
-    <div class="portada-container">
-      <img class="portada" src="../assets/catedral.png" alt="">
-      <h4 class="portada-title">Title</h4>
-    </div>
-    <div class="portada-container">
-      <img class="portada" src="../assets/catedral.png" alt="">
-      <h4 class="portada-title">Title</h4>
+  <div class="Collections-container">
+    <div class="portada-container" v-for="item in collections" v-bind:key="item.id">
+      <img class="portada" v-bind:src="item.image.url" alt="">
+      <h4 class="portada-title">{{ item.name }}</h4>
     </div>
   </div>
 </div>
 </template>
 
 <script>
-import datos2 from "../../JSON EJEMPLOS/categorias.json";
 
 export default {
-  name: "Tours",
+  name: "Collections",
   computed: {
-    items2() {
-      return datos2.map((item2) => {
-        return item2;
-      });
+    collections() {
+      return this.$store.getters.allCollections
+    },
+    categories() {
+      return this.$store.getters.allCategories
     },
   },
 };
@@ -57,7 +37,7 @@ export default {
   font-style: normal;
 }
 
-.tours {
+.Collections {
   flex: 1%;
   max-width: 1920px;
   margin: 0 auto;
@@ -89,7 +69,7 @@ export default {
       }
     }
   }
-  .tours-container{
+  .Collections-container{
   width: 100%;
   display: inline-flex;
   justify-content: flex-start;
@@ -102,6 +82,8 @@ export default {
   flex-direction: column;
   .portada{
     width: 100%;
+    height: 90%;
+    object-fit: cover;
   }
   .portada-title{
     font-size: 25px;
