@@ -11,6 +11,7 @@
           <slot name="body"/>
         </div>
         <div class="modal__footer">
+          <!-- TODO AGREGAR V-SLOT BUTTONS/FOOTER -->
           <button class="cancel_button" @click="closeModal()">CANCELAR</button>
           <button class="change_button" @click="closeModal()">MODIFICAR</button>
         </div>
@@ -21,7 +22,7 @@
 
 <script>
 export default {
-  name: "ModalDelete",
+  name: "ModalChange",
   data() {
     return {
       show: false
