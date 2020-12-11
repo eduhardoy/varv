@@ -93,9 +93,9 @@
             placeholder="URL"
             v-model="updateCollection.image.url"
           />
-          <select class="modal-selector" placeholder="Categoria" multiple>
+          <select name="categories[]" class="modal-selector select-checkbox" placeholder="Categoria" multiple>
             <option
-              value=""
+              value="{{item2.id}}"
               v-for="item2 in categories"
               v-bind:key="item2.id"
               >{{ item2.name }}</option
@@ -196,6 +196,15 @@ export default {
 </script>
 
 <style lang="scss">
+.select-checkbox option::before {
+  content: "\2610";
+  width: 1.3em;
+  text-align: center;
+  display: inline-block;
+}
+.select-checkbox option:checked::before {
+  content: "\2611";
+}
 .admin-colecciones {
   position: relative;
   background-color: white;

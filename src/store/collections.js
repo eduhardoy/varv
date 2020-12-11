@@ -5,8 +5,8 @@ const URL = "http://inibotnea.com:3010/api/collection/";
 var config = {
   headers: {
     "Content-Type": "application/json",
-    Authorization:
-      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJGcmFuIiwiYXVkIjoiUkVNT1RFX1VTRVIiLCJyb2xlcyI6WyJST0xFX0FETUlOIl0sImlzcyI6IkdvbnphbG8iLCJleHAiOjE2MDgzMDIzNjZ9.-bthbzLcC8-1YhsTzKsB2vwvGqmtuyz1DB-EtmpuaYaE4PEjOWsnt2RlliOzHHlpqoqoGo4vs5o3LkgIDDNcBw",
+    Authorization: `Bearer ${localStorage.getItem("LoggedUser")}`,
+    "Access-Control-Allow-Origin": "*",
   },
 };
 
@@ -15,16 +15,23 @@ export default {
     collections: [],
     updateCollection: {},
     newCollection: {},
+    collectionById: {},
   },
   getters: {
     allCollections: (state) => state.collections,
     updateCollection: (state) => state.updateCollection,
+    collectionById: (state) => state.collectionById
   },
   actions: {
     getCollections({ commit }) {
       Axios.get(URL).then((response) =>
         commit("SET_COLLECTIONS", response.data)
       );
+    },
+    getCollectionById({ commit }, collectionId) {
+      Axios.get(URL + collectionId).then((response) => {
+        commit("SET_COLLECTION_BY_ID", response.data);
+      });
     },
     setUpdateCollection({ commit }, collection) {
       commit("SET_UPDATE_COLLECTION", collection);
@@ -45,6 +52,7 @@ export default {
         });
     },
     deleteCollection({ state, dispatch }) {
+      console.log(config);
       Axios.delete(URL + state.updateCollection.id, config)
         .then((response) => console.log(response))
         .finally(() => {
@@ -70,6 +78,9 @@ export default {
     },
     SET_NEW_COLLECTION(state, collection) {
       state.newCollection = { ...collection };
+    },
+    SET_COLLECTION_BY_ID(state, collection) {
+      state.collectionById = collection;
     },
   },
 };
