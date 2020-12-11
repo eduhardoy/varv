@@ -5,16 +5,14 @@
         <li class="filter-item">{{ item.name }}</li>
       </ul>
     </div>
-    <div class="collections-container">
-      <div
-        class="portada-container"
-        v-for="item in collections"
-        v-bind:key="item.id"
-      >
-        <div @click="goToTour(item)">
-          <img class="portada" v-bind:src="item.image.url" alt="" />
-          <h4 class="portada-title">{{ item.name }}</h4>
-        </div>
+    <div
+      class="collections-container"
+      v-for="item in collections"
+      v-bind:key="item.id"
+    >
+      <div class="portada-container" @click="goToTour(item)">
+        <img class="portada" v-bind:src="item.image.url" alt="" />
+        <h4 class="portada-title">{{ item.name }}</h4>
       </div>
     </div>
   </div>
@@ -90,30 +88,20 @@ export default {
       padding: 20px;
       display: flex;
       flex-direction: column;
+      .portada-title {
+        font-size: 25px;
+        font-family: "Lato", sans-serif;
+        font-weight: 400;
+        margin: 0;
+        margin-top: 20px;
+      }
       .portada {
         width: 100%;
         display: inline-flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        .portada-container {
-          box-sizing: border-box;
-          width: calc(100% / 3);
-          padding: 20px;
-          display: flex;
-          flex-direction: column;
-          .portada {
-            width: 100%;
-            height: 90%;
-            object-fit: cover;
-          }
-          .portada-title {
-            font-size: 25px;
-            font-family: "Lato", sans-serif;
-            font-weight: 400;
-            margin: 0;
-            margin-top: 20px;
-          }
-        }
+        height: 90%;
+        object-fit: cover;
       }
     }
   }
