@@ -31,7 +31,7 @@ export default {
   },
   methods: {
     goToTour(collection) {
-      return this.$router.push({ name: "Tour", params: { collection } });
+      return this.$router.push({ name: "Tour", params: { id:collection.id } });
     },
   },
 };

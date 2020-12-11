@@ -22,13 +22,20 @@ import Wapp from "../components/Whatsapp";
 import Footer from "../components/Footer";
 
 export default {
-  props: ["collection"],
   name: "Home",
   components: {
     Header,
     Wapp,
     Footer,
   },
+  computed:{
+    collection(){
+      return this.$store.getters.collectionById
+    }
+  },
+  mounted(){
+    this.$store.dispatch("getCollectionById",this.$route.params.id );
+  }
 };
 </script>
 

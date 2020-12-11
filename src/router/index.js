@@ -15,7 +15,7 @@ const routes = [
     component: Home,
   },
   {
-    path: "/tour/",
+    path: "/tour/:id",
     name: "Tour",
     component: Tour,
     props:true,
