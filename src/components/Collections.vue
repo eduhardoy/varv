@@ -1,16 +1,17 @@
 <template>
-  <div class="collections">
+  <div class="collections" id="collections">
     <div class="filter-container">
       <ul class="filter-list" v-for="item in categories" v-bind:key="item.id">
         <li class="filter-item">{{ item.name }}</li>
       </ul>
     </div>
-    <div
-      class="collections-container"
-      v-for="item in collections"
-      v-bind:key="item.id"
-    >
-      <div class="portada-container" @click="goToTour(item)">
+    <div class="collections-container">
+      <div
+        class="portada-container"
+        v-for="item in collections"
+        v-bind:key="item.id"
+        @click="goToTour(item)"
+      >
         <img class="portada" v-bind:src="item.image.url" alt="" />
         <h4 class="portada-title">{{ item.name }}</h4>
       </div>
@@ -31,7 +32,7 @@ export default {
   },
   methods: {
     goToTour(collection) {
-      return this.$router.push({ name: "Tour", params: { id:collection.id } });
+      return this.$router.push({ name: "Tour", params: { id: collection.id } });
     },
   },
 };
