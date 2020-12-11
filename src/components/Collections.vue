@@ -1,20 +1,18 @@
 <template>
-  <div class="Collections">
+  <div class="collections">
     <div class="filter-container">
       <ul class="filter-list" v-for="item in categories" v-bind:key="item.id">
         <li class="filter-item">{{ item.name }}</li>
       </ul>
     </div>
-    <div class="Collections-container">
-      <div
-        class="portada-container"
-        v-for="item in collections"
-        v-bind:key="item.id"
-      >
-        <div @click="goToTour(item)">
-          <img class="portada" v-bind:src="item.image.url" alt="" />
-          <h4 class="portada-title">{{ item.name }}</h4>
-        </div>
+    <div
+      class="collections-container"
+      v-for="item in collections"
+      v-bind:key="item.id"
+    >
+      <div class="portada-container" @click="goToTour(item)">
+        <img class="portada" v-bind:src="item.image.url" alt="" />
+        <h4 class="portada-title">{{ item.name }}</h4>
       </div>
     </div>
   </div>
@@ -31,12 +29,11 @@ export default {
       return this.$store.getters.allCategories;
     },
   },
-  methods:{
-    goToTour(collection){
-      return this.$router.push({ name: "Tour", params: { collection } })
-    }
-  }
-
+  methods: {
+    goToTour(collection) {
+      return this.$router.push({ name: "Tour", params: { collection } });
+    },
+  },
 };
 </script>
 
@@ -48,7 +45,7 @@ export default {
   font-style: normal;
 }
 
-.Collections {
+.collections {
   flex: 1%;
   max-width: 1920px;
   margin: 0 auto;
@@ -80,7 +77,7 @@ export default {
       }
     }
   }
-  .Collections-container {
+  .collections-container {
     width: 100%;
     display: inline-flex;
     justify-content: flex-start;
@@ -91,17 +88,20 @@ export default {
       padding: 20px;
       display: flex;
       flex-direction: column;
-      .portada {
-        width: 100%;
-        height: 90%;
-        object-fit: cover;
-      }
       .portada-title {
         font-size: 25px;
         font-family: "Lato", sans-serif;
         font-weight: 400;
         margin: 0;
         margin-top: 20px;
+      }
+      .portada {
+        width: 100%;
+        display: inline-flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        height: 90%;
+        object-fit: cover;
       }
     }
   }

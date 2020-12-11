@@ -8,10 +8,10 @@
     <div class="menu" v-bind:class="{isActive: isActive}">
       <button class="notshow" :class="{closebutton: isActive}"  @click="closeMenu()">X</button>
       <ul class="nav">
-        <li class="menu-elements" @click="closeMenu()"><a href="#about">Nosotros</a></li>
-        <li class="menu-elements" @click="closeMenu()"><a href="">Proyectos</a></li>
-        <li class="menu-elements" @click="closeMenu()"><a href="#prices">Precios</a></li>
-        <li class="menu-elements" @click="closeMenu()"><a href="#contact">Contacto</a></li>
+        <li class="menu-elements" @click="closeMenu()"><a href="/#about">Nosotros</a></li>
+        <li class="menu-elements" @click="closeMenu()"><a href="/#collections">Proyectos</a></li>
+        <li class="menu-elements" @click="closeMenu()"><a href="/#prices">Precios</a></li>
+        <li class="menu-elements" @click="closeMenu()"><a href="/#contact">Contacto</a></li>
       </ul>
     </div>
     <i class="icon-menu burger-button" @click="openMenu()"></i>
