@@ -1,5 +1,7 @@
 import Axios from "axios";
 
+const URL = "http://inibotnea.com:3010/api/collection/"
+
 export default {
   state: {
     collections: [],
@@ -12,7 +14,7 @@ export default {
   },
   actions: {
     getCollections({ commit }) {
-      Axios.get("http://inibotnea.com:3010/api/collection").then((response) =>
+      Axios.get(URL).then((response) =>
         commit("SET_COLLECTIONS", response.data)
       );
     },
@@ -29,7 +31,7 @@ export default {
       state.updateCollection["categories"] = arrCategories;
 
       Axios.put(
-        `http://localhost:3010/api/collection/${state.updateCollection.id}`,
+        URL + state.updateCollection.id,
         state.updateCollection
       )
         .then((response) => console.log(response))
@@ -39,7 +41,7 @@ export default {
     },
     deleteCollection({ state, dispatch }) {
       Axios.delete(
-        `http://inibotnea.com:3010/api/collection/${state.updateCollection.id}`
+        URL + state.updateCollection.id
       )
         .then((response) => console.log(response))
         .finally(() => {
@@ -47,7 +49,7 @@ export default {
         });
     },
     addCollection({ dispatch }, newCollection) {
-      Axios.post(`http://inibotnea.com:3010/api/collection`, newCollection)
+      Axios.post(URL, newCollection)
         .then((response) => console.log(response))
         .finally(() => {
           dispatch("getCollections");

@@ -43,6 +43,7 @@
 export default {
   name: "AdminLogin",
   methods: {
+    // TODO Implementar LOGIN
     goToAdminHome() {
         localStorage.setItem("LoggedUser","test")
       this.$router.push("/admin");
