@@ -11,7 +11,7 @@
     <div class="admin-body">
       <ul class="admin-list">
         <li v-for="item in colecciones" v-bind:key="item.id" class="list-item">
-          <div class="datos-list">
+          <div class="datos-list" >
             <h4>Nombre: {{ item.name }}</h4>
             <h4>Descripción: {{ item.description }}</h4>
           </div>
@@ -24,7 +24,7 @@
           >
             <img src="../../assets/config.png" alt="" />
           </button>
-          <button class="delete-button" @click="$refs.delete.openModal()">
+          <button class="delete-button" @click="openDeleteModal(item)">
             <img src="../../assets/delete.png" alt="" />
           </button>
         </li>
@@ -33,11 +33,36 @@
     <ModalAdd ref="add">
       <template v-slot:body>
         <div class="modal-container">
-          <input class="modal-selector" placeholder="Nombre" />
-          <input class="modal-selector" placeholder="Descripción" />
-          <input class="modal-selector" placeholder="Nombre imagen" />
-          <input class="modal-selector" placeholder="URL" />
-          <input class="modal-selector" placeholder="Categoria"/>
+          <input
+            class="modal-selector"
+            placeholder="Nombre"
+            v-model="newCollection.name"
+          />
+          <input
+            class="modal-selector"
+            placeholder="Descripción"
+            v-model="newCollection.description"
+          />
+          <input
+            class="modal-selector"
+            placeholder="Iframe"
+            v-model="newCollection.iframe"
+          />
+          <input
+            class="modal-selector"
+            placeholder="Nombre imagen"
+            v-model="newCollection.image.name"
+          />
+          <input
+            class="modal-selector"
+            placeholder="URL"
+            v-model="newCollection.image.url"
+          />
+          <input
+            class="modal-selector"
+            placeholder="Categoria"
+            v-model="newCollection.categories"
+          />
         </div>
       </template>
       <template v-slot:footer>
@@ -48,18 +73,43 @@
     <ModalChange ref="change">
       <template v-slot:body>
         <div class="modal-container">
-          <input class="modal-selector" placeholder="Nombre" v-model="updateCollection.name"/>
-          <input class="modal-selector" placeholder="Descripción" v-model="updateCollection.description"/>
-          <input class="modal-selector" placeholder="Nombre imagen" v-model="updateCollection.image.name"/>
-          <input class="modal-selector" placeholder="URL" v-model="updateCollection.image.url"/>
+          <input
+            class="modal-selector"
+            placeholder="Nombre"
+            v-model="updateCollection.name"
+          />
+          <input
+            class="modal-selector"
+            placeholder="Descripción"
+            v-model="updateCollection.description"
+          />
+          <input
+            class="modal-selector"
+            placeholder="Nombre imagen"
+            v-model="updateCollection.image.name"
+          />
+          <input
+            class="modal-selector"
+            placeholder="URL"
+            v-model="updateCollection.image.url"
+          />
           <select class="modal-selector" placeholder="Categoria" multiple>
-            <option value="" v-for="item2 in categories" v-bind:key="item2.id">{{ item2.name }}</option>
+            <option
+              value=""
+              v-for="item2 in categories"
+              v-bind:key="item2.id"
+              >{{ item2.name }}</option
+            >
           </select>
         </div>
       </template>
       <template v-slot:footer>
-        <button class="cancel_button" @click="$refs.change.closeModal()">CANCELAR</button>
-        <button class="change_button" @click="confirmChangeModal()">MODIFICAR</button>
+        <button class="cancel_button" @click="$refs.change.closeModal()">
+          CANCELAR
+        </button>
+        <button class="change_button" @click="confirmChangeModal()">
+          MODIFICAR
+        </button>
       </template>
     </ModalChange>
     <ModalDelete ref="delete">
@@ -68,8 +118,12 @@
         <p>*Se eliminaran todos los tours</p>
       </template>
       <template v-slot:footer>
-        <button class="cancel_button" @click="$refs.delete.closeModal()">CANCELAR</button>
-        <button class="delete_button" @click="confirmDeleteModal()">ELIMINAR</button>
+        <button class="cancel_button" @click="$refs.delete.closeModal()">
+          CANCELAR
+        </button>
+        <button class="delete_button" @click="confirmDeleteModal()">
+          ELIMINAR
+        </button>
       </template>
     </ModalDelete>
   </div>
@@ -83,8 +137,9 @@ import ModalChange from "../../components/ModalChange";
 export default {
   data: () => ({
     title: "COLECCIONES",
-    newCollection: {},
-
+    newCollection: {
+      image: {},
+    },
   }),
   methods: {
     goToTour(tours) {
@@ -108,12 +163,12 @@ export default {
       return this.$refs.delete.closeModal();
     },
     closeAddModal() {
-      this.newCollection = {};
+      this.newCollection = { image: {} };
       return this.$refs.add.closeModal();
     },
     confirmAddModal() {
       this.$store.dispatch("addCollection", this.newCollection);
-      this.newCollection = {};
+      this.newCollection = { image: {} };
       return this.$refs.add.closeModal();
     },
   },
@@ -129,12 +184,12 @@ export default {
     colecciones() {
       return this.$store.getters.allCollections;
     },
-    updateCollection(){
-      return this.$store.getters.updateCollection
-    }
+    updateCollection() {
+      return this.$store.getters.updateCollection;
+    },
   },
   mounted() {
-    this.$store.dispatch("getCollections")
+    this.$store.dispatch("getCollections");
     this.$store.dispatch("getCategories");
   },
 };
