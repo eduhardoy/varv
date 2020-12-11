@@ -26,8 +26,16 @@
     </div>
     <ModalAdd ref="add">
       <template v-slot:body>
-        <input class="modal-selector" placeholder="Nombre" v-model="newCategory.name"/>
-        <input class="modal-selector" placeholder="Descripción" v-model="newCategory.description"/>
+        <input
+          class="modal-selector"
+          placeholder="Nombre"
+          v-model="newCategory.name"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Descripción"
+          v-model="newCategory.description"
+        />
       </template>
       <template v-slot:footer>
         <button class="cancel_button" @click="closeAddModal()">CANCELAR</button>
@@ -221,6 +229,7 @@ export default {
       padding: 0;
       margin: 0;
       margin-top: 30px;
+      margin-bottom: 40px;
       .list-item {
         padding: 0;
         margin: 0;

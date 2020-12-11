@@ -11,7 +11,7 @@
     <div class="admin-body">
       <ul class="admin-list">
         <li v-for="item in colecciones" v-bind:key="item.id" class="list-item">
-          <div class="datos-list" >
+          <div class="datos-list">
             <h4>Nombre: {{ item.name }}</h4>
             <h4>Descripción: {{ item.description }}</h4>
           </div>
@@ -93,7 +93,12 @@
             placeholder="URL"
             v-model="updateCollection.image.url"
           />
-          <select name="categories[]" class="modal-selector select-checkbox" placeholder="Categoria" multiple>
+          <select
+            name="categories[]"
+            class="modal-selector select-checkbox"
+            placeholder="Categoria"
+            multiple
+          >
             <option
               value="{{item2.id}}"
               v-for="item2 in categories"
@@ -301,6 +306,7 @@ export default {
       padding: 0;
       margin: 0;
       margin-top: 30px;
+      margin-bottom: 40px;
       .list-item {
         padding: 0;
         margin: 0;
