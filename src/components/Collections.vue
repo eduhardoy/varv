@@ -59,6 +59,7 @@ export default {
   align-items: center;
   .filter-container {
     width: 90%;
+    padding-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,22 +87,30 @@ export default {
     .portada-container {
       box-sizing: border-box;
       width: calc(100% / 3);
-      padding: 20px;
+      padding: 5px;
+      padding-bottom: 20px;
       display: flex;
+      text-align: center;
       flex-direction: column;
+      filter: grayscale(100%);
+      &:hover {
+        filter: none;
+        cursor: pointer;
+      }
       .portada-title {
         font-size: 25px;
         font-family: "Lato", sans-serif;
-        font-weight: 400;
+        font-weight: 300;
         margin: 0;
-        margin-top: 20px;
+        margin-top: 10px;
+        text-transform: uppercase;
       }
       .portada {
         width: 100%;
         display: inline-flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        height: 90%;
+        height: 40vh;
         object-fit: cover;
       }
     }
