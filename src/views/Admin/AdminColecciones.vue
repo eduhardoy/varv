@@ -85,6 +85,11 @@
           />
           <input
             class="modal-selector"
+            placeholder="Iframe"
+            v-model="updateCollection.iframe"
+          />
+          <input
+            class="modal-selector"
             placeholder="Nombre imagen"
             v-model="updateCollection.image.name"
           />
