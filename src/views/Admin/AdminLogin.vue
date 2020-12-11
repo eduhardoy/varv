@@ -12,6 +12,7 @@
             class="form-input"
             placeholder="Username"
             name="username"
+            v-model="loginData.username"
           />
         </div>
         <div class="form-wrap-input">
@@ -20,10 +21,11 @@
             class="form-input"
             placeholder="Password"
             name="password"
+            v-model="loginData.password"
           />
         </div>
         <div class="form-container-btn">
-          <button class="form-btn" v-on:click.prevent="goToAdminHome">
+          <button class="form-btn" v-on:click.prevent="login()">
             LOGIN
           </button>
         </div>
@@ -34,20 +36,16 @@
 </template>
 
 <script>
-/**
- * TODO
- * Post Login
- * Save Token
- * If token exist and is valid push to AdminHome
- */
 export default {
   name: "AdminLogin",
+  data:() => ({
+    loginData: {}
+  }),
   methods: {
-    // TODO Implementar LOGIN
-    goToAdminHome() {
-        localStorage.setItem("LoggedUser","test")
-      this.$router.push("/admin");
-    },
+    login(){
+      console.log(this.loginData)
+      this.$store.dispatch("getToken", this.loginData)
+    }
   },
 };
 </script>
