@@ -1,6 +1,14 @@
 import Axios from "axios";
 
-const URL = "http://inibotnea.com:3010/api/collection/"
+const URL = "http://localhost:3010/api/collection/";
+
+var config = {
+  headers: {
+    "Content-Type": "application/json",
+    Authorization:
+      "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJGcmFuIiwiYXVkIjoiUkVNT1RFX1VTRVIiLCJyb2xlcyI6WyJST0xFX0FETUlOIl0sImlzcyI6IkdvbnphbG8iLCJleHAiOjE2MDgzMDIzNjZ9.-bthbzLcC8-1YhsTzKsB2vwvGqmtuyz1DB-EtmpuaYaE4PEjOWsnt2RlliOzHHlpqoqoGo4vs5o3LkgIDDNcBw",
+  },
+};
 
 export default {
   state: {
@@ -30,26 +38,23 @@ export default {
 
       state.updateCollection["categories"] = arrCategories;
 
-      Axios.put(
-        URL + state.updateCollection.id,
-        state.updateCollection
-      )
+      Axios.put(URL + state.updateCollection.id, state.updateCollection, config)
         .then((response) => console.log(response))
         .finally(() => {
           dispatch("getCollections");
         });
     },
     deleteCollection({ state, dispatch }) {
-      Axios.delete(
-        URL + state.updateCollection.id
-      )
+      Axios.delete(URL + state.updateCollection.id, config)
         .then((response) => console.log(response))
         .finally(() => {
           dispatch("getCollections");
         });
     },
     addCollection({ dispatch }, newCollection) {
-      Axios.post(URL, newCollection)
+      newCollection["categories"] = [];
+
+      Axios.post(URL, newCollection, config)
         .then((response) => console.log(response))
         .finally(() => {
           dispatch("getCollections");
