@@ -1,5 +1,15 @@
 import Axios from "axios";
 
+const URL = "http://inibotnea.com:3010/api/category/";
+
+var config = {
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${localStorage.getItem("LoggedUser")}`,
+    "Access-Control-Allow-Origin": "*",
+  },
+};
+
 export default {
   state: {
     categories: [],
@@ -12,14 +22,15 @@ export default {
 
   actions: {
     getCategories({ commit }) {
-      Axios.get("http://inibotnea.com:3010/api/category").then((response) =>
+      Axios.get(URL).then((response) =>
         commit("SET_CATEGORIES", response.data)
       );
     },
     updateCategory({ state, dispatch }) {
       Axios.put(
-        `http://inibotnea.com:3010/api/category/${state.updateCategory.id}`,
-        state.updateCategory
+        URL + state.updateCategory.id,
+        state.updateCategory,
+        config
       )
         .then((response) => console.log(response))
         .finally(() => {
@@ -31,7 +42,8 @@ export default {
     },
     deleteCategory({ state, dispatch }) {
       Axios.delete(
-        `http://inibotnea.com:3010/api/category/${state.updateCategory.id}`
+        URL + state.updateCategory.id,
+        config
       )
         .then((response) => console.log(response))
         .finally(() => {
@@ -39,7 +51,7 @@ export default {
         });
     },
     addCategory({ dispatch }, newCategory) {
-      Axios.post(`http://inibotnea.com:3010/api/category`, newCategory)
+      Axios.post(URL, newCategory, config)
         .then((response) => console.log(response))
         .finally(() => {
           dispatch("getCategories");
