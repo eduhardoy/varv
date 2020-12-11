@@ -1,11 +1,11 @@
 <template>
-<div class="Collections">
+<div class="collections" id="collections">
   <div class="filter-container">
     <ul class="filter-list" v-for="item in categories" v-bind:key="item.id">
       <li class="filter-item">{{ item.name }}</li>
     </ul>
   </div>
-  <div class="Collections-container">
+  <div class="collections-container">
     <div class="portada-container" v-for="item in collections" v-bind:key="item.id">
       <img class="portada" v-bind:src="item.image.url" alt="">
       <h4 class="portada-title">{{ item.name }}</h4>
@@ -37,7 +37,7 @@ export default {
   font-style: normal;
 }
 
-.Collections {
+.collections {
   flex: 1%;
   max-width: 1920px;
   margin: 0 auto;
@@ -69,7 +69,7 @@ export default {
       }
     }
   }
-  .Collections-container{
+  .collections-container{
   width: 100%;
   display: inline-flex;
   justify-content: flex-start;
