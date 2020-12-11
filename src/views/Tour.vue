@@ -4,7 +4,7 @@
     TOUR ID {{ $route.params.id }}
     <div class="tour-page">
       <div class="tour-page-title">
-        <h2>{{ collection.name }}</h2>
+        <h1>{{ collection.name }}</h1>
         <h3>{{ collection.description }}</h3>
       </div>
       <div class="tour-view">
@@ -28,14 +28,14 @@ export default {
     Wapp,
     Footer,
   },
-  computed:{
-    collection(){
-      return this.$store.getters.collectionById
-    }
+  computed: {
+    collection() {
+      return this.$store.getters.collectionById;
+    },
   },
-  mounted(){
-    this.$store.dispatch("getCollectionById",this.$route.params.id );
-  }
+  mounted() {
+    this.$store.dispatch("getCollectionById", this.$route.params.id);
+  },
 };
 </script>
 
@@ -45,7 +45,7 @@ export default {
   max-width: 1920px;
   margin: 0 auto;
   padding-top: 70px;
-  padding-bottom: 100px;
+  padding-bottom: 10px;
   width: 100%;
   flex-direction: column;
   display: flex;
@@ -53,17 +53,24 @@ export default {
   align-items: center;
   .tour-page-title {
     width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 40px;
     h1 {
-      font-size: 30px;
+      font-size: 40px;
+      margin: 10px;
     }
     h3 {
-      font-size: 20px;
+      font-size: 30px;
       font-weight: 300;
+      margin: 10px;
     }
   }
   .tour-view {
     width: 80%;
-    .iframer {
+    iframe {
       width: 100%;
       height: 80vh;
     }
