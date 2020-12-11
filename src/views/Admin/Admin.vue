@@ -50,11 +50,11 @@ export default {};
       background-color: #ededed;
       display: flex;
       justify-content: space-around;
-      height: 30%;
+      height: 40%;
       align-items: center;
       flex-direction: column;
       h1 {
-        margin: 0px;
+        margin: 10px;
       }
     }
 
