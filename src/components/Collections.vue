@@ -88,7 +88,6 @@ export default {
       box-sizing: border-box;
       width: calc(100% / 3);
       padding: 5px;
-      padding-bottom: 20px;
       display: flex;
       text-align: center;
       flex-direction: column;
@@ -98,12 +97,17 @@ export default {
         cursor: pointer;
       }
       .portada-title {
+        width: calc(100% - 20px);
         font-size: 25px;
+        padding: 5px;
         font-family: "Lato", sans-serif;
         font-weight: 300;
         margin: 0;
-        margin-top: 10px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
         text-transform: uppercase;
+        position: absolute;
+        bottom: 30px;
       }
       .portada {
         width: 100%;
@@ -112,6 +116,7 @@ export default {
         flex-wrap: wrap;
         height: 40vh;
         object-fit: cover;
+        position: relative;
       }
     }
   }
