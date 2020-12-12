@@ -9,13 +9,13 @@
         <div class="dato">
           <i class="icon-envelop"><strong>varvlab@gmail.com</strong></i>
         </div>
-        <a class="dato" href="https://www.facebook.com/varvlab">
+        <a class="dato" href="https://www.facebook.com/varvlab" target="_blank">
           <i class="icon-facebook"><strong>/varvlab</strong></i>
         </a>
-        <a class="dato" href="https://www.instagram.com/varvlab/">
+        <a class="dato" href="https://www.instagram.com/varvlab/" target="_blank">
           <i class="icon-instagram"><strong>@varvlab</strong></i>
         </a>
-        <a class="dato" href="https://www.youtube.com/user/indeterminacion">
+        <a class="dato" href="https://www.youtube.com/user/indeterminacion" target="_blank">
           <i class="icon-youtube"><strong>VARV</strong></i>
         </a>
       </div>
