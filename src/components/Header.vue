@@ -2,16 +2,30 @@
   <header class="header">
     <div class="logo">
       <router-link to="/">
-        <img alt="Vue logo" src="../assets/logo.png" >
+        <img alt="Vue logo" src="../assets/logo.png" />
       </router-link>
     </div>
-    <div class="menu" v-bind:class="{isActive: isActive}">
-      <button class="notshow" :class="{closebutton: isActive}"  @click="closeMenu()">X</button>
+    <div class="menu" v-bind:class="{ isActive: isActive }">
+      <button
+        class="notshow"
+        :class="{ closebutton: isActive }"
+        @click="closeMenu()"
+      >
+        X
+      </button>
       <ul class="nav">
-        <li class="menu-elements" @click="closeMenu()"><a href="/#about">Nosotros</a></li>
-        <li class="menu-elements" @click="closeMenu()"><a href="/#collections">Proyectos</a></li>
-        <li class="menu-elements" @click="closeMenu()"><a href="/#prices">Precios</a></li>
-        <li class="menu-elements" @click="closeMenu()"><a href="/#contact">Contacto</a></li>
+        <li class="menu-elements" @click="closeMenu()">
+          <a href="/#about">Nosotros</a>
+        </li>
+        <li class="menu-elements" @click="closeMenu()">
+          <a href="/#collections">Proyectos</a>
+        </li>
+        <li class="menu-elements" @click="closeMenu()">
+          <a href="/#prices">Precios</a>
+        </li>
+        <li class="menu-elements" @click="closeMenu()">
+          <a href="/#contact">Contacto</a>
+        </li>
       </ul>
     </div>
     <i class="icon-menu burger-button" @click="openMenu()"></i>
@@ -22,7 +36,7 @@ export default {
   name: "Header",
   data() {
     return {
-      isActive: false
+      isActive: false,
     };
   },
   methods: {
@@ -31,27 +45,29 @@ export default {
     },
     openMenu() {
       this.isActive = true;
-    }
-  }
+    },
+  },
 };
 </script>
 
 <style>
 @font-face {
-  font-family: 'icomoon';
-  src:  url('../../public/fonts/icomoon.eot?uus47');
-  src:  url('../../public/fonts/icomoon.eot?uus47#iefix') format('embedded-opentype'),
-    url('../../public/fonts/icomoon.ttf?uus47') format('truetype'),
-    url('../../public/fonts/icomoon.woff?uus47') format('woff'),
-    url('../../public/fonts/icomoon.svg?uus47#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("../../public/fonts/icomoon.eot?uus47");
+  src: url("../../public/fonts/icomoon.eot?uus47#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/icomoon.ttf?uus47") format("truetype"),
+    url("../../public/fonts/icomoon.woff?uus47") format("woff"),
+    url("../../public/fonts/icomoon.svg?uus47#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -80,11 +96,11 @@ export default {
   font-size: 30px;
 }
 
-.notshow{
+.notshow {
   display: none;
 }
 
-.closebutton{
+.closebutton {
   display: flex;
   position: absolute;
   border-radius: 50%;
@@ -109,7 +125,7 @@ export default {
   background-color: white;
   box-shadow: 0px 8px 9px -1px rgba(125, 120, 120, 0.6);
   color: white;
-  position: fixed;
+  position: sticky;
   z-index: 5;
   top: 0;
   left: 0;
@@ -154,11 +170,11 @@ export default {
   padding-left: 5px;
   border-top: 2px solid white;
   border-bottom: 2px solid white;
-} 
+}
 .menu-elements:hover {
   border-bottom: 2px solid black;
 }
-.menu-elements a{
+.menu-elements a {
   text-decoration: none;
   color: black;
   font-family: "Brandon", sans-serif;
@@ -168,20 +184,20 @@ export default {
   line-height: 30px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
 @media screen and (max-width: 1023px) {
-  .burger-button{
+  .burger-button {
     display: flex;
   }
 
   .logo {
-  width: 100%;
-}
+    width: 100%;
+  }
 
-  .menu{
+  .menu {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 8;
@@ -191,26 +207,26 @@ a{
     height: 100vh;
     justify-content: center;
     align-items: center;
-    transition: .4s;
+    transition: 0.4s;
   }
 
   .menu.isActive {
-        left: 0;
-        flex-direction: column;
-    }
+    left: 0;
+    flex-direction: column;
+  }
 
-  .nav{
+  .nav {
     flex-direction: column;
     padding: 0;
   }
   .menu-elements {
-  height: 80%;
-  margin: 40px;
-  border: none;
+    height: 80%;
+    margin: 40px;
+    border: none;
   }
-  .menu-elements a{
-  font-size: 30px;
-  color: white;
-} 
+  .menu-elements a {
+    font-size: 30px;
+    color: white;
+  }
 }
 </style>

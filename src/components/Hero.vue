@@ -17,15 +17,15 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'Brandon';
-  src:  url('../assets/Fonts/Brandon_reg.otf') format('woff');
+  font-family: "Brandon";
+  src: url("../assets/Fonts/Brandon_reg.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Brandon Thin';
-  src:  url('../assets/Fonts/Brandon_thin.otf') format('woff');
+  font-family: "Brandon Thin";
+  src: url("../assets/Fonts/Brandon_thin.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -38,13 +38,12 @@ export default {
   background-size: cover;
   width: 100%;
   height: 850px;
-  margin-top: 65px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
 }
-.hero-container{
+.hero-container {
   width: 40%;
   height: 80%;
   display: flex;
@@ -67,25 +66,21 @@ export default {
 }
 
 @media (max-width: 1750px) {
-  .hero-container{
+  .hero-container {
     margin-top: 165px;
-}
+  }
 }
 @media (max-width: 1050px) {
-  .hero-container{
-  width: 100%;
-  align-items: center;
-  margin: 0;
-}
-.hero-title {
-  margin-bottom: 400px;
-  margin-top: 20px;
-}
+  .hero-container {
+    width: 100%;
+    align-items: center;
+    margin: 0;
+  }
+  .hero-title {
+    margin-bottom: 400px;
+    margin-top: 20px;
+  }
 }
 @media (max-width: 768px) {
-.hero {
-  margin-top: 50px;
 }
-}
-
 </style>
