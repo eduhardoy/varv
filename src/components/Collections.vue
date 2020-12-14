@@ -91,33 +91,32 @@ export default {
       display: flex;
       text-align: center;
       flex-direction: column;
-      filter: grayscale(100%);
-      &:hover {
+      position: relative;
+      & :hover {
         filter: none;
         cursor: pointer;
       }
-      .portada-title {
-        width: calc(100% - 20px);
-        font-size: 25px;
-        padding: 5px;
-        font-family: "Lato", sans-serif;
-        font-weight: 300;
-        margin: 0;
-        color: white;
-        background-color: rgba(0, 0, 0, 0.7);
-        text-transform: uppercase;
-        position: absolute;
-        bottom: 30px;
-      }
-      .portada {
-        width: 100%;
-        display: inline-flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        height: 40vh;
-        object-fit: cover;
-        position: relative;
-      }
+    }
+    .portada-title {
+      width: calc(100% - 10px);
+      font-size: 25px;
+      font-family: "Lato", sans-serif;
+      font-weight: 300;
+      margin: 0;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.7);
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 30px;
+    }
+    .portada {
+      width: 100%;
+      display: inline-flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      height: 40vh;
+      object-fit: cover;
+      filter: grayscale(80%);
     }
   }
 }

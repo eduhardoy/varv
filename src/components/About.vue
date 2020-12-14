@@ -1,23 +1,26 @@
 <template>
   <div class="about" id="about">
     <div class="frase">
-      <h2>Hola, esto es <strong>VARV</strong>.</h2>
-      <h2 class="frase-space">Con nosotros podrás darle</h2>
-      <h2 class="frase-space">dinámica y vida a tus proyectos.</h2>
+      <h2>Nos especializamos en Tours Virtuales 360°,</h2>
+      <h2>
+        modelado 3D, realidad virtual
+      </h2>
+      <h2>y levantamientos con drones.</h2>
     </div>
     <div class="description">
       <figure class="devices">
-        <img src="../assets/catedral2.png" alt="">
+        <img src="../assets/catedral2.png" alt="" />
       </figure>
       <div class="lista">
         <ul class="item-about-list">
-          <h5> Fotografía y vídeo en 360°</h5>
-          <h5> Tours virtuales interactivos</h5>
-          <h5> Tomas aéreas con dron</h5>
-          <h5> Levantamiento en 3D</h5>
-          <h5> Diseño arquitectónico</h5>
-          <h5> Consultoría y construcción</h5>
-          <h5> Capacitación digital</h5>
+          <h5>Fotografía y vídeo en 360°</h5>
+          <h5>Tours virtuales interactivos</h5>
+          <h5>Tomas aéreas con dron</h5>
+          <h5>Levantamiento en 3D</h5>
+          <h5>Diseño arquitectónico</h5>
+          <h5>Consultoría y construcción</h5>
+          <h5>Capacitación digital</h5>
+          <h5>Street View</h5>
         </ul>
       </div>
     </div>
@@ -32,8 +35,8 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'Brandon';
-  src:  url('../assets/Fonts/Brandon_med.otf') format('woff');
+  font-family: "Brandon";
+  src: url("../assets/Fonts/Brandon_med.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -64,14 +67,7 @@ export default {
 .frase h2 {
   font-weight: 300;
   margin: 0;
-  letter-spacing: 0.1em
-}
-
-
-.frase h2 strong{
-  font-family: "Brandon", sans-serif;
-  font-weight: 400;
-  margin: 0;
+  letter-spacing: 0.1em;
 }
 
 .description {
@@ -91,7 +87,7 @@ export default {
   margin: 0;
 }
 
-.devices img{
+.devices img {
   width: 100%;
   height: auto;
 }
@@ -127,8 +123,8 @@ export default {
 }
 
 @media (max-width: 950px) {
-.about {
-  margin-top: 30px;
-}
+  .about {
+    margin-top: 30px;
+  }
 }
 </style>

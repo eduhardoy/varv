@@ -1,14 +1,15 @@
 <template>
   <transition name="fade">
     <div class="modal" v-if="show">
-      <div class="modal__backdrop" @click="closeModal()"/>
+      <div class="modal__backdrop" @click="closeModal()" />
       <div class="modal__dialog">
         <div class="modal__header">
-          <button type="button" class="modal__close" @click="closeModal()">X
+          <button type="button" class="modal__close" @click="closeModal()">
+            X
           </button>
         </div>
         <div class="modal__body">
-          <slot name="body"/>
+          <slot name="body" />
         </div>
         <div class="modal__footer">
           <slot name="footer" />
@@ -23,7 +24,7 @@ export default {
   name: "ModalAdd",
   data() {
     return {
-      show: false
+      show: false,
     };
   },
   methods: {
@@ -34,11 +35,10 @@ export default {
     openModal() {
       this.show = true;
       document.querySelector("body").classList.add("overflow-hidden");
-    }
-  }
+    },
+  },
 };
 </script>
-
 
 <style lang="scss" scoped>
 .modal {
@@ -49,7 +49,7 @@ export default {
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 999;
+  z-index: 998;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,7 +82,7 @@ export default {
     width: 50px;
     height: 50px;
     font-size: 40px;
-    background-color: #F44336;
+    background-color: #f44336;
     color: white;
   }
   &__header {
@@ -107,7 +107,7 @@ export default {
     height: 20%;
     display: flex;
     justify-content: space-between;
-    .cancel_button{
+    .cancel_button {
       height: 60px;
       width: 240px;
       background-color: black;
@@ -116,10 +116,10 @@ export default {
       border-radius: 10px;
       font-size: 30px;
     }
-    .add_button{
+    .add_button {
       height: 60px;
       width: 240px;
-      background-color: #8FD14F;
+      background-color: #8fd14f;
       border: black 2px solid;
       border-radius: 10px;
       font-size: 30px;

@@ -1,10 +1,9 @@
 <template>
   <div class="hero">
     <div class="hero-container">
-      <h1 class="hero-title">VARV</h1>
-      <h2 class="hero-details">Tours Virtuales 360</h2>
-      <h2 class="hero-details">Arquitectura</h2>
-      <h2 class="hero-details">Realidad Virtual</h2>
+      <h1 class="hero-title">Hola, esto es <strong>VARV</strong></h1>
+      <h2 class="hero-details">Con nosotros podras darle</h2>
+      <h2 class="hero-details">dinámica y vida a tus proyectos</h2>
     </div>
   </div>
 </template>
@@ -37,49 +36,49 @@ export default {
   background-position: center center;
   background-size: cover;
   width: 100%;
-  height: 850px;
+  height: 95vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
+  position: relative;
 }
 .hero-container {
   width: 40%;
-  height: 80%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  margin-top: 145px;
+  position: absolute;
+  bottom: 50%;
+  right: 0;
+  padding: 10px;
 }
 .hero-title {
   margin: 0;
   color: #ffffff;
-  font-family: "Brandon";
-  font-size: 120px;
+  font-family: "Lato";
+  font-size: 65px;
+  font-weight: 300;
+}
+.hero-title strong {
+  font-family: "Brandon Thin";
 }
 .hero-details {
   margin: 0;
   color: #ffffff;
-  font-family: "Brandon Thin";
-  font-size: 60px;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 45px;
 }
 
-@media (max-width: 1750px) {
-  .hero-container {
-    margin-top: 165px;
+@media (max-width: 1330px) {
+  .hero-title {
+    font-size: 55px;
+  }
+  .hero-details {
+    font-size: 35px;
   }
 }
 @media (max-width: 1050px) {
-  .hero-container {
-    width: 100%;
-    align-items: center;
-    margin: 0;
-  }
-  .hero-title {
-    margin-bottom: 400px;
-    margin-top: 20px;
-  }
 }
 @media (max-width: 768px) {
 }

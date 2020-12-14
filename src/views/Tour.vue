@@ -1,7 +1,6 @@
 <template>
   <Header />
   <div>
-    TOUR ID {{ $route.params.id }}
     <div class="tour-page">
       <div class="tour-page-title">
         <h1>{{ collection.name }}</h1>
@@ -44,7 +43,6 @@ export default {
   flex: 1%;
   max-width: 1920px;
   margin: 0 auto;
-  padding-top: 70px;
   padding-bottom: 10px;
   width: 100%;
   flex-direction: column;
