@@ -61,11 +61,13 @@ export default {
     h1 {
       font-size: 40px;
       margin: 10px;
+      color: black;
     }
     h3 {
       font-size: 30px;
       font-weight: 300;
       margin: 10px;
+      color: black;
     }
   }
   .tour-view {

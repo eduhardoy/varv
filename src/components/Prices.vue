@@ -6,13 +6,13 @@
         <h2 class="title">BÁSICO</h2>
       </div>
       <div class="row2">
-        <h4 class="title2">$20</h4>
+        <h4 class="title2">$100</h4>
       </div>
       <div class="description1">
-        <h3>Una imagen 360°</h3>
+        <h3>5 imagenes 360°</h3>
       </div>
       <div class="description2">
-        <h3>Un punto de interacción</h3>
+        <h3>2 puntos de interacción</h3>
       </div>
       <div class="description3">
       </div>

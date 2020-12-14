@@ -1,16 +1,17 @@
 <template>
-  <div class="collections">
+  <div class="collections" id="collections">
     <div class="filter-container">
       <ul class="filter-list" v-for="item in categories" v-bind:key="item.id">
         <li class="filter-item">{{ item.name }}</li>
       </ul>
     </div>
-    <div
-      class="collections-container"
-      v-for="item in collections"
-      v-bind:key="item.id"
-    >
-      <div class="portada-container" @click="goToTour(item)">
+    <div class="collections-container">
+      <div
+        class="portada-container"
+        v-for="item in collections"
+        v-bind:key="item.id"
+        @click="goToTour(item)"
+      >
         <img class="portada" v-bind:src="item.image.url" alt="" />
         <h4 class="portada-title">{{ item.name }}</h4>
       </div>
@@ -31,7 +32,7 @@ export default {
   },
   methods: {
     goToTour(collection) {
-      return this.$router.push({ name: "Tour", params: { id:collection.id } });
+      return this.$router.push({ name: "Tour", params: { id: collection.id } });
     },
   },
 };
@@ -58,6 +59,7 @@ export default {
   align-items: center;
   .filter-container {
     width: 90%;
+    padding-bottom: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,23 +87,36 @@ export default {
     .portada-container {
       box-sizing: border-box;
       width: calc(100% / 3);
-      padding: 20px;
+      padding: 5px;
       display: flex;
+      text-align: center;
       flex-direction: column;
+      filter: grayscale(100%);
+      &:hover {
+        filter: none;
+        cursor: pointer;
+      }
       .portada-title {
+        width: calc(100% - 20px);
         font-size: 25px;
+        padding: 5px;
         font-family: "Lato", sans-serif;
-        font-weight: 400;
+        font-weight: 300;
         margin: 0;
-        margin-top: 20px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.7);
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 30px;
       }
       .portada {
         width: 100%;
         display: inline-flex;
         justify-content: flex-start;
         flex-wrap: wrap;
-        height: 90%;
+        height: 40vh;
         object-fit: cover;
+        position: relative;
       }
     }
   }

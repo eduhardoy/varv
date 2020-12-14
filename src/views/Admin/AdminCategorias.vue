@@ -227,6 +227,7 @@ export default {
       padding: 0;
       margin: 0;
       margin-top: 30px;
+      margin-bottom: 40px;
       .list-item {
         padding: 0;
         margin: 0;
