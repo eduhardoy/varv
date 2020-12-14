@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const URL = "http://localhost:3010/api/client/";
+const URL = "http://inibotnea.com:3010/api/client/";
 
 var config = (token) => ({
   headers: {
