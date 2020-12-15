@@ -15,7 +15,9 @@ export default {
   state: {
     collections: [],
     updateCollection: {},
-    newCollection: {},
+    newCollection: {
+      categories: []
+    },
     collectionById: {},
   },
   getters: {
