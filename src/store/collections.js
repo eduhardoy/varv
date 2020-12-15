@@ -39,6 +39,7 @@ export default {
     },
     updateCollection({ state, dispatch }) {
       let arrCategories = [];
+      // console.log(state.updateCollection.categories)
 
       state.updateCollection.categories.forEach((element) => {
         arrCategories.push(element.id);

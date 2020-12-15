@@ -108,19 +108,29 @@
             placeholder="URL"
             v-model="updateCollection.image.url"
           />
-          <select
+          <div v-for="item2 in categories" v-bind:key="item2.id">
+            <input
+              type="checkbox"
+              :id="item2.id"
+              :value="item2"
+              v-model="updateCollection.categories"
+            />
+            <label :for="item2.id">{{ item2.name }}</label>
+          </div>
+          <!-- <select
             name="categories[]"
             class="modal-selector select-checkbox"
             placeholder="Categoria"
+            v-model="updateCollection.categories"
             multiple
           >
             <option
-              value="{{item2.id}}"
               v-for="item2 in categories"
               v-bind:key="item2.id"
+              v-bind:value="item2"
               >{{ item2.name }}</option
             >
-          </select>
+          </select> -->
         </div>
       </template>
       <template v-slot:footer>
