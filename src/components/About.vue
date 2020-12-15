@@ -1,11 +1,10 @@
 <template>
   <div class="about" id="about">
     <div class="frase">
-      <h2>Nos especializamos en Tours Virtuales 360°,</h2>
       <h2>
-        modelado 3D, realidad virtual
+        Nos especializamos en Tours Virtuales 360°, modelado 3D, realidad
+        virtual y levantamientos con drones.
       </h2>
-      <h2>y levantamientos con drones.</h2>
     </div>
     <div class="description">
       <figure class="devices">
@@ -54,7 +53,7 @@ export default {
 }
 
 .frase {
-  width: 100%;
+  width: 70%;
   height: 30%;
   margin-top: 3%;
   font-size: 28px;

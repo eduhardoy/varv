@@ -177,19 +177,6 @@ export default {
 
 <style lang="scss">
 /* TODO Ordenar modal-selector donde corresponde */
-.modal-selector {
-    text-align: center;
-    width: 60%;
-    font-family: "Lato", Helvetica, Arial, sans-serif;
-    margin-top: 20px;
-    padding: 20px;
-    padding-left: 30px;
-    border: 2px solid black;
-    border-radius: 25px;
-    font-size: 30px;
-    background-color: #ededed;
-    outline: none;
-  }
 .admin-clientes {
   position: relative;
   background-color: white;
@@ -198,9 +185,27 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-
-  
+  .modal-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    .modal-selector {
+      text-align: center;
+      width: 30%;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      margin-top: 20px;
+      padding: 20px;
+      padding-left: 30px;
+      margin-left: 20px;
+      border: 2px solid black;
+      border-radius: 25px;
+      font-size: 25px;
+      background-color: #ededed;
+      outline: none;
+    }
+  }
   .admin-title {
     width: 100%;
     display: flex;
@@ -331,5 +336,19 @@ export default {
       }
     }
   }
+}
+.modal-selector {
+  text-align: center;
+  width: 30%;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  padding: 20px;
+  padding-left: 30px;
+  margin-left: 20px;
+  border: 2px solid black;
+  border-radius: 25px;
+  font-size: 25px;
+  background-color: #ededed;
+  outline: none;
 }
 </style>
