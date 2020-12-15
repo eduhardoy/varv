@@ -108,15 +108,22 @@
             placeholder="URL"
             v-model="updateCollection.image.url"
           />
-          <div v-for="item2 in categories" v-bind:key="item2.id">
-            <input
-              type="checkbox"
-              :id="item2.id"
-              :value="item2"
-              v-model="updateCollection.categories"
-            />
-            <label :for="item2.id">{{ item2.name }}</label>
+          <div class="modal-selector-big">
+            <div
+              class="selector-check"
+              v-for="item2 in categories"
+              v-bind:key="item2.id"
+            >
+              <input
+                type="checkbox"
+                :id="item2.id"
+                :value="item2"
+                v-model="updateCollection.categories"
+              />
+              <label :for="item2.id">{{ item2.name }}</label>
+            </div>
           </div>
+
           <!-- <select
             name="categories[]"
             class="modal-selector select-checkbox"
@@ -256,13 +263,31 @@ export default {
       font-family: "Lato", Helvetica, Arial, sans-serif;
       margin-top: 20px;
       padding: 20px;
-      padding-left: 30px;
       margin-left: 20px;
       border: 2px solid black;
       border-radius: 25px;
       font-size: 25px;
       background-color: #ededed;
       outline: none;
+    }
+    .modal-selector-big {
+      text-align: center;
+      width: 60%;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      margin-top: 20px;
+      padding: 20px;
+      margin-left: 20px;
+      border: 2px solid black;
+      border-radius: 25px;
+      font-size: 25px;
+      background-color: #ededed;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      .selector-check {
+        padding: 8px;
+      }
     }
   }
   .admin-title {

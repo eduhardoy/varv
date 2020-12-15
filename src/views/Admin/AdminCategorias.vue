@@ -26,9 +26,21 @@
     </div>
     <ModalAdd ref="add">
       <template v-slot:body>
-        <input class="modal-selector" placeholder="Nombre" v-model="newCategory.name"/>
-        <input class="modal-selector" placeholder="Descripción" v-model="newCategory.description"/>
-        <input class="modal-selector" placeholder="Order" v-model="newCategory.order"/>
+        <input
+          class="modal-selector"
+          placeholder="Nombre"
+          v-model="newCategory.name"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Descripción"
+          v-model="newCategory.description"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Order"
+          v-model="newCategory.order"
+        />
       </template>
       <template v-slot:footer>
         <button class="cancel_button" @click="closeAddModal()">CANCELAR</button>
@@ -47,7 +59,7 @@
           placeholder="Descripción"
           v-model="updateCategory.description"
         />
-        <input 
+        <input
           class="modal-selector"
           placeholder="Order"
           v-model="updateCategory.order"
@@ -154,7 +166,6 @@ export default {
     font-family: "Lato", Helvetica, Arial, sans-serif;
     margin-top: 20px;
     padding: 20px;
-    padding-left: 30px;
     border: 2px solid black;
     border-radius: 25px;
     font-size: 30px;

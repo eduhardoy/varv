@@ -197,7 +197,6 @@ export default {
       font-family: "Lato", Helvetica, Arial, sans-serif;
       margin-top: 20px;
       padding: 20px;
-      padding-left: 30px;
       margin-left: 20px;
       border: 2px solid black;
       border-radius: 25px;
@@ -336,19 +335,5 @@ export default {
       }
     }
   }
-}
-.modal-selector {
-  text-align: center;
-  width: 30%;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
-  margin-top: 20px;
-  padding: 20px;
-  padding-left: 30px;
-  margin-left: 20px;
-  border: 2px solid black;
-  border-radius: 25px;
-  font-size: 25px;
-  background-color: #ededed;
-  outline: none;
 }
 </style>

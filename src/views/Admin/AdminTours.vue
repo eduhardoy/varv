@@ -72,8 +72,8 @@ export default {
   },
   computed: {
     items() {
-      console.log(this.tours)
-      return this.tours.map((item) => {
+      console.log(this.tours);
+      return this.tours.map(item => {
         console.log(item.id);
         return item;
       });
@@ -104,7 +104,6 @@ export default {
       font-family: "Lato", Helvetica, Arial, sans-serif;
       margin-top: 20px;
       padding: 20px;
-      padding-left: 30px;
       margin-left: 20px;
       border: 2px solid black;
       border-radius: 25px;
