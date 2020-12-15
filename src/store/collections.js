@@ -2,13 +2,14 @@ import Axios from "axios";
 
 const URL = "http://inibotnea.com:3010/api/collection/";
 
-var config = {
+var config = (token) => ({
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${localStorage.getItem("LoggedUser")}`,
+    // Authorization: `Bearer ${localStorage.getItem("LoggedUser")}`,
+    Authorization: `Bearer ${token}`,
     "Access-Control-Allow-Origin": "*",
-  },
-};
+  }
+})
 
 export default {
   state: {
@@ -45,15 +46,20 @@ export default {
 
       state.updateCollection["categories"] = arrCategories;
 
-      Axios.put(URL + state.updateCollection.id, state.updateCollection, config)
+      Axios.put(URL + state.updateCollection.id, state.updateCollection, config(localStorage.getItem("LoggedUser")))
         .then((response) => console.log(response))
+        .catch(err => {
+          console.log(err.response.data)
+          if(err.response.data && err.response.data.expired == true)
+            dispatch("expired")
+        })
         .finally(() => {
           dispatch("getCollections");
         });
     },
     deleteCollection({ state, dispatch }) {
       console.log(config);
-      Axios.delete(URL + state.updateCollection.id, config)
+      Axios.delete(URL + state.updateCollection.id, config(localStorage.getItem("LoggedUser")))
         .then((response) => console.log(response))
         .finally(() => {
           dispatch("getCollections");
@@ -62,7 +68,7 @@ export default {
     addCollection({ dispatch }, newCollection) {
       newCollection["categories"] = [];
 
-      Axios.post(URL, newCollection, config)
+      Axios.post(URL, newCollection, config(localStorage.getItem("LoggedUser")))
         .then((response) => console.log(response))
         .finally(() => {
           dispatch("getCollections");

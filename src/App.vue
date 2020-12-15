@@ -1,5 +1,6 @@
 <template>
   <!-- ROUTER -->
+  <!-- LOADING COMPONENT --> 
   <router-view/>
 </template>
 

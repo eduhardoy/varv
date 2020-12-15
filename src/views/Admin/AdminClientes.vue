@@ -4,7 +4,7 @@
       <div class="title-box">
         <h1>{{ title }}</h1>
       </div>
-      <button class="add-button">
+      <button class="add-button" @click="$refs.add.openModal()">
         <h2>+</h2>
       </button>
     </div>
@@ -25,16 +25,109 @@
       </ul>
     </div>
   </div>
+  <ModalAdd ref="add">
+    <template v-slot:body>
+      <input
+        class="modal-selector"
+        placeholder="Nombre"
+        v-model="newClient.name"
+      />
+      <input
+        class="modal-selector"
+        placeholder="Descripción"
+        v-model="newClient.description"
+      />
+      <input
+        class="modal-selector"
+        placeholder="Order"
+        v-model="newClient.order"
+      />
+      <input
+        class="modal-selector"
+        placeholder="Nombre Imagen"
+        v-model="newClient.image.name"
+      />
+      <input
+        class="modal-selector"
+        placeholder="URL"
+        v-model="newClient.image.url"
+      />
+    </template>
+    <template v-slot:footer>
+      <button class="cancel_button" @click="closeAddModal()">CANCELAR</button>
+      <button class="add_button" @click="confirmAddModal()">AGREGAR</button>
+    </template>
+  </ModalAdd>
+  <ModalChange ref="change">
+    <template v-slot:body>
+      <input
+        class="modal-selector"
+        placeholder="Order"
+        v-model="updateCategory.order"
+      />
+      <input
+        class="modal-selector"
+        placeholder="Nombre"
+        v-model="updateCategory.name"
+      />
+      <input
+        class="modal-selector"
+        placeholder="Descripción"
+        v-model="updateCategory.description"
+      />
+      <input
+        class="modal-selector"
+        placeholder="Nombre Imagen"
+        v-model="updateCategory.image.name"
+      /><input
+        class="modal-selector"
+        placeholder="URL"
+        v-model="updateCategory.image.url"
+      />
+    </template>
+    <template v-slot:footer>
+      <button class="cancel_button" @click="$refs.change.closeModal()">
+        CANCELAR
+      </button>
+      <button class="change_button" @click="confirmChangeModal()">
+        MODIFICAR
+      </button>
+    </template>
+  </ModalChange>
+  <ModalDelete ref="delete">
+    <template v-slot:body>
+      <p>Esta seguro que desea eliminar?</p>
+    </template>
+    <template v-slot:footer>
+      <button class="cancel_button" @click="$refs.delete.closeModal()">
+        CANCELAR
+      </button>
+      <button class="delete_button" @click="confirmDeleteModal()">
+        ELIMINAR
+      </button>
+    </template>
+  </ModalDelete>
 </template>
 
 <script>
+import ModalDelete from "../../components/ModalDelete";
+import ModalAdd from "../../components/ModalAdd";
+import ModalChange from "../../components/ModalChange";
 import datos from "../../../JSON EJEMPLOS/clients.json";
 
 export default {
   data: () => {
     return {
+      newClient: {
+        image: {},
+      },
       title: "CLIENTES",
     };
+  },
+  components: {
+    ModalDelete,
+    ModalAdd,
+    ModalChange,
   },
   computed: {
     items() {
@@ -47,6 +140,20 @@ export default {
 </script>
 
 <style lang="scss">
+/* TODO Ordenar modal-selector donde corresponde */
+.modal-selector {
+    text-align: center;
+    width: 60%;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    padding: 20px;
+    padding-left: 30px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 30px;
+    background-color: #ededed;
+    outline: none;
+  }
 .admin-clientes {
   position: relative;
   background-color: white;
@@ -57,6 +164,7 @@ export default {
   align-items: center;
   font-family: "Lato", Helvetica, Arial, sans-serif;
 
+  
   .admin-title {
     width: 100%;
     display: flex;

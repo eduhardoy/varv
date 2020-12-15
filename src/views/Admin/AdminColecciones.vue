@@ -35,6 +35,11 @@
         <div class="modal-container">
           <input
             class="modal-selector"
+            placeholder="Order"
+            v-model="newCollection.order"
+          />
+          <input
+            class="modal-selector"
             placeholder="Nombre"
             v-model="newCollection.name"
           />
@@ -73,6 +78,11 @@
     <ModalChange ref="change">
       <template v-slot:body>
         <div class="modal-container">
+          <input
+            class="modal-selector"
+            placeholder="Order"
+            v-model="updateCollection.order"
+          />
           <input
             class="modal-selector"
             placeholder="Nombre"

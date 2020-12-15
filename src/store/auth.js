@@ -14,6 +14,9 @@ export default {
         Axios.post(URL,loginForm)
         .then(response => commit("SET_TOKEN",response.data))
     },
+    expired({commit}){
+      commit("DEL_TOKEN")
+    }
   },
   mutations: {
     SET_TOKEN(state, auth) {
@@ -21,5 +24,10 @@ export default {
       state.auth = {...auth};
       router.push("/admin");
     },
+    DEL_TOKEN(state){
+      localStorage.removeItem("LoggedUser")
+      state.auth = {}
+      location.reload();
+    }
   },
 };
