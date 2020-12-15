@@ -63,11 +63,15 @@
             placeholder="URL"
             v-model="newCollection.image.url"
           />
-          <input
-            class="modal-selector"
-            placeholder="Categoria"
-            v-model="newCollection.categories"
-          />
+          <div v-for="item2 in categories" v-bind:key="item2.id">
+            <input
+              type="checkbox"
+              :id="item2.id"
+              :value="item2"
+              v-model="newCollection.categories"
+            />
+            <label :for="item2.id">{{ item2.name }}</label>
+          </div>
         </div>
       </template>
       <template v-slot:footer>
@@ -117,20 +121,6 @@
             />
             <label :for="item2.id">{{ item2.name }}</label>
           </div>
-          <!-- <select
-            name="categories[]"
-            class="modal-selector select-checkbox"
-            placeholder="Categoria"
-            v-model="updateCollection.categories"
-            multiple
-          >
-            <option
-              v-for="item2 in categories"
-              v-bind:key="item2.id"
-              v-bind:value="item2"
-              >{{ item2.name }}</option
-            >
-          </select> -->
         </div>
       </template>
       <template v-slot:footer>
@@ -169,6 +159,7 @@ export default {
     title: "COLECCIONES",
     newCollection: {
       image: {},
+      categories: [],
     },
   }),
   methods: {
@@ -226,7 +217,7 @@ export default {
 </script>
 
 <style lang="scss">
-.select-checkbox option::before {
+/* .select-checkbox option::before {
   content: "\2610";
   width: 1.3em;
   text-align: center;
@@ -234,7 +225,7 @@ export default {
 }
 .select-checkbox option:checked::before {
   content: "\2611";
-}
+} */
 .admin-colecciones {
   position: relative;
   background-color: white;
