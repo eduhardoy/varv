@@ -53,6 +53,11 @@ export default {
     addCategory({ dispatch }, newCategory) {
       Axios.post(URL, newCategory, config(localStorage.getItem("LoggedUser")))
         .then((response) => console.log(response))
+        .catch(err => {
+          console.log(err.response.data)
+          if(err.response.data && err.response.data.expired == true)
+            dispatch("expired")
+        })
         .finally(() => {
           dispatch("getCategories");
         });

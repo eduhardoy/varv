@@ -39,6 +39,7 @@ export default {
     },
     updateCollection({ state, dispatch }) {
       let arrCategories = [];
+      // console.log(state.updateCollection.categories)
 
       state.updateCollection.categories.forEach((element) => {
         arrCategories.push(element.id);
@@ -70,6 +71,11 @@ export default {
 
       Axios.post(URL, newCollection, config(localStorage.getItem("LoggedUser")))
         .then((response) => console.log(response))
+        .catch(err => {
+          console.log(err.response.data)
+          if(err.response.data && err.response.data.expired == true)
+            dispatch("expired")
+        })
         .finally(() => {
           dispatch("getCollections");
         });

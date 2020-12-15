@@ -10,15 +10,15 @@
     </div>
     <div class="admin-body">
       <ul class="admin-list">
-        <li v-for="item in items" v-bind:key="item.id" class="list-item">
+        <li v-for="item in clients" v-bind:key="item.id" class="list-item">
           <div class="datos-list">
             <h4>Nombre: {{ item.name }}</h4>
-            <h4>URL: {{ item.URL }}</h4>
+            <h4>URL: {{ item.description }}</h4>
           </div>
-          <button class="change-button">
+          <button class="change-button" v-on:click="openChangeModal(item)">
             <img src="../../assets/config.png" alt="" />
           </button>
-          <button class="delete-button">
+          <button class="delete-button" @click="openDeleteModal(item)">
             <img src="../../assets/delete.png" alt="" />
           </button>
         </li>
@@ -27,33 +27,31 @@
   </div>
   <ModalAdd ref="add">
     <template v-slot:body>
-      <div class="modal-container">
-        <input
-          class="modal-selector"
-          placeholder="Nombre"
-          v-model="newClient.name"
-        />
-        <input
-          class="modal-selector"
-          placeholder="Descripción"
-          v-model="newClient.description"
-        />
-        <input
-          class="modal-selector"
-          placeholder="Order"
-          v-model="newClient.order"
-        />
-        <input
-          class="modal-selector"
-          placeholder="Nombre Imagen"
-          v-model="newClient.image.name"
-        />
-        <input
-          class="modal-selector"
-          placeholder="URL"
-          v-model="newClient.image.url"
-        />
-      </div>
+      <input
+        class="modal-selector"
+        placeholder="Order"
+        v-model="newClient.order"
+      />
+      <input
+        class="modal-selector"
+        placeholder="Nombre"
+        v-model="newClient.name"
+      />
+      <input
+        class="modal-selector"
+        placeholder="Descripción"
+        v-model="newClient.description"
+      />
+      <input
+        class="modal-selector"
+        placeholder="Nombre Imagen"
+        v-model="newClient.image.name"
+      />
+      <input
+        class="modal-selector"
+        placeholder="URL"
+        v-model="newClient.image.url"
+      />
     </template>
     <template v-slot:footer>
       <button class="cancel_button" @click="closeAddModal()">CANCELAR</button>
@@ -65,26 +63,26 @@
       <input
         class="modal-selector"
         placeholder="Order"
-        v-model="updateCategory.order"
+        v-model="updateClient.order"
       />
       <input
         class="modal-selector"
         placeholder="Nombre"
-        v-model="updateCategory.name"
+        v-model="updateClient.name"
       />
       <input
         class="modal-selector"
         placeholder="Descripción"
-        v-model="updateCategory.description"
+        v-model="updateClient.description"
       />
       <input
         class="modal-selector"
         placeholder="Nombre Imagen"
-        v-model="updateCategory.image.name"
+        v-model="updateClient.image.name"
       /><input
         class="modal-selector"
         placeholder="URL"
-        v-model="updateCategory.image.url"
+        v-model="updateClient.image.url"
       />
     </template>
     <template v-slot:footer>
@@ -131,12 +129,48 @@ export default {
     ModalAdd,
     ModalChange,
   },
+  methods: {
+    openChangeModal(clientData) {
+      this.$store.dispatch("setUpdateClient", clientData);
+      return this.$refs.change.openModal();
+    },
+    confirmChangeModal() {
+      this.$store.dispatch("updateClient");
+      return this.$refs.change.closeModal();
+    },
+    openDeleteModal(clientData) {
+      this.$store.dispatch("setUpdateClient", clientData);
+      return this.$refs.delete.openModal();
+    },
+    confirmDeleteModal() {
+      this.$store.dispatch("deleteClient");
+      return this.$refs.delete.closeModal();
+    },
+    closeAddModal() {
+      this.newClient = {};
+      return this.$refs.add.closeModal();
+    },
+    confirmAddModal() {
+      this.$store.dispatch("addClient", this.newClient);
+      this.newClient = {};
+      return this.$refs.add.closeModal();
+    },
+  },
   computed: {
     items() {
       return datos.map(item => {
         return item;
       });
     },
+    clients() {
+      return this.$store.getters.allClients;
+    },
+    updateClient() {
+      return this.$store.getters.updateClient;
+    },
+  },
+  mounted() {
+    this.$store.dispatch("getClients");
   },
 };
 </script>
