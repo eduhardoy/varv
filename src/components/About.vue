@@ -7,7 +7,7 @@
       </h2>
     </div>
     <div class="description">
-      <figure class="devices">
+      <figure class="description-image">
         <img src="../assets/catedral2.png" alt="" />
       </figure>
       <div class="lista">
@@ -42,7 +42,6 @@ export default {
 
 .about {
   max-width: 1500px;
-  flex: 1%;
   margin: 0 auto;
   padding-top: 70px;
   width: 100%;
@@ -56,6 +55,7 @@ export default {
   width: 70%;
   height: 30%;
   margin-top: 3%;
+  padding-bottom: 20px;
   font-size: 28px;
   display: flex;
   justify-content: center;
@@ -70,7 +70,7 @@ export default {
 }
 
 .description {
-  width: 90%;
+  width: 80%;
   height: 100%;
   margin-top: 1%;
   margin-bottom: 3%;
@@ -80,13 +80,13 @@ export default {
   align-items: center;
 }
 
-.devices {
+.description-image {
   width: 50%;
   height: auto;
   margin: 0;
 }
 
-.devices img {
+.description-image img {
   width: 100%;
   height: auto;
 }
@@ -97,7 +97,7 @@ export default {
   font-weight: 300;
   font-size: 25px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .lista h5 {
@@ -121,9 +121,49 @@ export default {
   padding: 0;
 }
 
+@media (max-width: 1145px) {
+  .frase {
+    font-size: 25px;
+  }
+  .lista h5 {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .description {
+    flex-direction: column;
+    width: 100%;
+  }
+  .lista {
+    width: 100%;
+  }
+}
+
 @media (max-width: 950px) {
   .about {
     margin-top: 30px;
   }
+}
+
+@media (max-width: 768px) {
+  .description-image {
+    width: 60%;
+  }
+}
+@media (max-width: 425px) {
+  .description-image {
+    width: 100%;
+  }
+  .frase {
+    font-size: 20px;
+    width: 100%;
+  }
+  .lista h5 {
+    font-size: 18px;
+    padding: 10px;
+  }
+}
+@media (max-width: 950px) {
 }
 </style>
