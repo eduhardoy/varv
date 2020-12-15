@@ -36,7 +36,7 @@ export default {
             dispatch("expired")
         })
         .finally(() => {
-          dispatch("getCategories");
+          dispatch("getClients");
         });
     },
     setUpdateClient({ commit }, updateClient) {
@@ -52,6 +52,11 @@ export default {
     addClient({ dispatch }, newClient) {
       Axios.post(URL, newClient, config(localStorage.getItem("LoggedUser")))
         .then((response) => console.log(response))
+        .catch(err => {
+          console.log(err.response.data)
+          if(err.response.data && err.response.data.expired == true)
+            dispatch("expired")
+        })
         .finally(() => {
           dispatch("getClients");
         });

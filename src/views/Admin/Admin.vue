@@ -79,7 +79,7 @@ export default {};
       box-sizing: border-box;
       background-color: #ededed;
       display: flex;
-      justify-content: start;
+      justify-content: flex-start;
       flex-direction: column;
       align-items: center;
       height: 90%;
