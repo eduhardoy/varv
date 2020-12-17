@@ -81,6 +81,7 @@ export default {
   .filter-container {
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
