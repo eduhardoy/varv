@@ -2,7 +2,13 @@
   <div class="collections" id="collections">
     <div class="filter-container">
       <ul class="filter-list" v-for="item in categories" v-bind:key="item.id">
-        <li class="filter-item">{{ item.name }}</li>
+        <li
+          class="filter-item"
+          @click="selectCategory(item.id)"
+          :class="selectedCategory == item.id ? 'selected' : ''"
+        >
+          {{ item.name }}
+        </li>
       </ul>
     </div>
     <div class="collections-container">
@@ -24,15 +30,30 @@ export default {
   name: "Collections",
   computed: {
     collections() {
-      return this.$store.getters.allCollections;
+      let collections = this.$store.getters.allCollections;
+      let selectedCollections = [];
+      collections.forEach((element) => {
+        if (
+          element.categories.filter((e) => e.id == this.selectedCategory)
+            .length > 0
+        )
+          selectedCollections.push(element);
+      });
+      return selectedCollections;
     },
     categories() {
       return this.$store.getters.allCategories;
+    },
+    selectedCategory() {
+      return this.$store.getters.getSelectedCategory;
     },
   },
   methods: {
     goToTour(collection) {
       return this.$router.push({ name: "Tour", params: { id: collection.id } });
+    },
+    selectCategory(categoryId) {
+      return this.$store.dispatch("setSelectedCategory", categoryId);
     },
   },
 };
@@ -76,6 +97,9 @@ export default {
         &:hover {
           border-bottom: 1px solid black;
         }
+      }
+      .selected {
+        border-bottom: 1px solid black !important;
       }
     }
   }
