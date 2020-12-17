@@ -97,7 +97,7 @@ export default {
 .contact {
   flex: 1%;
   max-width: 1920px;
-  margin: 0 auto;
+  margin: 0;
   padding-top: 70px;
   padding-bottom: 100px;
   width: 100%;
@@ -127,7 +127,7 @@ export default {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  margin-top: 35px;
+  padding: 20px;
 }
 
 .dato i{
@@ -257,12 +257,15 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
+}
+
+.redes{
+  width: 70%;
 }
 
 .formnow {
   width: 70%;
-  margin-top: 100px;
+  padding-top: 70px;
 }
 
 .formbutton{
@@ -271,8 +274,11 @@ export default {
 }
 
 @media (max-width: 530px) {
+  .redes{
+  width: 90%;
+}
   .formnow {
-  width: 80%;
+  width: 90%;
 }
 }
 

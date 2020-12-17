@@ -2,7 +2,7 @@
   <header class="header">
     <div class="logo">
       <router-link to="/">
-        <img alt="Vue logo" src="../assets/logo.png" />
+        <img alt="Vue logo" src="../assets/logo2.png" />
       </router-link>
     </div>
     <div class="menu" v-bind:class="{ isActive: isActive }">
@@ -141,7 +141,7 @@ export default {
 }
 .logo img {
   width: auto;
-  height: 50px;
+  height: 60px;
   padding-top: 10px;
   padding-bottom: 10px;
 }

@@ -3,7 +3,7 @@
     <div class="hero-container">
       <h1 class="hero-title">Hola, esto es <strong>VARV</strong></h1>
       <h2 class="hero-details">
-        Con nosotros podrás darle <br />dinámica y vida a tus proyectos
+        Con nosotros podrás darle dinámica y vida a tus proyectos
       </h2>
     </div>
   </div>
@@ -45,12 +45,13 @@ export default {
 .hero-container {
   width: 40%;
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
   position: absolute;
   bottom: 45%;
-  right: 30px;
+  right: 60px;
+  text-align: center;
 }
 .hero-title {
   margin: 0;
@@ -90,21 +91,9 @@ export default {
 }
 @media (max-width: 1120px) {
   .hero-container {
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+    width: 100vw;
+    bottom: 10%;
     right: 0;
-    top: 0;
-    position: relative;
-  }
-  .hero-title {
-    position: absolute;
-    top: 15px;
-  }
-  .hero-details {
-    position: absolute;
-    bottom: 45px;
   }
 }
 
@@ -114,6 +103,17 @@ export default {
   }
   .hero-details {
     font-size: 30px;
+  }
+}
+@media (max-width: 400px){
+    .hero-container {
+    bottom: 10%;
+  }
+    .hero-title {
+    font-size: 35px;
+  }
+  .hero-details {
+    font-size: 20px;
   }
 }
 </style>

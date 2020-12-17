@@ -3,7 +3,7 @@
     <div class="wrap-login">
       <form class="login-form" action="">
         <span class="login-form-logo">
-          <img class="logovarv" src="../../assets/VARVLOGO.png" alt="">
+          <img class="logovarv" src="../../assets/logo3.png" alt="">
         </span>
         <span class="login-form-title"> Login here</span>
         <div class="form-wrap-input">
