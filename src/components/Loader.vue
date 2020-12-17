@@ -1,5 +1,5 @@
 <template>
-  <div class="loader">
+  <div class="loader" >
     <div className="lds-grid">
       <div />
       <div />

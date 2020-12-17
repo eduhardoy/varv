@@ -1,8 +1,19 @@
 <template>
   <!-- ROUTER -->
   <!-- LOADING COMPONENT --> 
+  <Loader v-if="$store.getters.isLoading"/>
   <router-view/>
 </template>
+
+<script>
+import Loader from './components/Loader'
+export default {
+  name : "App",
+  components:{
+    Loader
+  }
+}
+</script>
 
 <style>
 body{
