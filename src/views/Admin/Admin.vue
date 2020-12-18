@@ -3,7 +3,7 @@
     <div class="admin-menu">
       <div class="admin-menu-title">
         <span class="login-form-logo">
-          <img class="logovarv" src="../../assets/VARVLOGO.png" alt="" />
+          <img class="logovarv" src="../../assets/logo3.png" alt="" />
         </span>
         <h1>MENU</h1>
       </div>

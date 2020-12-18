@@ -147,6 +147,9 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .frase {
+    width: 90%;
+  }
   .description-image {
     width: 60%;
   }

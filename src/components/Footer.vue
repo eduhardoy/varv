@@ -1,7 +1,7 @@
 <template>
   <footer>
     <figure class="footerlogo">
-      <img src="../assets/VARVLOGO.png" alt="" class="footerlogoimg">
+      <img src="../assets/logo3.png" alt="" class="footerlogoimg">
     </figure>
     <div class="rights">
       <h4>© 2020 All Rights Reserved -<strong><a class="link" href="https://franciscovaldez.pb.online/cv-3" target="_blank"> Francisco Valdez Apolo.</a></strong></h4>

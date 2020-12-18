@@ -8,38 +8,47 @@ var config = (token) => ({
     // Authorization: `Bearer ${localStorage.getItem("LoggedUser")}`,
     Authorization: `Bearer ${token}`,
     "Access-Control-Allow-Origin": "*",
-  }
-})
+  },
+});
 
 export default {
   state: {
     collections: [],
     updateCollection: {},
     newCollection: {
-      categories: []
+      categories: [],
     },
     collectionById: {},
   },
   getters: {
     allCollections: (state) => state.collections,
     updateCollection: (state) => state.updateCollection,
-    collectionById: (state) => state.collectionById
+    collectionById: (state) => state.collectionById,
   },
   actions: {
-    getCollections({ commit }) {
-      Axios.get(URL).then((response) =>
-        commit("SET_COLLECTIONS", response.data)
-      );
+    getCollections({ commit, dispatch }) {
+      dispatch("setLoader", true);
+      Axios.get(URL)
+        .then((response) => commit("SET_COLLECTIONS", response.data))
+        .finally(() => {
+          dispatch("setLoader", false);
+        });
     },
-    getCollectionById({ commit }, collectionId) {
-      Axios.get(URL + collectionId).then((response) => {
-        commit("SET_COLLECTION_BY_ID", response.data);
-      });
+    getCollectionById({ commit, dispatch }, collectionId) {
+      dispatch("setLoader", true);
+      Axios.get(URL + collectionId)
+        .then((response) => {
+          commit("SET_COLLECTION_BY_ID", response.data);
+        })
+        .finally(() => {
+          dispatch("setLoader", false);
+        });
     },
     setUpdateCollection({ commit }, collection) {
       commit("SET_UPDATE_COLLECTION", collection);
     },
     updateCollection({ state, dispatch }) {
+      dispatch("setLoader", true);
       let arrCategories = [];
       // console.log(state.updateCollection.categories)
 
@@ -49,37 +58,49 @@ export default {
 
       state.updateCollection["categories"] = arrCategories;
 
-      Axios.put(URL + state.updateCollection.id, state.updateCollection, config(localStorage.getItem("LoggedUser")))
+      Axios.put(
+        URL + state.updateCollection.id,
+        state.updateCollection,
+        config(localStorage.getItem("LoggedUser"))
+      )
         .then((response) => console.log(response))
-        .catch(err => {
-          console.log(err.response.data)
-          if(err.response.data && err.response.data.expired == true)
-            dispatch("expired")
+        .catch((err) => {
+          console.log(err.response.data);
+          if (err.response.data && err.response.data.expired == true)
+            dispatch("expired");
         })
         .finally(() => {
           dispatch("getCollections");
+          dispatch("setLoader", false);
         });
     },
     deleteCollection({ state, dispatch }) {
+      dispatch("setLoader", true);
       console.log(config);
-      Axios.delete(URL + state.updateCollection.id, config(localStorage.getItem("LoggedUser")))
+      Axios.delete(
+        URL + state.updateCollection.id,
+        config(localStorage.getItem("LoggedUser"))
+      )
         .then((response) => console.log(response))
         .finally(() => {
           dispatch("getCollections");
+          dispatch("setLoader", false);
         });
     },
     addCollection({ dispatch }, newCollection) {
+      dispatch("setLoader", true);
       newCollection["categories"] = [];
 
       Axios.post(URL, newCollection, config(localStorage.getItem("LoggedUser")))
         .then((response) => console.log(response))
-        .catch(err => {
-          console.log(err.response.data)
-          if(err.response.data && err.response.data.expired == true)
-            dispatch("expired")
+        .catch((err) => {
+          console.log(err.response.data);
+          if (err.response.data && err.response.data.expired == true)
+            dispatch("expired");
         })
         .finally(() => {
           dispatch("getCollections");
+          dispatch("setLoader", false);
         });
     },
   },

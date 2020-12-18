@@ -2,7 +2,13 @@
   <div class="collections" id="collections">
     <div class="filter-container">
       <ul class="filter-list" v-for="item in categories" v-bind:key="item.id">
-        <li class="filter-item">{{ item.name }}</li>
+        <li
+          class="filter-item"
+          @click="selectCategory(item.id)"
+          :class="selectedCategory == item.id ? 'selected' : ''"
+        >
+          {{ item.name }}
+        </li>
       </ul>
     </div>
     <div class="collections-container">
@@ -24,15 +30,30 @@ export default {
   name: "Collections",
   computed: {
     collections() {
-      return this.$store.getters.allCollections;
+      let collections = this.$store.getters.allCollections;
+      let selectedCollections = [];
+      collections.forEach((element) => {
+        if (
+          element.categories.filter((e) => e.id == this.selectedCategory)
+            .length > 0
+        )
+          selectedCollections.push(element);
+      });
+      return selectedCollections;
     },
     categories() {
       return this.$store.getters.allCategories;
+    },
+    selectedCategory() {
+      return this.$store.getters.getSelectedCategory;
     },
   },
   methods: {
     goToTour(collection) {
       return this.$router.push({ name: "Tour", params: { id: collection.id } });
+    },
+    selectCategory(categoryId) {
+      return this.$store.dispatch("setSelectedCategory", categoryId);
     },
   },
 };
@@ -58,14 +79,19 @@ export default {
   justify-content: center;
   align-items: center;
   .filter-container {
-    width: 90%;
-    padding-bottom: 30px;
+    width: 100%;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     .filter-list {
       list-style: none;
+      margin: 0;
+      padding: 20px;
+      @media (max-width: 1024px){
+      padding: 20px;
+      }
       .filter-item {
         padding: 1px 10px 1px 10px;
         font-size: 30px;
@@ -75,7 +101,17 @@ export default {
         border-bottom: 1px solid transparent;
         &:hover {
           border-bottom: 1px solid black;
+          cursor: pointer;
         }
+        @media (max-width: 768px){
+        font-size: 25px;
+      }
+        @media (max-width: 425px){
+        font-size: 20px;
+      }
+      }
+      .selected {
+        border-bottom: 1px solid black !important;
       }
     }
   }
@@ -95,6 +131,12 @@ export default {
       & :hover {
         filter: none;
         cursor: pointer;
+      }
+      @media (max-width: 768px){
+        width: 50%;
+      }
+      @media (max-width: 425px){
+        width: 100%;
       }
     }
     .portada-title {

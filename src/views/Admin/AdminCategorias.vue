@@ -28,6 +28,11 @@
       <template v-slot:body>
         <input
           class="modal-selector"
+          placeholder="Order"
+          v-model="newCategory.order"
+        />
+        <input
+          class="modal-selector"
           placeholder="Nombre"
           v-model="newCategory.name"
         />
@@ -35,11 +40,6 @@
           class="modal-selector"
           placeholder="Descripción"
           v-model="newCategory.description"
-        />
-        <input
-          class="modal-selector"
-          placeholder="Order"
-          v-model="newCategory.order"
         />
       </template>
       <template v-slot:footer>
@@ -51,6 +51,11 @@
       <template v-slot:body>
         <input
           class="modal-selector"
+          placeholder="Order"
+          v-model="updateCategory.order"
+        />
+        <input
+          class="modal-selector"
           placeholder="Nombre"
           v-model="updateCategory.name"
         />
@@ -58,11 +63,6 @@
           class="modal-selector"
           placeholder="Descripción"
           v-model="updateCategory.description"
-        />
-        <input
-          class="modal-selector"
-          placeholder="Order"
-          v-model="updateCategory.order"
         />
       </template>
       <template v-slot:footer>
