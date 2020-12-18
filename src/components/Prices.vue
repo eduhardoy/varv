@@ -32,7 +32,7 @@
         <h2 class="title">ESPECIAL</h2>
       </div>
       <div class="row2">
-        <h4 class="title">+$200</h4>
+        <h4 class="title2">+$200</h4>
       </div>
       <div class="row3">
         <h3>Vídeos 360°</h3>
@@ -138,6 +138,12 @@ export default {
 .iva h2{
   font-size: 30px;
   font-weight: 300;
+}
+
+@media (max-width: 768px){
+  .pricecase {
+  height: 400px;
+}
 }
 
 </style>

@@ -84,16 +84,16 @@ export default {
 }
 
 .burger-button {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   color: black;
   display: none;
   align-items: center;
   justify-content: center;
-  right: 0px;
-  top: 0px;
+  right: 0;
   font-size: 30px;
+  position: absolute;
 }
 
 .notshow {
@@ -138,6 +138,7 @@ export default {
   align-items: center;
   justify-content: center;
   width: 30%;
+  position: relative;
 }
 .logo img {
   width: auto;

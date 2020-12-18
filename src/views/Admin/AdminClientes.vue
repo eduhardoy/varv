@@ -11,6 +11,9 @@
     <div class="admin-body">
       <ul class="admin-list">
         <li v-for="item in clients" v-bind:key="item.id" class="list-item">
+          <div class="order-number">
+            {{ item.order }}
+          </div>
           <div class="datos-list">
             <h4>Nombre: {{ item.name }}</h4>
             <h4>URL: {{ item.description }}</h4>
@@ -290,6 +293,9 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+        .order-number{
+          font-size: 28px;
+        }
         .datos-list {
           width: 60%;
           height: 70%;

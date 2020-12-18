@@ -57,7 +57,7 @@ export default {
   height: auto;
   max-height: 100%;
   width: auto;
-  max-width: 200px;
+  max-width: 100%;
 }
 
 .clients ul {
@@ -72,12 +72,29 @@ export default {
 
 .clients ul li {
   background-color: white;
-  box-shadow: 1px 1px 12px 5px rgba(0,0,0,0.33);
+  box-shadow: 0px 0px 14px 0px #7A7A7A;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 200px;
   width: 200px;
   margin: 20px;
+}
+
+@media (max-width: 768px){
+  .clients ul li {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+}
+}
+
+@media (max-width: 375px){
+  .clients ul li {
+  height: 150px;
+  width: 150px;
+  margin: 5px;
+  box-shadow: 0px 0px 23px -6px #7A7A7A;
+}
 }
 </style>

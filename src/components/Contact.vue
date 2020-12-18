@@ -273,6 +273,19 @@ export default {
 }
 }
 
+@media (max-width: 768px){
+  .contact h3 {
+  font-size: 30px;
+}
+.dato i{
+  font-size: 30px;
+}
+.dato i strong{
+  font-size: 30px;
+  }
+}
+
+
 @media (max-width: 530px) {
   .redes{
   width: 90%;
@@ -280,6 +293,16 @@ export default {
   .formnow {
   width: 90%;
 }
+}
+
+@media (max-width: 435px){
+.dato i{
+  font-size: 25px;
+}
+
+.dato i strong{
+  font-size: 25px;
+  }
 }
 
 </style>
