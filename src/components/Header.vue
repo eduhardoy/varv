@@ -211,6 +211,11 @@ a {
     transition: 0.4s;
   }
 
+  .notshow {
+  width: 70px;
+  height: 70px;
+}
+
   .menu.isActive {
     left: 0;
     flex-direction: column;
