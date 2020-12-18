@@ -80,7 +80,7 @@ export default {
   box-sizing: border-box;
   min-width: 300px;
   border-radius: 10%;
-  border: solid 1px black;
+  box-shadow: 0px 0px 14px 0px #7A7A7A;
   display: flex;
   flex-direction: column;
   overflow: hidden;

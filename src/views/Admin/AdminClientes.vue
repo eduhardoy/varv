@@ -27,7 +27,8 @@
   </div>
   <ModalAdd ref="add">
     <template v-slot:body>
-      <input
+      <div class="modal-container">
+        <input
         class="modal-selector"
         placeholder="Order"
         v-model="newClient.order"
@@ -52,6 +53,8 @@
         placeholder="URL"
         v-model="newClient.image.url"
       />
+      </div>
+      
     </template>
     <template v-slot:footer>
       <button class="cancel_button" @click="closeAddModal()">CANCELAR</button>
@@ -60,7 +63,8 @@
   </ModalAdd>
   <ModalChange ref="change">
     <template v-slot:body>
-      <input
+      <div class="modal-container">
+        <input
         class="modal-selector"
         placeholder="Order"
         v-model="updateClient.order"
@@ -84,6 +88,8 @@
         placeholder="URL"
         v-model="updateClient.image.url"
       />
+      </div>
+      
     </template>
     <template v-slot:footer>
       <button class="cancel_button" @click="$refs.change.closeModal()">
@@ -336,4 +342,17 @@ export default {
     }
   }
 }
+.modal-selector {
+      text-align: center;
+      width: 30%;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      margin-top: 20px;
+      padding: 20px;
+      margin-left: 20px;
+      border: 2px solid black;
+      border-radius: 25px;
+      font-size: 25px;
+      background-color: #ededed;
+      outline: none;
+    }
 </style>
