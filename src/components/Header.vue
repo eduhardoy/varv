@@ -141,7 +141,7 @@ export default {
 }
 .logo img {
   width: auto;
-  height: 60px;
+  height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
 }

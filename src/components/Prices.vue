@@ -8,34 +8,22 @@
       <div class="row2">
         <h4 class="title2">$100</h4>
       </div>
-      <div class="description1">
+      <div class="row3">
         <h3>5 imagenes 360°</h3>
-      </div>
-      <div class="description2">
         <h3>2 puntos de interacción</h3>
-      </div>
-      <div class="description3">
-      </div>
-      <div class="description4">
       </div>
     </div>
     <div class="pricecase">
       <div class="row1">
         <h2 class="title">ESTÁNDAR</h2>
       </div>
-      <div class="row2mid">
+      <div class="row2">
         <h4 class="title2">$200</h4>
       </div>
-      <div class="description1">
+      <div class="row3">
         <h3>Tour virtual de hasta 12 escenas</h3>
-      </div>
-      <div class="description2">
         <h3>5 puntos de interacción</h3>
-      </div>
-      <div class="description3">
         <h3>Mapa de ubicación (Si aplica)</h3>
-      </div>
-      <div class="description4">
         <h3>Sonido (Opcional)</h3>
       </div>
     </div>
@@ -43,19 +31,13 @@
       <div class="row1">
         <h2 class="title">ESPECIAL</h2>
       </div>
-      <div class="row2end">
-        <h4 class="title2">+$200</h4>
+      <div class="row2">
+        <h4 class="title">+$200</h4>
       </div>
-      <div class="description1">
+      <div class="row3">
         <h3>Vídeos 360°</h3>
-      </div>
-      <div class="description2">
         <h3>Tours interactivos personalizados</h3>
-      </div>
-      <div class="description3">
         <h3>Fotos y vídeos con dron</h3>
-      </div>
-      <div class="description4">
         <h3>*Cuentanos sobre tu proyecto y cotiza</h3>
       </div>
     </div>
@@ -89,20 +71,18 @@ export default {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: 20px;
 }
 
 .pricecase {
-  height: 480px;
-  width: calc(80% / 3);
+  height: 500px;
+  width: 400px;
   margin: 20px;
   box-sizing: border-box;
-  min-width: 450px;
-  border-radius: 20%;
+  min-width: 300px;
+  border-radius: 10%;
   border: solid 1px black;
-  display: grid;
-  grid-template-rows: 100px 120px 50px 50px 50px 50px;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -111,6 +91,7 @@ export default {
   justify-content: center;
   align-items: center;
   background-color: black;
+  height: 20%;
   margin: 0;
 }
 
@@ -128,64 +109,30 @@ export default {
   align-items: center;
   background-color: rgba(15,160,194, 0.6);
   margin: 0;
-  margin-bottom: 5px;
-}
-
-.row2mid{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(15,160,194, 0.6);
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-.row2end{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(15,160,194, 0.6);
-  margin: 0;
-  margin-bottom: 5px;
+  height: 20%;
 }
 
 .title2 {
   width: 50%;
   height: 40%;
   font-size: 60px;
+  line-height:60px;
   padding-bottom: 20px;
   margin: 0;
   color: #ffffff;
 }
 
-.description1 {
-  grid-row: 3;
-  text-align: center;
-  font-size: 18px;
-  margin-top: 20px;
+.row3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  height: 50%;
+  margin: 20px;
 }
-
-.description2 {
-  grid-row: 4;
-  text-align: center;
-  font-size: 18px;
-  margin-top: 20px;
-}
-
-.description3 {
-  grid-row: 5;
-  text-align: center;
-  font-size: 18px;
-  margin-top: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.description4 {
-  grid-row: 6;
-  text-align: center;
-  font-size: 18px;
-  margin-top: 20px;
+.row3 h3{
+  padding: 10px;
 }
 
 .iva h2{
