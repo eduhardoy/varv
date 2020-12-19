@@ -56,7 +56,6 @@ export default {
   height: 30%;
   margin-top: 3%;
   padding-bottom: 20px;
-  font-size: 28px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,6 +64,7 @@ export default {
 
 .frase h2 {
   font-weight: 300;
+  font-size: 40px;
   margin: 0;
   letter-spacing: 0.1em;
 }
@@ -122,8 +122,8 @@ export default {
 }
 
 @media (max-width: 1145px) {
-  .frase {
-    font-size: 25px;
+  .frase h2 {
+    font-size: 35px;
   }
   .lista h5 {
     font-size: 15px;
@@ -131,6 +131,7 @@ export default {
 }
 
 @media (max-width: 1024px) {
+
   .description {
     flex-direction: column;
     width: 100%;
@@ -148,7 +149,11 @@ export default {
 
 @media (max-width: 768px) {
   .frase {
-    width: 90%;
+    width: 80%;
+    
+  }
+  .frase h2 {
+    font-size: 30px;
   }
   .description-image {
     width: 60%;
@@ -160,7 +165,10 @@ export default {
   }
   .frase {
     font-size: 20px;
-    width: 100%;
+    width: 90%;
+  }
+  .frase h2 {
+    font-size: 25px;
   }
   .lista h5 {
     font-size: 18px;

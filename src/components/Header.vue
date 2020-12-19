@@ -227,11 +227,11 @@ a {
   }
   .menu-elements {
     height: 80%;
-    margin: 40px;
+    margin: 20px;
     border: none;
   }
   .menu-elements a {
-    font-size: 30px;
+    font-size: 25px;
     color: white;
   }
 }

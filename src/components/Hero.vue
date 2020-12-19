@@ -50,7 +50,7 @@ export default {
   flex-direction: column;
   position: absolute;
   bottom: 45%;
-  right: 60px;
+  right: 0;
   text-align: center;
 }
 .hero-title {
@@ -60,6 +60,7 @@ export default {
   font-size: 65px;
   font-weight: 300;
   text-shadow: 0px 1px 9px #000000;
+  padding: 10px;
 }
 .hero-title strong {
   font-family: "Brandon Thin";
@@ -71,6 +72,7 @@ export default {
   font-weight: 300;
   font-size: 45px;
   text-shadow: 0px 1px 9px #000000;
+  padding: 10px;
 }
 
 @media (max-width: 1480px) {
@@ -95,9 +97,6 @@ export default {
     bottom: 10%;
     right: 0;
   }
-}
-
-@media (max-width: 1120px) {
   .hero-title {
     font-size: 45px;
   }
@@ -105,6 +104,12 @@ export default {
     font-size: 30px;
   }
 }
+@media (max-width: 768px){
+  .hero {
+    height: 80vh;
+  }
+}
+
 @media (max-width: 400px){
     .hero-container {
     bottom: 10%;

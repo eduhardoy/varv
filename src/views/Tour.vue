@@ -43,7 +43,6 @@ export default {
   flex: 1%;
   max-width: 1920px;
   margin: 0 auto;
-  padding-bottom: 10px;
   width: 100%;
   flex-direction: column;
   display: flex;
@@ -55,25 +54,46 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin: 40px;
+    margin: 20px;
     h1 {
       font-size: 40px;
       margin: 10px;
       color: black;
+      @media (max-width: 1024px){
+        font-size: 35px;
+      }
+      @media (max-width: 768px){
+        font-size: 25px;
+      }
     }
     h3 {
       font-size: 30px;
       font-weight: 300;
       margin: 10px;
       color: black;
+      @media (max-width: 1024px){
+        font-size: 25px;
+      }
+      @media (max-width: 768px){
+        font-size: 20px;
+      }
     }
   }
   .tour-view {
     width: 80%;
+    @media (max-width: 1024px){
+        width: 90%;
+      }
+    @media (max-width: 768px){
+        width: 95%;
+      }
     iframe {
       width: 100%;
-      height: 80vh;
+      height: 70vh;
+      
     }
   }
 }
+
+
 </style>
