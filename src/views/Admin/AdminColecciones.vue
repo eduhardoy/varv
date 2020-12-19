@@ -66,7 +66,8 @@
             placeholder="URL"
             v-model="newCollection.image.url"
           />
-          <div v-for="item2 in categories" v-bind:key="item2.id">
+          <div class="modal-selector-big">
+            <div class="selector-check" v-for="item2 in categories" v-bind:key="item2.id">
             <input
               type="checkbox"
               :id="item2.id"
@@ -74,6 +75,7 @@
               v-model="newCollection.categories"
             />
             <label :for="item2.id">{{ item2.name }}</label>
+          </div>
           </div>
         </div>
       </template>

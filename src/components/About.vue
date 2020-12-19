@@ -131,6 +131,9 @@ export default {
 }
 
 @media (max-width: 1024px) {
+  .about{
+    padding-top: 30px;
+  }
 
   .description {
     flex-direction: column;
@@ -148,6 +151,10 @@ export default {
 }
 
 @media (max-width: 768px) {
+  .about{
+    padding-top: 0px;
+  }
+
   .frase {
     width: 80%;
     

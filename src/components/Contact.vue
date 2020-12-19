@@ -252,6 +252,12 @@ export default {
 }
 }
 
+@media (max-width: 1024px){
+  .contact {
+    padding-top: 30px;
+  }
+}
+
 @media (max-width: 950px) {
 .contact {
   flex-direction: column;
@@ -265,7 +271,7 @@ export default {
 
 .formnow {
   width: 70%;
-  padding-top: 70px;
+  padding-top: 20px;
 }
 
 .formbutton{
@@ -274,6 +280,9 @@ export default {
 }
 
 @media (max-width: 768px){
+  .contact {
+    padding-top: 0px;
+  }
   .contact h3 {
   font-size: 30px;
 }

@@ -141,6 +141,14 @@ export default {
 }
 
 @media (max-width: 768px){
+  .prices{
+    padding-top: 30px;
+  }
+}
+@media (max-width: 768px){
+  .prices{
+    padding-top: 0px;
+  }
   .pricecase {
   height: 400px;
 }

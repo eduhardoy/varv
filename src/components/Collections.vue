@@ -78,6 +78,12 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 1024px){
+    padding-top: 30px;
+  }
+  @media (max-width: 768px){
+    padding-top: 0px;
+  }
   .filter-container {
     width: 100%;
     padding: 20px;
