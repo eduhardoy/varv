@@ -1,6 +1,6 @@
 import Axios from "axios";
 import router from "../router";
-const URL = "http://inibotnea.com:3010/api/login"
+const URL = "http://198.74.58.89:3010/api/login"
 
 export default {
   state: {

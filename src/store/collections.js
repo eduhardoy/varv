@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const URL = "http://inibotnea.com:3010/api/collection/";
+const URL = "http://198.74.58.89:3010/api/collection/";
 
 var config = (token) => ({
   headers: {
@@ -89,7 +89,13 @@ export default {
     },
     addCollection({ dispatch }, newCollection) {
       dispatch("setLoader", true);
-      newCollection["categories"] = [];
+      let arrCategories = [];
+
+      newCollection.categories.forEach((element) => {
+        arrCategories.push(element.id);
+      });
+
+      newCollection["categories"] = arrCategories;
 
       Axios.post(URL, newCollection, config(localStorage.getItem("LoggedUser")))
         .then((response) => console.log(response))
