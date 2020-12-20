@@ -110,6 +110,14 @@ export default {
   }
 }
 
+.hero-title {
+  padding: 5px;
+}
+
+.hero-details {
+  padding: 5px;
+}
+
 @media (max-width: 400px){
     .hero-container {
     bottom: 10%;

@@ -16,7 +16,7 @@
           </div>
           <div class="datos-list">
             <h4>Nombre: {{ item.name }}</h4>
-            <h4>URL: {{ item.description }}</h4>
+            <h4>Descripción: {{ item.description }}</h4>
           </div>
           <button class="change-button" v-on:click="openChangeModal(item)">
             <img src="../../assets/config.png" alt="" />

@@ -2,11 +2,8 @@
   <div class="clients">
     <div class="container">
       <h2>NUESTROS CLIENTES</h2>
-      <ul>
-        <li><img src="../assets/cliente4.png" alt="" /></li>
-        <li><img src="../assets/cliente3.png" alt="" /></li>
-        <li><img src="../assets/cliente1.png" alt="" /></li>
-        <li><img src="../assets/cliente2.jpeg" alt="" /></li>
+      <ul v-for="item in clients" v-bind:key="item.id">
+        <li ><img :src="item.image.url" alt="" /></li>
       </ul>
     </div>
   </div>
@@ -15,6 +12,14 @@
 <script>
 export default {
   name: "Clients",
+  computed: {
+    clients() {
+      return this.$store.getters.allClients
+    }
+  },
+  mounted(){
+    this.$store.dispatch("getClients")
+  }
 };
 </script>
 
