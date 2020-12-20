@@ -2,45 +2,45 @@
   <div class="prices" id="prices">
     <div class="list">
       <div class="pricecase">
-      <div class="row1">
-        <h2 class="title">BÁSICO</h2>
+        <div class="row1">
+          <h2 class="title">BÁSICO</h2>
+        </div>
+        <div class="row2">
+          <h4 class="title2">$100</h4>
+        </div>
+        <div class="row3">
+          <h3>Tour virtual de hasta 5 escenas en 360°</h3>
+          <h3>2 puntos de interacción</h3>
+        </div>
       </div>
-      <div class="row2">
-        <h4 class="title2">$100</h4>
+      <div class="pricecase">
+        <div class="row1">
+          <h2 class="title">ESTÁNDAR</h2>
+        </div>
+        <div class="row2">
+          <h4 class="title2">$200</h4>
+        </div>
+        <div class="row3">
+          <h3>Tour virtual de hasta 12 escenas en 360°</h3>
+          <h3>5 puntos de interacción</h3>
+          <h3>Mapa de ubicación (Si aplica)</h3>
+          <h3>Sonido (Opcional)</h3>
+        </div>
       </div>
-      <div class="row3">
-        <h3>5 imagenes 360°</h3>
-        <h3>2 puntos de interacción</h3>
+      <div class="pricecase">
+        <div class="row1">
+          <h2 class="title">ESPECIAL</h2>
+        </div>
+        <div class="row2">
+          <h4 class="title2">+$200</h4>
+        </div>
+        <div class="row3">
+          <h3>Tours interactivos personalizados</h3>
+          <h3>Vídeos 360°</h3>
+          <h3>Fotos y vídeos con dron</h3>
+          <h3>*Cuéntanos sobre tu proyecto y cotiza</h3>
+        </div>
       </div>
-    </div>
-    <div class="pricecase">
-      <div class="row1">
-        <h2 class="title">ESTÁNDAR</h2>
-      </div>
-      <div class="row2">
-        <h4 class="title2">$200</h4>
-      </div>
-      <div class="row3">
-        <h3>Tour virtual de hasta 12 escenas</h3>
-        <h3>5 puntos de interacción</h3>
-        <h3>Mapa de ubicación (Si aplica)</h3>
-        <h3>Sonido (Opcional)</h3>
-      </div>
-    </div>
-    <div class="pricecase">
-      <div class="row1">
-        <h2 class="title">ESPECIAL</h2>
-      </div>
-      <div class="row2">
-        <h4 class="title2">+$200</h4>
-      </div>
-      <div class="row3">
-        <h3>Vídeos 360°</h3>
-        <h3>Tours interactivos personalizados</h3>
-        <h3>Fotos y vídeos con dron</h3>
-        <h3>*Cuentanos sobre tu proyecto y cotiza</h3>
-      </div>
-    </div>
     </div>
     <div class="iva">
       <h2>*Los precios no incluyen IVA</h2>
@@ -55,7 +55,7 @@ export default {
 </script>
 
 <style>
-.prices h3{
+.prices h3 {
   font-weight: 400;
   margin: 0;
 }
@@ -80,7 +80,7 @@ export default {
   box-sizing: border-box;
   min-width: 300px;
   border-radius: 10%;
-  box-shadow: 0px 0px 14px 0px #7A7A7A;
+  box-shadow: 0px 0px 14px 0px #7a7a7a;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -107,7 +107,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(15,160,194, 0.6);
+  background-color: rgba(15, 160, 194, 0.6);
   margin: 0;
   height: 20%;
 }
@@ -116,7 +116,7 @@ export default {
   width: 50%;
   height: 40%;
   font-size: 60px;
-  line-height:60px;
+  line-height: 60px;
   padding-bottom: 20px;
   margin: 0;
   color: #ffffff;
@@ -131,27 +131,26 @@ export default {
   height: 50%;
   margin: 20px;
 }
-.row3 h3{
+.row3 h3 {
   padding: 10px;
 }
 
-.iva h2{
+.iva h2 {
   font-size: 30px;
   font-weight: 300;
 }
 
-@media (max-width: 768px){
-  .prices{
+@media (max-width: 768px) {
+  .prices {
     padding-top: 30px;
   }
 }
-@media (max-width: 768px){
-  .prices{
+@media (max-width: 768px) {
+  .prices {
     padding-top: 0px;
   }
   .pricecase {
-  height: 400px;
+    height: 400px;
+  }
 }
-}
-
 </style>

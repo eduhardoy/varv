@@ -34,6 +34,7 @@ export default {
   },
   mounted() {
     this.$store.dispatch("getCollectionById", this.$route.params.id);
+    window.scrollTo(0, 0);
   },
 };
 </script>
@@ -59,10 +60,10 @@ export default {
       font-size: 40px;
       margin: 10px;
       color: black;
-      @media (max-width: 1024px){
+      @media (max-width: 1024px) {
         font-size: 35px;
       }
-      @media (max-width: 768px){
+      @media (max-width: 768px) {
         font-size: 25px;
       }
     }
@@ -71,29 +72,26 @@ export default {
       font-weight: 300;
       margin: 10px;
       color: black;
-      @media (max-width: 1024px){
+      @media (max-width: 1024px) {
         font-size: 25px;
       }
-      @media (max-width: 768px){
+      @media (max-width: 768px) {
         font-size: 20px;
       }
     }
   }
   .tour-view {
     width: 80%;
-    @media (max-width: 1024px){
-        width: 90%;
-      }
-    @media (max-width: 768px){
-        width: 95%;
-      }
+    @media (max-width: 1024px) {
+      width: 90%;
+    }
+    @media (max-width: 768px) {
+      width: 95%;
+    }
     iframe {
       width: 100%;
       height: 70vh;
-      
     }
   }
 }
-
-
 </style>

@@ -37,20 +37,18 @@ export default {
     Footer,
   },
   compute: {
-    categories(){
+    categories() {
       return this.$store.getters.allCategories;
     },
-    collections(){
+    collections() {
       return this.$store.getters.allCollections;
     },
   },
   mounted() {
-    this.$store.dispatch('getCategories')
-    this.$store.dispatch('getCollections')
-  }
+    this.$store.dispatch("getCategories");
+    this.$store.dispatch("getCollections");
+  },
 };
 </script>
 
-
-<style>
-</style>
+<style></style>
