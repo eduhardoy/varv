@@ -31,7 +31,7 @@ export default {
 }
 
 .hero {
-  background-image: url("../assets/mural.png");
+  background-image: url("https://live.staticflickr.com/65535/50741090263_29ba6dd92a_h.jpg");
   background-color: #ffffff;
   background-repeat: no-repeat;
   background-position: center center;
