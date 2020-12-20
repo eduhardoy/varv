@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { trackRouter } from 'vue-gtag-next'
 import Home from "../views/Home.vue";
 import Contact from "../views/Contact.vue";
 import NotFound from "../views/404.vue";
@@ -79,5 +80,7 @@ const router = createRouter({
     document.getElementById('app').scrollIntoView();
 }
 });
+
+trackRouter(router);
 
 export default router;
