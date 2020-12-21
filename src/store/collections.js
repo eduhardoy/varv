@@ -1,6 +1,6 @@
 import Axios from "axios";
 
-const URL = "https://varvlab.com:3010/api/collection/";
+const URL = "https://varvlab.com/api/collection/";
 
 var config = (token) => ({
   headers: {
