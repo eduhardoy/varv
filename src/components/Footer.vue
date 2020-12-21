@@ -1,15 +1,27 @@
 <template>
   <footer>
-    <figure class="footerlogo">
-      <img src="../assets/logo3.png" alt="" class="footerlogoimg">
-    </figure>
+    <a href="/">
+      <figure class="footerlogo">
+        <img src="../assets/logo3.png" alt="" class="footerlogoimg" />
+      </figure>
+    </a>
     <div class="rights">
-      <h4>© 2020 All Rights Reserved -<strong><a class="link" href="https://franciscovaldez.pb.online/cv-3" target="_blank"> Francisco Valdez Apolo.</a></strong></h4>
+      <h4>
+        © 2020 All Rights Reserved -<strong
+          ><a
+            class="link"
+            href="https://franciscovaldez.pb.online/cv-3"
+            target="_blank"
+          >
+            Francisco Valdez Apolo.</a
+          ></strong
+        >
+      </h4>
     </div>
     <a href="http://inibotnea.com/" target="_blank">
       <figure class="inibot">
-      <img src="../assets/inibot.png" alt="" class="inibotimg">
-    </figure>
+        <img src="../assets/inibot.png" alt="" class="inibotimg" />
+      </figure>
     </a>
   </footer>
 </template>
@@ -35,17 +47,17 @@ footer figure {
   margin: 0;
 }
 
-.rights h4{
+.rights h4 {
   font-size: 13px;
   font-weight: 300;
 }
 
-.rights h4 strong{
+.rights h4 strong {
   font-size: 15px;
   font-weight: 300;
 }
 
-.link{
+.link {
   text-decoration: none;
   color: black;
 }
@@ -58,11 +70,9 @@ footer figure {
   width: 180px;
 }
 
-
 @media (max-width: 950px) {
-footer {
-  margin-top: 50px;
+  footer {
+    margin-top: 50px;
+  }
 }
-}
-
 </style>

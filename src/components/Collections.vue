@@ -50,7 +50,10 @@ export default {
   },
   methods: {
     goToTour(collection) {
-      return this.$router.push({ name: "Tour", params: { id: collection.id } });
+      return this.$router.push({
+        name: "Tour",
+        params: { id: collection.id, name: collection.name }
+      });
     },
     selectCategory(categoryId) {
       return this.$store.dispatch("setSelectedCategory", categoryId);
@@ -78,10 +81,10 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (max-width: 1024px){
+  @media (max-width: 1024px) {
     padding-top: 30px;
   }
-  @media (max-width: 768px){
+  @media (max-width: 768px) {
     padding-top: 0px;
   }
   .filter-container {
@@ -96,8 +99,8 @@ export default {
       list-style: none;
       margin: 0;
       padding: 20px;
-      @media (max-width: 1024px){
-      padding: 20px;
+      @media (max-width: 1024px) {
+        padding: 10px;
       }
       .filter-item {
         padding: 1px 10px 1px 10px;
@@ -110,12 +113,13 @@ export default {
           border-bottom: 1px solid black;
           cursor: pointer;
         }
-        @media (max-width: 768px){
-        font-size: 25px;
-      }
-        @media (max-width: 425px){
-        font-size: 20px;
-      }
+        @media (max-width: 768px) {
+          padding: 1px 5px 1px 5px;
+          font-size: 25px;
+        }
+        @media (max-width: 425px) {
+          font-size: 22px;
+        }
       }
       .selected {
         border-bottom: 1px solid black !important;
@@ -139,10 +143,10 @@ export default {
         filter: none;
         cursor: pointer;
       }
-      @media (max-width: 768px){
+      @media (max-width: 768px) {
         width: 50%;
       }
-      @media (max-width: 425px){
+      @media (max-width: 425px) {
         width: 100%;
       }
     }

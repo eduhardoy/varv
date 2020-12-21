@@ -54,7 +54,7 @@ export default {
 .container-login {
   min-height: 97vh;
   min-width: 97vw;
-  background-image: url(../../assets/centro.png);
+  background-image: url("https://live.staticflickr.com/65535/50741933212_594de1eaec_h.jpg");
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

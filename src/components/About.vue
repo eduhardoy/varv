@@ -8,7 +8,7 @@
     </div>
     <div class="description">
       <figure class="description-image">
-        <img src="../assets/catedral2.png" alt="" />
+        <img src="https://live.staticflickr.com/65535/50741830761_d513f71418_c.jpg" alt="" />
       </figure>
       <div class="lista">
         <ul class="item-about-list">

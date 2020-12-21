@@ -2,8 +2,10 @@
   <div class="clients">
     <div class="container">
       <h2>NUESTROS CLIENTES</h2>
-      <ul v-for="item in clients" v-bind:key="item.id">
-        <li ><img :src="item.image.url" alt="" /></li>
+      <ul>
+        <li v-for="item in clients" v-bind:key="item.id">
+          <img :src="item.image.url" alt="" />
+        </li>
       </ul>
     </div>
   </div>
@@ -14,19 +16,19 @@ export default {
   name: "Clients",
   computed: {
     clients() {
-      return this.$store.getters.allClients
-    }
+      return this.$store.getters.allClients;
+    },
   },
-  mounted(){
-    this.$store.dispatch("getClients")
-  }
+  mounted() {
+    this.$store.dispatch("getClients");
+  },
 };
 </script>
 
 <style>
 @font-face {
-  font-family: 'Brandon';
-  src:  url('../assets/Fonts/Brandon_med.otf') format('woff');
+  font-family: "Brandon";
+  src: url("../assets/Fonts/Brandon_med.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -43,7 +45,7 @@ export default {
 }
 
 .clients {
-  background-color:#fafafa;
+  background-color: #fafafa;
   margin-bottom: 40px;
 }
 
@@ -77,7 +79,7 @@ export default {
 
 .clients ul li {
   background-color: white;
-  box-shadow: 0px 0px 14px 0px #7A7A7A;
+  box-shadow: 0px 0px 14px 0px #7a7a7a;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -86,20 +88,20 @@ export default {
   margin: 20px;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .clients ul li {
-  height: 150px;
-  width: 150px;
-  margin: 10px;
-}
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+  }
 }
 
-@media (max-width: 375px){
+@media (max-width: 375px) {
   .clients ul li {
-  height: 150px;
-  width: 150px;
-  margin: 5px;
-  box-shadow: 0px 0px 23px -6px #7A7A7A;
-}
+    height: 150px;
+    width: 150px;
+    margin: 5px;
+    box-shadow: 0px 0px 23px -6px #7a7a7a;
+  }
 }
 </style>
