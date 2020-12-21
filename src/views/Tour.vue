@@ -21,7 +21,8 @@ import Wapp from "../components/Whatsapp";
 import Footer from "../components/Footer";
 
 export default {
-  name: "Home",
+  name: "Tour",
+  props:["name"],
   components: {
     Header,
     Wapp,
@@ -35,6 +36,10 @@ export default {
   mounted() {
     this.$store.dispatch("getCollectionById", this.$route.params.id);
     window.scrollTo(0, 0);
+    this.$gtag.pageview({
+      page_title: `Tour-${this.$route.params.name}`,
+      page_path: `/tour/${this.$route.params.name.id}`,
+    });
   },
 };
 </script>

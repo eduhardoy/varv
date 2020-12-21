@@ -32,10 +32,10 @@ export default {
     collections() {
       let collections = this.$store.getters.allCollections;
       let selectedCollections = [];
-      collections.forEach(element => {
+      collections.forEach((element) => {
         if (
-          element.categories.filter(e => e.id == this.selectedCategory).length >
-          0
+          element.categories.filter((e) => e.id == this.selectedCategory)
+            .length > 0
         )
           selectedCollections.push(element);
       });
@@ -50,7 +50,10 @@ export default {
   },
   methods: {
     goToTour(collection) {
-      return this.$router.push({ name: "Tour", params: { id: collection.id } });
+      return this.$router.push({
+        name: "Tour",
+        params: { id: collection.id, name: collection.name }
+      });
     },
     selectCategory(categoryId) {
       return this.$store.dispatch("setSelectedCategory", categoryId);

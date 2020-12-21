@@ -15,16 +15,16 @@
       </button>
       <ul class="nav">
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#about">Nosotros</a>
+          <a href="/#about" @click="aboutClicked">Nosotros</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#collections">Proyectos</a>
+          <a href="/#collections" @click="collectionClicked">Proyectos</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#prices">Precios</a>
+          <a href="/#prices" @click="pricesClicked">Precios</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#contact">Contacto</a>
+          <a href="/#contact" @click="contactClicked">Contacto</a>
         </li>
       </ul>
     </div>
@@ -45,6 +45,30 @@ export default {
     },
     openMenu() {
       this.isActive = true;
+    },
+    aboutClicked() {
+      this.$gtag.event('nav-clicked', {
+        'event_category': "nav-about-clicked",
+        'event_label': "About Clicked"
+      })
+    },
+    collectionClicked() {
+      this.$gtag.event('nav-clicked', {
+        'event_category': "nav-collection-clicked",
+        'event_label': "Collection Clicked"
+      })
+    },
+    pricesClicked() {
+      this.$gtag.event('nav-clicked', {
+        'event_category': "nav-prices-clicked",
+        'event_label': "Prices Clicked"
+      })
+    },
+    contactClicked() {
+      this.$gtag.event('nav-clicked', {
+        'event_category': "nav-contact-clicked",
+        'event_label': "Contact Clicked"
+      })
     },
   },
 };

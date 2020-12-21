@@ -1,6 +1,6 @@
 import Axios from "axios";
 import router from "../router";
-const URL = "http://198.74.58.89:3010/api/login"
+const URL = "https://varvlab.com/api/login"
 
 export default {
   state: {
