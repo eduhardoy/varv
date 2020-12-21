@@ -1,10 +1,10 @@
 <template>
   <div class="about" id="about">
     <div class="frase">
-      <h2>
+      <h1>
         Nos especializamos en Tours Virtuales 360°, modelado 3D, realidad
         virtual y levantamientos con drones.
-      </h2>
+      </h1>
     </div>
     <div class="description">
       <figure class="description-image">
@@ -62,7 +62,7 @@ export default {
   flex-direction: column;
 }
 
-.frase h2 {
+.frase h1 {
   font-weight: 300;
   font-size: 40px;
   margin: 0;
@@ -122,7 +122,7 @@ export default {
 }
 
 @media (max-width: 1145px) {
-  .frase h2 {
+  .frase h1 {
     font-size: 35px;
   }
   .lista h5 {
@@ -131,7 +131,7 @@ export default {
 }
 
 @media (max-width: 1024px) {
-  .about{
+  .about {
     padding-top: 30px;
   }
 
@@ -151,15 +151,14 @@ export default {
 }
 
 @media (max-width: 768px) {
-  .about{
+  .about {
     padding-top: 0px;
   }
 
   .frase {
     width: 80%;
-    
   }
-  .frase h2 {
+  .frase h1 {
     font-size: 30px;
   }
   .description-image {
@@ -174,7 +173,7 @@ export default {
     font-size: 20px;
     width: 90%;
   }
-  .frase h2 {
+  .frase h1 {
     font-size: 25px;
   }
   .lista h5 {
