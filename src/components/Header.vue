@@ -1,9 +1,9 @@
 <template>
   <header class="header">
     <div class="logo">
-      <router-link to="/">
+      <a href="/">
         <img alt="Vue logo" src="../assets/logo2.png" />
-      </router-link>
+      </a>
     </div>
     <div class="menu" v-bind:class="{ isActive: isActive }">
       <button
@@ -212,9 +212,9 @@ a {
   }
 
   .notshow {
-  width: 70px;
-  height: 70px;
-}
+    width: 70px;
+    height: 70px;
+  }
 
   .menu.isActive {
     left: 0;

@@ -55,7 +55,11 @@ export default {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    text-align: left;
     margin: 20px;
+    @media (max-width: 768px) {
+      width: 95%;
+    }
     h1 {
       font-size: 40px;
       margin: 10px;

@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div class="hero" id="hero">
     <div class="hero-container">
       <h1 class="hero-title">Hola, esto es <strong>VARV</strong></h1>
       <h2 class="hero-details">
@@ -104,7 +104,7 @@ export default {
     font-size: 30px;
   }
 }
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .hero {
     height: 80vh;
   }
@@ -118,11 +118,11 @@ export default {
   padding: 5px;
 }
 
-@media (max-width: 400px){
-    .hero-container {
+@media (max-width: 400px) {
+  .hero-container {
     bottom: 10%;
   }
-    .hero-title {
+  .hero-title {
     font-size: 35px;
   }
   .hero-details {
