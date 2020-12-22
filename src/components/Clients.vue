@@ -4,7 +4,7 @@
       <h2>NUESTROS CLIENTES</h2>
       <ul>
         <li v-for="item in clients" v-bind:key="item.id">
-          <img :src="item.image.url" alt="" />
+          <img :src="item.image.url" alt="cliente" />
         </li>
       </ul>
     </div>

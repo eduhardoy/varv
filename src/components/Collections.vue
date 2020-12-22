@@ -18,7 +18,7 @@
         v-bind:key="item.id"
         @click="goToTour(item)"
       >
-        <img class="portada" v-bind:src="item.image.url" alt="" />
+        <img class="portada" v-bind:src="item.image.url" alt="proyecto" />
         <h4 class="portada-title">{{ item.name }}</h4>
       </div>
     </div>
@@ -32,10 +32,10 @@ export default {
     collections() {
       let collections = this.$store.getters.allCollections;
       let selectedCollections = [];
-      collections.forEach((element) => {
+      collections.forEach(element => {
         if (
-          element.categories.filter((e) => e.id == this.selectedCategory)
-            .length > 0
+          element.categories.filter(e => e.id == this.selectedCategory).length >
+          0
         )
           selectedCollections.push(element);
       });
@@ -52,7 +52,7 @@ export default {
     goToTour(collection) {
       return this.$router.push({
         name: "Tour",
-        params: { id: collection.id, name: collection.name }
+        params: { id: collection.id, name: collection.name },
       });
     },
     selectCategory(categoryId) {

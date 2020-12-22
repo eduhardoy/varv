@@ -2,7 +2,7 @@
   <header class="header">
     <div class="logo">
       <a href="/">
-        <img alt="Vue logo" src="../assets/logo2.png" />
+        <img alt="logovarv" src="../assets/logo2.png" />
       </a>
     </div>
     <div class="menu" v-bind:class="{ isActive: isActive }">
@@ -47,28 +47,28 @@ export default {
       this.isActive = true;
     },
     aboutClicked() {
-      this.$gtag.event('nav-clicked', {
-        'event_category': "nav-about-clicked",
-        'event_label': "About Clicked"
-      })
+      this.$gtag.event("nav-clicked", {
+        event_category: "nav-about-clicked",
+        event_label: "About Clicked",
+      });
     },
     collectionClicked() {
-      this.$gtag.event('nav-clicked', {
-        'event_category': "nav-collection-clicked",
-        'event_label': "Collection Clicked"
-      })
+      this.$gtag.event("nav-clicked", {
+        event_category: "nav-collection-clicked",
+        event_label: "Collection Clicked",
+      });
     },
     pricesClicked() {
-      this.$gtag.event('nav-clicked', {
-        'event_category': "nav-prices-clicked",
-        'event_label': "Prices Clicked"
-      })
+      this.$gtag.event("nav-clicked", {
+        event_category: "nav-prices-clicked",
+        event_label: "Prices Clicked",
+      });
     },
     contactClicked() {
-      this.$gtag.event('nav-clicked', {
-        'event_category': "nav-contact-clicked",
-        'event_label': "Contact Clicked"
-      })
+      this.$gtag.event("nav-clicked", {
+        event_category: "nav-contact-clicked",
+        event_label: "Contact Clicked",
+      });
     },
   },
 };

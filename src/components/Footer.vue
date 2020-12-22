@@ -2,7 +2,11 @@
   <footer>
     <a href="/">
       <figure class="footerlogo">
-        <img src="../assets/logo3.png" alt="" class="footerlogoimg" />
+        <img
+          src="../assets/logo3.png"
+          alt="logovarvlab"
+          class="footerlogoimg"
+        />
       </figure>
     </a>
     <div class="rights">
@@ -20,7 +24,7 @@
     </div>
     <a href="http://inibotnea.com/" target="_blank">
       <figure class="inibot">
-        <img src="../assets/inibot.png" alt="" class="inibotimg" />
+        <img src="../assets/inibot.png" alt="logoinibot" class="inibotimg" />
       </figure>
     </a>
   </footer>
