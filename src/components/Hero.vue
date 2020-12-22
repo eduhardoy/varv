@@ -1,7 +1,7 @@
 <template>
   <div class="hero" id="hero">
     <div class="hero-container">
-      <h1 class="hero-title">Hola, esto es <strong>VARV</strong></h1>
+      <h2 class="hero-title">Hola, esto es <strong>VARV</strong></h2>
       <h2 class="hero-details">
         Con nosotros podrás darle dinámica y vida a tus proyectos
       </h2>
