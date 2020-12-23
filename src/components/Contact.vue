@@ -12,19 +12,40 @@
         <a class="dato" href="https://www.facebook.com/varvlab" target="_blank">
           <i class="icon-facebook"><strong>/varvlab</strong></i>
         </a>
-        <a class="dato" href="https://www.instagram.com/varvlab/" target="_blank">
+        <a
+          class="dato"
+          href="https://www.instagram.com/varvlab/"
+          target="_blank"
+        >
           <i class="icon-instagram"><strong>@varvlab</strong></i>
         </a>
-        <a class="dato" href="https://www.youtube.com/user/indeterminacion" target="_blank">
+        <a
+          class="dato"
+          href="https://www.youtube.com/user/indeterminacion"
+          target="_blank"
+        >
           <i class="icon-youtube"><strong>VARV</strong></i>
         </a>
       </div>
     </div>
     <div class="formnow">
       <h3>COTIZA TU PROYECTO</h3>
-      <form action="https://www.inibotnea.com/api/contacto/varvlab">
-        <input class="formname" type="text" placeholder="Nombre" name="nombre">
-        <input class="formemail" type="email" placeholder="Email" name="email">
+      <form
+        action="https://www.inibotnea.com/api/contacto/varvlab"
+        method="POST"
+      >
+        <input
+          class="formname"
+          type="text"
+          placeholder="Nombre"
+          name="nombre"
+        />
+        <input
+          class="formemail"
+          type="email"
+          placeholder="Email"
+          name="email"
+        />
         <textarea class="formtext" name="mensaje"></textarea>
         <button class="formbutton">ENVIAR</button>
       </form>
@@ -40,27 +61,29 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'Brandon';
-  src:  url('../assets/Fonts/Brandon_med.otf') format('woff');
+  font-family: "Brandon";
+  src: url("../assets/Fonts/Brandon_med.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('../../public/fonts/icomoon.eot?uus47');
-  src:  url('../../public/fonts/icomoon.eot?uus47#iefix') format('embedded-opentype'),
-    url('../../public/fonts/icomoon.ttf?uus47') format('truetype'),
-    url('../../public/fonts/icomoon.woff?uus47') format('woff'),
-    url('../../public/fonts/icomoon.svg?uus47#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("../../public/fonts/icomoon.eot?uus47");
+  src: url("../../public/fonts/icomoon.eot?uus47#iefix")
+      format("embedded-opentype"),
+    url("../../public/fonts/icomoon.ttf?uus47") format("truetype"),
+    url("../../public/fonts/icomoon.woff?uus47") format("woff"),
+    url("../../public/fonts/icomoon.svg?uus47#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -130,14 +153,14 @@ export default {
   padding: 20px;
 }
 
-.dato i{
+.dato i {
   margin: 0;
   font-size: 35px;
   vertical-align: baseline;
   color: black;
 }
 
-.dato i strong{
+.dato i strong {
   margin: 0;
   margin-left: 20px;
   font-family: "Lato", sans-serif;
@@ -240,78 +263,76 @@ export default {
 
 @media (max-width: 1300px) {
   .formnow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 45%;
+  }
+
+  .formbutton {
+    font-size: 12px;
+  }
 }
 
-.formbutton {
-  font-size: 12px;
-}
-}
-
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
   .contact {
     padding-top: 30px;
   }
 }
 
 @media (max-width: 950px) {
-.contact {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  .contact {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .redes {
+    width: 70%;
+  }
+
+  .formnow {
+    width: 70%;
+    padding-top: 20px;
+  }
+
+  .formbutton {
+    width: 30%;
+  }
 }
 
-.redes{
-  width: 70%;
-}
-
-.formnow {
-  width: 70%;
-  padding-top: 20px;
-}
-
-.formbutton{
-  width: 30%;
-}
-}
-
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .contact {
     padding-top: 0px;
   }
   .contact h3 {
-  font-size: 30px;
-}
-.dato i{
-  font-size: 30px;
-}
-.dato i strong{
-  font-size: 30px;
+    font-size: 30px;
+  }
+  .dato i {
+    font-size: 30px;
+  }
+  .dato i strong {
+    font-size: 30px;
   }
 }
-
 
 @media (max-width: 530px) {
-  .redes{
-  width: 90%;
-}
+  .redes {
+    width: 90%;
+  }
   .formnow {
-  width: 90%;
-}
-}
-
-@media (max-width: 435px){
-.dato i{
-  font-size: 25px;
-}
-
-.dato i strong{
-  font-size: 25px;
+    width: 90%;
   }
 }
 
+@media (max-width: 435px) {
+  .dato i {
+    font-size: 25px;
+  }
+
+  .dato i strong {
+    font-size: 25px;
+  }
+}
 </style>
