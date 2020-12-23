@@ -22,10 +22,10 @@
     </div>
     <div class="formnow">
       <h3>COTIZA TU PROYECTO</h3>
-      <form action="">
-        <input class="formname" type="text" placeholder="Nombre">
-        <input class="formemail" type="email" placeholder="Email">
-        <textarea class="formtext"></textarea>
+      <form action="https://www.inibotnea.com/api/contacto/varvlab">
+        <input class="formname" type="text" placeholder="Nombre" name="nombre">
+        <input class="formemail" type="email" placeholder="Email" name="email">
+        <textarea class="formtext" name="mensaje"></textarea>
         <button class="formbutton">ENVIAR</button>
       </form>
     </div>
