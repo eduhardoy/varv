@@ -9,7 +9,7 @@
     "build:test": "cross-env X_ENV=test NODE_ENV=production vue-cli-service build"
   },
   "dependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "vue": "^3.0.2",
     "vue-gtag-next": "^1.14.0",

@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { trackRouter } from 'vue-gtag-next'
+import { trackRouter } from "vue-gtag-next";
 import Home from "../views/Home.vue";
-import Contact from "../views/Contact.vue";
-import NotFound from "../views/404.vue";
 import Tour from "../views/Tour.vue";
 import Admin from "../views/Admin/Admin.vue";
 import AdminLogin from "../views/Admin/AdminLogin.vue";
@@ -19,26 +17,7 @@ const routes = [
     path: "/tour/:id",
     name: "Tour",
     component: Tour,
-    props:true,
-  },
-  {
-    path: "/about",
-    name: "About",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ "../views/About.vue"),
-  },
-  {
-    path: "/contact",
-    name: "Contact",
-    component: Contact,
-  },
-  {
-    path: "/404",
-    name: "NotFound",
-    component: NotFound,
+    props: true,
   },
   {
     path: "/admin",
