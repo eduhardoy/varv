@@ -24,7 +24,7 @@ import Clients from "../../components/Ecuador/Clients";
 import Footer from "../../components/Ecuador/Footer";
 
 export default {
-  name: "Home",
+  name: "HomeEcuador",
   components: {
     Header,
     Wapp,

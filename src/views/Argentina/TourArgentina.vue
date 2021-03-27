@@ -21,7 +21,7 @@ import Wapp from "../../components/Ecuador/Whatsapp";
 import Footer from "../../components/Ecuador/Footer";
 
 export default {
-  name: "Tour",
+  name: "TourArgentina",
   props: ["name"],
   components: {
     Header,

@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { trackRouter } from "vue-gtag-next";
-import Home from "../views/Ecuador/Home.vue";
-import Tour from "../views/Ecuador/Tour.vue";
+import HomeEcuador from "../views/Ecuador/HomeEcuador.vue";
+import HomeArgentina from "../views/Argentina/HomeArgentina.vue";
+import Tour from "../views/Tour.vue";
+import Landing from "../views/Landing.vue";
 import Admin from "../views/Admin/Admin.vue";
 import AdminLogin from "../views/Admin/AdminLogin.vue";
 import AuthGuard from "../guards/auth.guard";
@@ -10,8 +12,18 @@ import IsLoggedGuard from "../guards/isLogged.guard";
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: Home,
+    name: "Landing",
+    component: Landing,
+  },
+  {
+    path: "/ecu",
+    name: "HomeEcuador",
+    component: HomeEcuador,
+  },
+  {
+    path: "/arg",
+    name: "HomeArgentina",
+    component: HomeArgentina,
   },
   {
     path: "/tour/:id",
