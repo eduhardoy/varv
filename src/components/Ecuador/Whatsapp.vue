@@ -14,11 +14,11 @@ export default {
 <style>
 @font-face {
   font-family: 'icomoon';
-  src:  url('../../public/fonts/icomoon.eot?uus47');
-  src:  url('../../public/fonts/icomoon.eot?uus47#iefix') format('embedded-opentype'),
-    url('../../public/fonts/icomoon.ttf?uus47') format('truetype'),
-    url('../../public/fonts/icomoon.woff?uus47') format('woff'),
-    url('../../public/fonts/icomoon.svg?uus47#icomoon') format('svg');
+  src:  url('../../../public/fonts/icomoon.eot?uus47');
+  src:  url('../../../public/fonts/icomoon.eot?uus47#iefix') format('embedded-opentype'),
+    url('../../../public/fonts/icomoon.ttf?uus47') format('truetype'),
+    url('../../../public/fonts/icomoon.woff?uus47') format('woff'),
+    url('../../../public/fonts/icomoon.svg?uus47#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;

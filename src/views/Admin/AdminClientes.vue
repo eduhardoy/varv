@@ -32,32 +32,31 @@
     <template v-slot:body>
       <div class="modal-container">
         <input
-        class="modal-selector"
-        placeholder="Order"
-        v-model="newClient.order"
-      />
-      <input
-        class="modal-selector"
-        placeholder="Nombre"
-        v-model="newClient.name"
-      />
-      <input
-        class="modal-selector"
-        placeholder="Descripción"
-        v-model="newClient.description"
-      />
-      <input
-        class="modal-selector"
-        placeholder="Nombre Imagen"
-        v-model="newClient.image.name"
-      />
-      <input
-        class="modal-selector"
-        placeholder="URL"
-        v-model="newClient.image.url"
-      />
+          class="modal-selector"
+          placeholder="Order"
+          v-model="newClient.order"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Nombre"
+          v-model="newClient.name"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Descripción"
+          v-model="newClient.description"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Nombre Imagen"
+          v-model="newClient.image.name"
+        />
+        <input
+          class="modal-selector"
+          placeholder="URL"
+          v-model="newClient.image.url"
+        />
       </div>
-      
     </template>
     <template v-slot:footer>
       <button class="cancel_button" @click="closeAddModal()">CANCELAR</button>
@@ -68,31 +67,30 @@
     <template v-slot:body>
       <div class="modal-container">
         <input
-        class="modal-selector"
-        placeholder="Order"
-        v-model="updateClient.order"
-      />
-      <input
-        class="modal-selector"
-        placeholder="Nombre"
-        v-model="updateClient.name"
-      />
-      <input
-        class="modal-selector"
-        placeholder="Descripción"
-        v-model="updateClient.description"
-      />
-      <input
-        class="modal-selector"
-        placeholder="Nombre Imagen"
-        v-model="updateClient.image.name"
-      /><input
-        class="modal-selector"
-        placeholder="URL"
-        v-model="updateClient.image.url"
-      />
+          class="modal-selector"
+          placeholder="Order"
+          v-model="updateClient.order"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Nombre"
+          v-model="updateClient.name"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Descripción"
+          v-model="updateClient.description"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Nombre Imagen"
+          v-model="updateClient.image.name"
+        /><input
+          class="modal-selector"
+          placeholder="URL"
+          v-model="updateClient.image.url"
+        />
       </div>
-      
     </template>
     <template v-slot:footer>
       <button class="cancel_button" @click="$refs.change.closeModal()">
@@ -119,10 +117,10 @@
 </template>
 
 <script>
-import ModalDelete from "../../components/ModalDelete";
-import ModalAdd from "../../components/ModalAdd";
-import ModalChange from "../../components/ModalChange";
-import datos from "../../../JSON EJEMPLOS/clients.json";
+import ModalDelete from "../../components/Modals/ModalDelete";
+import ModalAdd from "../../components/Modals/ModalAdd";
+import ModalChange from "../../components/Modals/ModalChange";
+import datos from "../../../JSON/clients.json";
 
 export default {
   data: () => {
@@ -293,7 +291,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        .order-number{
+        .order-number {
           font-size: 28px;
         }
         .datos-list {
@@ -349,16 +347,16 @@ export default {
   }
 }
 .modal-selector {
-      text-align: center;
-      width: 30%;
-      font-family: "Lato", Helvetica, Arial, sans-serif;
-      margin-top: 20px;
-      padding: 20px;
-      margin-left: 20px;
-      border: 2px solid black;
-      border-radius: 25px;
-      font-size: 25px;
-      background-color: #ededed;
-      outline: none;
-    }
+  text-align: center;
+  width: 30%;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  margin-top: 20px;
+  padding: 20px;
+  margin-left: 20px;
+  border: 2px solid black;
+  border-radius: 25px;
+  font-size: 25px;
+  background-color: #ededed;
+  outline: none;
+}
 </style>

@@ -67,15 +67,19 @@
             v-model="newCollection.image.url"
           />
           <div class="modal-selector-big">
-            <div class="selector-check" v-for="item2 in categories" v-bind:key="item2.id">
-            <input
-              type="checkbox"
-              :id="item2.id"
-              :value="item2"
-              v-model="newCollection.categories"
-            />
-            <label :for="item2.id">{{ item2.name }}</label>
-          </div>
+            <div
+              class="selector-check"
+              v-for="item2 in categories"
+              v-bind:key="item2.id"
+            >
+              <input
+                type="checkbox"
+                :id="item2.id"
+                :value="item2"
+                v-model="newCollection.categories"
+              />
+              <label :for="item2.id">{{ item2.name }}</label>
+            </div>
           </div>
         </div>
       </template>
@@ -161,9 +165,9 @@
 </template>
 
 <script>
-import ModalDelete from "../../components/ModalDelete";
-import ModalAdd from "../../components/ModalAdd";
-import ModalChange from "../../components/ModalChange";
+import ModalDelete from "../../components/Modals/ModalDelete";
+import ModalAdd from "../../components/Modals/ModalAdd";
+import ModalChange from "../../components/Modals/ModalChange";
 
 export default {
   data: () => ({
@@ -364,7 +368,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        .order-number{
+        .order-number {
           font-size: 28px;
         }
         .datos-list {

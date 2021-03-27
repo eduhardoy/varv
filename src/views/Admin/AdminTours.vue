@@ -54,9 +54,9 @@
 </template>
 
 <script>
-import ModalDelete from "../../components/ModalDelete";
-import ModalAdd from "../../components/ModalAdd";
-import ModalChange from "../../components/ModalChange";
+import ModalDelete from "../../components/Modals/ModalDelete";
+import ModalAdd from "../../components/Modals/ModalAdd";
+import ModalChange from "../../components/Modals/ModalChange";
 
 export default {
   props: ["tours"],

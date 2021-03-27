@@ -1,23 +1,23 @@
 <template>
   <!-- ROUTER -->
-  <!-- LOADING COMPONENT --> 
-  <Loader v-if="$store.getters.isLoading"/>
-  <router-view/>
+  <!-- LOADING COMPONENT -->
+  <Loader v-if="$store.getters.isLoading" />
+  <router-view />
 </template>
 
 <script>
-import Loader from './components/Loader'
+import Loader from "../src/components/Loader";
 export default {
-  name : "App",
-  components:{
-    Loader
-  }
-}
+  name: "App",
+  components: {
+    Loader,
+  },
+};
 </script>
 
 <style>
-body{
-  margin: 0px
+body {
+  margin: 0px;
 }
 
 #app {

@@ -16,13 +16,13 @@
 </template>
 
 <script>
-import Header from "../components/Header";
-import Wapp from "../components/Whatsapp";
-import Footer from "../components/Footer";
+import Header from "../../components/Ecuador/Header";
+import Wapp from "../../components/Ecuador/Whatsapp";
+import Footer from "../../components/Ecuador/Footer";
 
 export default {
   name: "Tour",
-  props:["name"],
+  props: ["name"],
   components: {
     Header,
     Wapp,

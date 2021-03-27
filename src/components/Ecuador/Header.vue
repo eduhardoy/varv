@@ -2,7 +2,7 @@
   <header class="header">
     <div class="logo">
       <a href="/">
-        <img alt="logovarv" src="../assets/logo2.png" />
+        <img alt="logovarv" src="../../assets/logo2.png" />
       </a>
     </div>
     <div class="menu" v-bind:class="{ isActive: isActive }">
@@ -77,12 +77,12 @@ export default {
 <style>
 @font-face {
   font-family: "icomoon";
-  src: url("../../public/fonts/icomoon.eot?uus47");
-  src: url("../../public/fonts/icomoon.eot?uus47#iefix")
+  src: url("../../../public/fonts/icomoon.eot?uus47");
+  src: url("../../../public/fonts/icomoon.eot?uus47#iefix")
       format("embedded-opentype"),
-    url("../../public/fonts/icomoon.ttf?uus47") format("truetype"),
-    url("../../public/fonts/icomoon.woff?uus47") format("woff"),
-    url("../../public/fonts/icomoon.svg?uus47#icomoon") format("svg");
+    url("../../../public/fonts/icomoon.ttf?uus47") format("truetype"),
+    url("../../../public/fonts/icomoon.woff?uus47") format("woff"),
+    url("../../../public/fonts/icomoon.svg?uus47#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;

@@ -65,7 +65,7 @@ export default {
 <style lang="scss">
 @font-face {
   font-family: "Brandon Thin";
-  src: url("../assets/Fonts/Brandon_light.otf") format("woff");
+  src: url("../../assets/Fonts/Brandon_light.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }

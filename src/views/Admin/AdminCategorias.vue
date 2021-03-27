@@ -12,8 +12,8 @@
       <ul class="admin-list">
         <li v-for="item in categories" v-bind:key="item.id" class="list-item">
           <div class="order-number">
-              {{ item.order }}
-            </div>
+            {{ item.order }}
+          </div>
           <div class="datos-list">
             <h4>Nombre: {{ item.name }}</h4>
             <h4>Descripción: {{ item.description }}</h4>
@@ -94,9 +94,9 @@
 </template>
 
 <script>
-import ModalDelete from "../../components/ModalDelete";
-import ModalAdd from "../../components/ModalAdd";
-import ModalChange from "../../components/ModalChange";
+import ModalDelete from "../../components/Modals/ModalDelete";
+import ModalAdd from "../../components/Modals/ModalAdd";
+import ModalChange from "../../components/Modals/ModalChange";
 
 export default {
   data: () => {
@@ -254,7 +254,7 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
-        .order-number{
+        .order-number {
           font-size: 28px;
         }
         .datos-list {

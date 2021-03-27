@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { trackRouter } from "vue-gtag-next";
-import Home from "../views/Home.vue";
-import Tour from "../views/Tour.vue";
+import Home from "../views/Ecuador/Home.vue";
+import Tour from "../views/Ecuador/Tour.vue";
 import Admin from "../views/Admin/Admin.vue";
 import AdminLogin from "../views/Admin/AdminLogin.vue";
 import AuthGuard from "../guards/auth.guard";

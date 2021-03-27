@@ -28,7 +28,7 @@ export default {
 <style>
 @font-face {
   font-family: "Brandon";
-  src: url("../assets/Fonts/Brandon_med.otf") format("woff");
+  src: url("../../assets/Fonts/Brandon_med.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }

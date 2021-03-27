@@ -18,14 +18,14 @@ export default {
 <style>
 @font-face {
   font-family: "Brandon";
-  src: url("../assets/Fonts/Brandon_reg.otf") format("woff");
+  src: url("../../assets/Fonts/Brandon_reg.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Brandon Thin";
-  src: url("../assets/Fonts/Brandon_thin.otf") format("woff");
+  src: url("../../assets/Fonts/Brandon_thin.otf") format("woff");
   font-weight: normal;
   font-style: normal;
 }
