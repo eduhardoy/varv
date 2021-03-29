@@ -36,6 +36,11 @@ export default {};
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (max-width: 1300px) {
+      width: 90%;
+      height: 90%;
+      flex-direction: column;
+    }
     &__logo {
       width: 60%;
       height: 100%;
@@ -46,20 +51,35 @@ export default {};
         height: 60%;
         max-height: 512px;
       }
+      @media (max-width: 1300px) {
+        width: 90%;
+        height: 50%;
+        img {
+          height: 70%;
+        }
+      }
     }
     &__countries {
       height: 50%;
-      width: 40%;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      @media (max-width: 1300px) {
+        width: 90%;
+        height: 50%;
+      }
       .router__countries {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         height: 50%;
         width: 100%;
+        @media (max-width: 1300px) {
+          width: 50%;
+          height: 30%;
+          justify-content: center;
+        }
         p {
           color: white;
           padding: 15px;
