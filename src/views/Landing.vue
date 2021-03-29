@@ -84,6 +84,7 @@ export default {};
           color: white;
           padding: 15px;
           font-size: 20px;
+          font-weight: 300;
         }
         img {
           height: 40px;
