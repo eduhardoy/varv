@@ -18,7 +18,7 @@
           <a href="/#about" @click="aboutClicked">Nosotros</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#collections" @click="collectionClicked">Proyectos</a>
+          <a href="/#collections" @click="collectionClicked">ProyectosARG</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
           <a href="/#prices" @click="pricesClicked">Precios</a>

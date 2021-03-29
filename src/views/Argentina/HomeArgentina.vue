@@ -13,15 +13,15 @@
 </template>
 
 <script>
-import Header from "../../components/Ecuador/Header";
-import Wapp from "../../components/Ecuador/Whatsapp";
-import Hero from "../../components/Ecuador/Hero";
-import About from "../../components/Ecuador/About";
-import Collections from "../../components/Ecuador/Collections";
-import Prices from "../../components/Ecuador/Prices";
-import Contact from "../../components/Ecuador/Contact";
-import Clients from "../../components/Ecuador/Clients";
-import Footer from "../../components/Ecuador/Footer";
+import Header from "../../components/Argentina/Header";
+import Wapp from "../../components/Argentina/Whatsapp";
+import Hero from "../../components/Argentina/Hero";
+import About from "../../components/Argentina/About";
+import Collections from "../../components/Argentina/Collections";
+import Prices from "../../components/Argentina/Prices";
+import Contact from "../../components/Argentina/Contact";
+import Clients from "../../components/Argentina/Clients";
+import Footer from "../../components/Argentina/Footer";
 
 export default {
   name: "HomeArgentina",
