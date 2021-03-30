@@ -2,7 +2,7 @@
   <header class="header">
     <div class="logo">
       <a href="/">
-        <img alt="logovarv" src="../../assets/logo2.png" />
+        <img alt="logovarv" src="../../assets/logo2ecu.png" />
       </a>
     </div>
     <div class="menu" v-bind:class="{ isActive: isActive }">

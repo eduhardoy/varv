@@ -4,7 +4,7 @@
       <h3>CONTACTO</h3>
       <div>
         <div class="dato">
-          <i class="icon-phone"><strong>+593 991425988</strong></i>
+          <i class="icon-phone"><strong>+54 3794-290578</strong></i>
         </div>
         <div class="dato">
           <i class="icon-envelop"><strong>varvlab@gmail.com</strong></i>

@@ -6,7 +6,7 @@
           <h2 class="title">BÁSICO</h2>
         </div>
         <div class="row2">
-          <h4 class="title2">$100</h4>
+          <h4 class="title2">$15000</h4>
         </div>
         <div class="row3">
           <h3>Tour virtual de hasta 5 escenas en 360°</h3>
@@ -18,7 +18,7 @@
           <h2 class="title">ESTÁNDAR</h2>
         </div>
         <div class="row2">
-          <h4 class="title2">$200</h4>
+          <h4 class="title2">$25000</h4>
         </div>
         <div class="row3">
           <h3>Tour virtual de hasta 12 escenas en 360°</h3>
@@ -32,13 +32,13 @@
           <h2 class="title">ESPECIAL</h2>
         </div>
         <div class="row2">
-          <h4 class="title2">+$200</h4>
+          <h4 class="title5">CONSULTAR</h4>
         </div>
         <div class="row3">
           <h3>Tours interactivos personalizados</h3>
           <h3>Vídeos 360°</h3>
-          <h3>Fotos y vídeos con dron</h3>
-          <h3>*Cuéntanos sobre tu proyecto y cotiza</h3>
+          <h3>Mapa de ubicación (Si aplica)</h3>
+          <h3>Sonido (Opcional)</h3>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .prices h3 {
   font-weight: 400;
   margin: 0;
@@ -116,6 +116,16 @@ export default {
   width: 50%;
   height: 40%;
   font-size: 60px;
+  line-height: 60px;
+  padding-bottom: 20px;
+  margin: 0;
+  color: #ffffff;
+}
+
+.title5 {
+  width: 90%;
+  height: 40%;
+  font-size: 40px;
   line-height: 60px;
   padding-bottom: 20px;
   margin: 0;

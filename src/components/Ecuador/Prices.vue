@@ -44,6 +44,11 @@
     </div>
     <div class="iva">
       <h2>*Los precios no incluyen IVA</h2>
+      <h2>
+        Los precios son referenciales, nos adaptamos a tus necesidades y si eres
+        emprendedor o nos interesan tus servicios/productos, podemos llegar a un
+        acuerdo de canje de servicios.
+      </h2>
     </div>
   </div>
 </template>
@@ -135,7 +140,14 @@ export default {
   padding: 10px;
 }
 
+.iva {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .iva h2 {
+  max-width: 80%;
   font-size: 30px;
   font-weight: 300;
 }

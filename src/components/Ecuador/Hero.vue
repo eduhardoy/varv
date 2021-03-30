@@ -50,7 +50,7 @@ export default {
   flex-direction: column;
   position: absolute;
   bottom: 45%;
-  right: 0;
+  right: 40px;
   text-align: center;
 }
 .hero-title {

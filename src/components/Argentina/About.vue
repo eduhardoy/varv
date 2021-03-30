@@ -2,13 +2,15 @@
   <div class="about" id="about">
     <div class="frase">
       <h1>
-        Nos especializamos en Tours Virtuales 360°, modelado 3D, realidad
-        virtual y levantamientos con drones.
+        Nos especializamos en Tours Virtuales 360° y Realidad Virtual.
       </h1>
     </div>
     <div class="description">
       <figure class="description-image">
-        <img src="https://live.staticflickr.com/65535/50741830761_d513f71418_c.jpg" alt="" />
+        <img
+          src="https://live.staticflickr.com/65535/50741830761_d513f71418_c.jpg"
+          alt=""
+        />
       </figure>
       <div class="lista">
         <ul class="item-about-list">
