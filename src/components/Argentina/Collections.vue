@@ -3,6 +3,7 @@
     <div class="filter-container">
       <ul class="filter-list" v-for="item in categories" v-bind:key="item.id">
         <li
+          v-show="item.pais === 'arg'"
           class="filter-item"
           @click="selectCategory(item.id)"
           :class="selectedCategory == item.id ? 'selected' : ''"
@@ -16,6 +17,7 @@
         class="portada-container"
         v-for="item in collections"
         v-bind:key="item.id"
+        v-show="item.pais === 'arg'"
         @click="goToTour(item)"
       >
         <img class="portada" v-bind:src="item.image.url" alt="proyecto" />

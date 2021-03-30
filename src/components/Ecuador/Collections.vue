@@ -3,6 +3,7 @@
     <div class="filter-container">
       <ul class="filter-list" v-for="item in categories" v-bind:key="item.id">
         <li
+          v-show="item.pais === 'ecu'"
           class="filter-item"
           @click="selectCategory(item.id)"
           :class="selectedCategory == item.id ? 'selected' : ''"
@@ -13,6 +14,7 @@
     </div>
     <div class="collections-container">
       <div
+        v-show="item.pais === 'ecu'"
         class="portada-container"
         v-for="item in collections"
         v-bind:key="item.id"

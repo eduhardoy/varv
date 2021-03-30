@@ -3,7 +3,11 @@
     <div class="container">
       <h2>NUESTROS CLIENTES</h2>
       <ul>
-        <li v-for="item in clients" v-bind:key="item.id">
+        <li
+          v-for="item in clients"
+          v-bind:key="item.id"
+          v-show="item.pais === 'arg'"
+        >
           <img :src="item.image.url" alt="cliente" />
         </li>
       </ul>
