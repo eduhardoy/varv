@@ -1,7 +1,9 @@
 <template>
-  <a class="whatsapp" href="https://api.whatsapp.com/send?phone=593991425988&text=Hola,%20necesitaria%20una%20cotizaci%C3%B3n">
-    <i class="icon-whatsapp">
-    </i>
+  <a
+    class="whatsapp"
+    href="https://api.whatsapp.com/send?phone=593991425988&text=Hola,%20necesitaria%20una%20cotizaci%C3%B3n"
+  >
+    <i class="icon-whatsapp"> </i>
   </a>
 </template>
 
@@ -13,20 +15,22 @@ export default {
 
 <style>
 @font-face {
-  font-family: 'icomoon';
-  src:  url('../../../public/fonts/icomoon.eot?uus47');
-  src:  url('../../../public/fonts/icomoon.eot?uus47#iefix') format('embedded-opentype'),
-    url('../../../public/fonts/icomoon.ttf?uus47') format('truetype'),
-    url('../../../public/fonts/icomoon.woff?uus47') format('woff'),
-    url('../../../public/fonts/icomoon.svg?uus47#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("../../../public/fonts/icomoon.eot?uus47");
+  src: url("../../../public/fonts/icomoon.eot?uus47#iefix")
+      format("embedded-opentype"),
+    url("../../../public/fonts/icomoon.ttf?uus47") format("truetype"),
+    url("../../../public/fonts/icomoon.woff?uus47") format("woff"),
+    url("../../../public/fonts/icomoon.svg?uus47#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -55,19 +59,19 @@ export default {
   color: #ffffff;
   background-color: #24d366;
   box-shadow: none;
-  cursor: pointer;    outline: 0;
+  cursor: pointer;
+  outline: 0;
   vertical-align: baseline;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.whatsapp i{
+.whatsapp i {
   display: inline-block;
   font-style: normal;
   font-variant: normal;
   text-rendering: auto;
   line-height: 1;
 }
-
 </style>

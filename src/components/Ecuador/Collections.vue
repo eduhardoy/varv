@@ -51,7 +51,7 @@ export default {
   methods: {
     goToTour(collection) {
       return this.$router.push({
-        name: "Tour",
+        name: "TourEcu",
         params: { id: collection.id, name: collection.name },
       });
     },

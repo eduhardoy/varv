@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="logo">
-      <a href="/">
+      <a href="/ecu">
         <img alt="logovarv" src="../../assets/logo2ecu.png" />
       </a>
     </div>
@@ -15,16 +15,16 @@
       </button>
       <ul class="nav">
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#about" @click="aboutClicked">Nosotros</a>
+          <a href="/ecu/#about" @click="aboutClicked">Nosotros</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#collections" @click="collectionClicked">Proyectos</a>
+          <a href="/ecu/#collections" @click="collectionClicked">Proyectos</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#prices" @click="pricesClicked">Precios</a>
+          <a href="/ecu/#prices" @click="pricesClicked">Precios</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#contact" @click="contactClicked">Contacto</a>
+          <a href="/ecu/#contact" @click="contactClicked">Contacto</a>
         </li>
       </ul>
     </div>

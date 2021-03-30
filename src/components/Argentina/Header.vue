@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="logo">
-      <a href="/">
+      <a href="/arg">
         <img alt="logovarv" src="../../assets/logo2arg.png" />
       </a>
     </div>
@@ -15,16 +15,16 @@
       </button>
       <ul class="nav">
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#about" @click="aboutClicked">Nosotros</a>
+          <a href="/arg/#about" @click="aboutClicked">Nosotros</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#collections" @click="collectionClicked">Proyectos</a>
+          <a href="/arg/#collections" @click="collectionClicked">Proyectos</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#prices" @click="pricesClicked">Precios</a>
+          <a href="/arg/#prices" @click="pricesClicked">Precios</a>
         </li>
         <li class="menu-elements" @click="closeMenu()">
-          <a href="/#contact" @click="contactClicked">Contacto</a>
+          <a href="/arg/#contact" @click="contactClicked">Contacto</a>
         </li>
       </ul>
     </div>
