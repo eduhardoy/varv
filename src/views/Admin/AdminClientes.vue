@@ -56,6 +56,11 @@
           placeholder="URL"
           v-model="newClient.image.url"
         />
+        <input
+          class="modal-selector"
+          placeholder="Pais"
+          v-model="newClient.pais"
+        />
       </div>
     </template>
     <template v-slot:footer>
@@ -89,6 +94,11 @@
           class="modal-selector"
           placeholder="URL"
           v-model="updateClient.image.url"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Pais"
+          v-model="updateClient.pais"
         />
       </div>
     </template>

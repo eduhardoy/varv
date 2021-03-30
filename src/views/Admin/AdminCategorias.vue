@@ -44,6 +44,11 @@
           placeholder="Descripción"
           v-model="newCategory.description"
         />
+        <input
+          class="modal-selector"
+          placeholder="Pais"
+          v-model="newCategory.pais"
+        />
       </template>
       <template v-slot:footer>
         <button class="cancel_button" @click="closeAddModal()">CANCELAR</button>
@@ -66,6 +71,11 @@
           class="modal-selector"
           placeholder="Descripción"
           v-model="updateCategory.description"
+        />
+        <input
+          class="modal-selector"
+          placeholder="Pais"
+          v-model="updateCategory.pais"
         />
       </template>
       <template v-slot:footer>

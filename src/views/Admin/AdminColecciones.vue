@@ -66,6 +66,11 @@
             placeholder="URL"
             v-model="newCollection.image.url"
           />
+          <input
+            class="modal-selector"
+            placeholder="Pais"
+            v-model="newCollection.pais"
+          />
           <div class="modal-selector-big">
             <div
               class="selector-check"
@@ -120,6 +125,11 @@
             class="modal-selector"
             placeholder="URL"
             v-model="updateCollection.image.url"
+          />
+          <input
+            class="modal-selector"
+            placeholder="Pais"
+            v-model="updateCollection.pais"
           />
           <div class="modal-selector-big">
             <div
