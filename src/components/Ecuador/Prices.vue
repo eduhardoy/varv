@@ -47,7 +47,7 @@
       <h2>
         Los precios son referenciales, nos adaptamos a tus necesidades y si eres
         emprendedor o nos interesan tus servicios/productos, podemos llegar a un
-        acuerdo de canje de servicios.
+        acuerdo de canje.
       </h2>
     </div>
   </div>
