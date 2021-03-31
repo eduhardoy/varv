@@ -6,7 +6,7 @@
         <li
           v-for="item in clients"
           v-bind:key="item.id"
-          v-show="item.pais === 'arg'"
+          v-show="item.pais === 'ecu'"
         >
           <img :src="item.image.url" alt="cliente" />
         </li>

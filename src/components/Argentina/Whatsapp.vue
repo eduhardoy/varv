@@ -1,5 +1,5 @@
 <template>
-  <a class="whatsapp" href="https://api.whatsapp.com/send?phone=593991425988&text=Hola,%20necesitaria%20una%20cotizaci%C3%B3n">
+  <a class="whatsapp" href="https://api.whatsapp.com/send?phone=543794289113&text=Hola,%20necesitaria%20una%20cotizaci%C3%B3n">
     <i class="icon-whatsapp">
     </i>
   </a>
