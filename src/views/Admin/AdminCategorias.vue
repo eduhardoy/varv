@@ -57,11 +57,11 @@
           placeholder="Descripción"
           v-model="newCategory.description"
         />
-        <input
-          class="modal-selector"
-          placeholder="Pais"
-          v-model="newCategory.pais"
-        />
+        <select class="modal-selector-2" v-model="newCategory.pais">
+          <option disabled value="">Seleccione un pais</option>
+          <option value="ecu">ecu</option>
+          <option value="arg">arg</option>
+        </select>
       </template>
       <template v-slot:footer>
         <button class="cancel_button" @click="closeAddModal()">CANCELAR</button>
@@ -85,11 +85,11 @@
           placeholder="Descripción"
           v-model="updateCategory.description"
         />
-        <input
-          class="modal-selector"
-          placeholder="Pais"
-          v-model="updateCategory.pais"
-        />
+        <select class="modal-selector-2" v-model="updateCategory.pais">
+          <option disabled value="">Seleccione un pais</option>
+          <option value="ecu">ecu</option>
+          <option value="arg">arg</option>
+        </select>
       </template>
       <template v-slot:footer>
         <button class="cancel_button" @click="$refs.change.closeModal()">
@@ -125,7 +125,9 @@ export default {
   data: () => {
     return {
       title: "CATEGORÍAS",
-      newCategory: {},
+      newCategory: {
+        pais: "ecu",
+      },
       pais: "ecu",
     };
   },
@@ -201,6 +203,20 @@ export default {
     font-size: 30px;
     background-color: #ededed;
     outline: none;
+  }
+  .modal-selector-2 {
+    text-align: center;
+    width: 100px;
+    font-family: "Lato", Helvetica, Arial, sans-serif;
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    outline: none;
+    text-align: center;
   }
   .admin-title {
     width: 100%;

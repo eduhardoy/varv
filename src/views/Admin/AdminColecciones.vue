@@ -79,11 +79,11 @@
             placeholder="URL"
             v-model="newCollection.image.url"
           />
-          <input
-            class="modal-selector"
-            placeholder="Pais"
-            v-model="newCollection.pais"
-          />
+          <select class="modal-selector-2" v-model="newCollection.pais">
+            <option disabled value="">Seleccione un pais</option>
+            <option value="ecu">ecu</option>
+            <option value="arg">arg</option>
+          </select>
           <div class="modal-selector-big">
             <div
               class="selector-check"
@@ -139,11 +139,11 @@
             placeholder="URL"
             v-model="updateCollection.image.url"
           />
-          <input
-            class="modal-selector"
-            placeholder="Pais"
-            v-model="updateCollection.pais"
-          />
+          <select class="modal-selector-2" v-model="updateCollection.pais">
+            <option disabled value="">Seleccione un pais</option>
+            <option value="ecu">ecu</option>
+            <option value="arg">arg</option>
+          </select>
           <div class="modal-selector-big">
             <div
               class="selector-check"
@@ -197,6 +197,7 @@ export default {
     title: "COLECCIONES",
     pais: "ecu",
     newCollection: {
+      pais: "ecu",
       image: {},
       categories: [],
     },
@@ -295,6 +296,20 @@ export default {
       font-size: 25px;
       background-color: #ededed;
       outline: none;
+    }
+    .modal-selector-2 {
+      text-align: center;
+      width: 100px;
+      font-family: "Lato", Helvetica, Arial, sans-serif;
+      margin: 20px;
+      padding: 10px;
+      border: 2px solid black;
+      border-radius: 25px;
+      font-size: 20px;
+      background-color: black;
+      color: white;
+      outline: none;
+      text-align: center;
     }
     .modal-selector-big {
       text-align: center;

@@ -69,11 +69,11 @@
           placeholder="URL"
           v-model="newClient.image.url"
         />
-        <input
-          class="modal-selector"
-          placeholder="Pais"
-          v-model="newClient.pais"
-        />
+        <select class="modal-selector-2" v-model="newClient.pais">
+          <option disabled value="">Seleccione un pais</option>
+          <option value="ecu">ecu</option>
+          <option value="arg">arg</option>
+        </select>
       </div>
     </template>
     <template v-slot:footer>
@@ -108,11 +108,11 @@
           placeholder="URL"
           v-model="updateClient.image.url"
         />
-        <input
-          class="modal-selector"
-          placeholder="Pais"
-          v-model="updateClient.pais"
-        />
+        <select class="modal-selector-2" v-model="updateClient.pais">
+          <option disabled value="">Seleccione un pais</option>
+          <option value="ecu">ecu</option>
+          <option value="arg">arg</option>
+        </select>
       </div>
     </template>
     <template v-slot:footer>
@@ -150,6 +150,7 @@ export default {
     return {
       pais: "ecu",
       newClient: {
+        pais: "ecu",
         image: {},
       },
       title: "CLIENTES",
@@ -401,5 +402,20 @@ export default {
       width: 100%;
     }
   }
+}
+
+.modal-selector-2 {
+  text-align: center;
+  width: 100px;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  margin: 20px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 25px;
+  font-size: 20px;
+  background-color: black;
+  color: white;
+  outline: none;
+  text-align: center;
 }
 </style>
