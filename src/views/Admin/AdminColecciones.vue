@@ -8,9 +8,22 @@
         <h2>+</h2>
       </button>
     </div>
+    <div class="pais-selector">
+      <button @click="setPais('arg')">
+        <img src="../../assets/argentina.png" alt="" />
+      </button>
+      <button @click="setPais('ecu')">
+        <img src="../../assets/ecuador.png" alt="" />
+      </button>
+    </div>
     <div class="admin-body">
       <ul class="admin-list">
-        <li v-for="item in colecciones" v-bind:key="item.id" class="list-item">
+        <li
+          v-for="item in colecciones"
+          v-bind:key="item.id"
+          class="list-item"
+          v-show="item.pais == pais"
+        >
           <div class="order-number">
             {{ item.order }}
           </div>
@@ -182,12 +195,16 @@ import ModalChange from "../../components/Modals/ModalChange";
 export default {
   data: () => ({
     title: "COLECCIONES",
+    pais: "ecu",
     newCollection: {
       image: {},
       categories: [],
     },
   }),
   methods: {
+    setPais(pais) {
+      this.pais = pais;
+    },
     goToTour(tours) {
       console.log(tours);
       this.$router.push({ name: "tours", params: { tours } });
@@ -371,7 +388,7 @@ export default {
         margin: 0;
         margin-top: 30px;
         width: 80%;
-        height: 100px;
+        height: 150px;
         background: #ededed;
         border-radius: 25px;
         box-shadow: 0px 0px 9px -2px #000000;
@@ -444,6 +461,21 @@ export default {
           }
         }
       }
+    }
+  }
+}
+.pais-selector {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    width: 60px;
+    height: 60px;
+    img {
+      width: 100%;
     }
   }
 }
