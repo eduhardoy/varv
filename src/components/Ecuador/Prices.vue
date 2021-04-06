@@ -165,4 +165,7 @@ export default {
     height: 400px;
   }
 }
+.iva h2 {
+  font-size: 20px;
+}
 </style>
